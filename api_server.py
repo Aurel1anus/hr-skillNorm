@@ -1,13 +1,4 @@
-"""Thin HTTP bridge for the Skill Normalizer.
-
-This file does not modify any existing backend code. It only imports the
-existing `SkillNormalizer` and `load_skills` helpers and exposes them over
-HTTP so that `frontend/` can be used interactively.
-
-Semantic matching is intentionally left unconfigured (same as the CLI) so
-that the project can still decide on the model/runtime strategy later.
-Exact matches and the threshold/review decision logic work out of the box.
-"""
+"""HTTP bridge for the Skill Normalizer and its local BGE matcher."""
 
 from pathlib import Path
 
@@ -17,6 +8,14 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
+from app.config import (
+    MARGIN_THRESHOLD,
+    MODEL_PATH,
+    SEMANTIC_THRESHOLD,
+    TOP_K,
+    UNKNOWN_THRESHOLD,
+)
+from app.embedding_matcher import EmbeddingMatcher
 from app.normalizer import SkillNormalizer
 from app.taxonomy import load_skills
 
@@ -37,7 +36,25 @@ app.add_middleware(
 )
 
 _skills = load_skills(SKILLS_PATH)
-_normalizer = SkillNormalizer(_skills)
+_matcher = None
+
+
+def semantic_match(text: str, top_k: int):
+    """Load the local model once, only when an exact match misses."""
+    global _matcher
+    if _matcher is None:
+        _matcher = EmbeddingMatcher(_skills, str(MODEL_PATH))
+    return _matcher.match(text, top_k)
+
+
+_normalizer = SkillNormalizer(
+    _skills,
+    semantic_matcher=semantic_match,
+    top_k=TOP_K,
+    semantic_threshold=SEMANTIC_THRESHOLD,
+    unknown_threshold=UNKNOWN_THRESHOLD,
+    margin_threshold=MARGIN_THRESHOLD,
+)
 
 
 class NormalizeRequest(BaseModel):
@@ -55,7 +72,8 @@ def list_skills():
         {
             "id": skill.id,
             "name": skill.name,
-            "category": skill.category,
+            "category": skill.category or skill.domain,
+            "domain": skill.domain,
             "description": skill.description,
             "aliases": skill.aliases,
         }

@@ -8,9 +8,11 @@ MatchType = Literal["exact", "semantic", "review", "unknown"]
 class Skill:
     id: str
     name: str
+    domain: str | None = None
     category: str | None = None
     description: str = ""
     aliases: list[str] = field(default_factory=list)
+    parent_id: str | None = None
 
 
 @dataclass(frozen=True)

@@ -1,0 +1,1447 @@
+[
+  {
+    "id": "ecommerce_001",
+    "domain": "跨境电商/运营",
+    "input": "库存管理",
+    "type": "canonical",
+    "expected_skill": "inventory_management",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "直接使用标准技能名称，应命中标准名精确匹配。"
+  },
+  {
+    "id": "ecommerce_002",
+    "domain": "跨境电商/运营",
+    "input": "补货管理",
+    "type": "canonical",
+    "expected_skill": "replenishment_management",
+    "acceptable_skills": ["inventory_management"],
+    "difficulty": "easy",
+    "notes": "补货管理是标准名称；它是库存管理的子技能，返回父技能可接受但不加分。"
+  },
+  {
+    "id": "ecommerce_003",
+    "domain": "跨境电商/运营",
+    "input": "库存管控",
+    "type": "alias",
+    "expected_skill": "inventory_management",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "「库存管控」是库存管理的稳定别称，用于验证 alias 字典。"
+  },
+  {
+    "id": "ecommerce_004",
+    "domain": "跨境电商/运营",
+    "input": "跨境运营",
+    "type": "alias",
+    "expected_skill": "cross_border_ecommerce_operation",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "「跨境运营」是跨境电商运营的别称，不应落到电商运营。"
+  },
+  {
+    "id": "ecommerce_005",
+    "domain": "跨境电商/运营",
+    "input": "大促运营",
+    "type": "alias",
+    "expected_skill": "campaign_operation",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "大促属于活动运营，不是店铺整体经营。"
+  },
+  {
+    "id": "ecommerce_006",
+    "domain": "跨境电商/运营",
+    "input": "网店运营",
+    "type": "alias",
+    "expected_skill": "ecommerce_operation",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "网店运营是电商运营的同义别称。"
+  },
+  {
+    "id": "ecommerce_007",
+    "domain": "跨境电商/运营",
+    "input": "商品上架",
+    "type": "alias",
+    "expected_skill": "product_listing",
+    "acceptable_skills": ["product_operation"],
+    "difficulty": "easy",
+    "notes": "商品上架指商品上新子技能；返回父技能商品运营可接受。"
+  },
+  {
+    "id": "ecommerce_008",
+    "domain": "跨境电商/运营",
+    "input": "根据历史销量和市场趋势判断未来需要备多少货",
+    "type": "semantic",
+    "expected_skill": "inventory_forecasting",
+    "acceptable_skills": ["inventory_management"],
+    "difficulty": "medium",
+    "notes": "核心是预测未来库存需求，不涉及实际补货执行；父技能库存管理可接受。"
+  },
+  {
+    "id": "ecommerce_009",
+    "domain": "跨境电商/运营",
+    "input": "跟进平台热销榜和竞品数据，挑选下一季主推款",
+    "type": "semantic",
+    "expected_skill": "product_selection",
+    "acceptable_skills": ["product_operation"],
+    "difficulty": "medium",
+    "notes": "行为是决定卖什么，属于选品；商品运营为父技能，可接受但不加分。"
+  },
+  {
+    "id": "ecommerce_010",
+    "domain": "跨境电商/运营",
+    "input": "监控各渠道曝光、点击与访客来源，定位流量下滑原因",
+    "type": "semantic",
+    "expected_skill": "traffic_analysis",
+    "acceptable_skills": ["ecommerce_operation"],
+    "difficulty": "medium",
+    "notes": "重点是流量结构诊断，不是成交或商品分析。"
+  },
+  {
+    "id": "ecommerce_011",
+    "domain": "跨境电商/运营",
+    "input": "梳理价格带并参考成本与竞品价格制定售价",
+    "type": "semantic",
+    "expected_skill": "pricing_strategy",
+    "acceptable_skills": ["product_operation"],
+    "difficulty": "medium",
+    "notes": "核心是价格决策，不应落到活动运营或商品运营。"
+  },
+  {
+    "id": "ecommerce_012",
+    "domain": "跨境电商/运营",
+    "input": "统筹店铺整体经营，协调活动、订单和商品维护等日常事务",
+    "type": "semantic",
+    "expected_skill": "ecommerce_operation",
+    "acceptable_skills": ["product_operation"],
+    "difficulty": "hard",
+    "notes": "输入包含多类事务，但主线是店铺整体经营，属于电商运营。"
+  },
+  {
+    "id": "ecommerce_013",
+    "domain": "跨境电商/运营",
+    "input": "根据商品销量和销售周期制定补货数量",
+    "type": "context",
+    "expected_skill": "replenishment_management",
+    "acceptable_skills": ["inventory_management"],
+    "difficulty": "medium",
+    "notes": "重点是根据销量和库存情况做补货决策，父技能库存管理可接受。"
+  },
+  {
+    "id": "ecommerce_014",
+    "domain": "跨境电商/运营",
+    "input": "优化商品详情页的标题、主图和卖点描述以提升点击",
+    "type": "context",
+    "expected_skill": "product_operation",
+    "acceptable_skills": ["product_listing", "conversion_rate_optimization"],
+    "difficulty": "medium",
+    "notes": "属于商品信息优化，第一版 taxonomy 未单列该技能；按商品生命周期归入商品运营，商品上新不能被直接等同。"
+  },
+  {
+    "id": "ecommerce_015",
+    "domain": "跨境电商/运营",
+    "input": "策划并执行黑五促销活动，设置满减规则与站内资源位投放",
+    "type": "context",
+    "expected_skill": "campaign_operation",
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "典型活动运营，核心是活动方案与执行，不含商品日常运营。"
+  },
+  {
+    "id": "ecommerce_016",
+    "domain": "跨境电商/运营",
+    "input": "分析各环节转化数据，找出详情页流失节点并推动优化",
+    "type": "context",
+    "expected_skill": "conversion_rate_optimization",
+    "acceptable_skills": ["data_analysis", "product_operation"],
+    "difficulty": "hard",
+    "notes": "数据分析只是手段，目标是提升转化率，因此不应只返回数据分析。"
+  },
+  {
+    "id": "ecommerce_017",
+    "domain": "跨境电商/运营",
+    "input": "处理每日订单发货、退换货及异常订单，保证履约时效",
+    "type": "context",
+    "expected_skill": "order_management",
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "订单履约动作明确，属于订单管理，不涉及库存或供应链决策。"
+  },
+  {
+    "id": "ecommerce_018",
+    "domain": "跨境电商/运营",
+    "input": "负责跨境店铺商品资料、物流时效与海外仓库存的协调跟进",
+    "type": "context",
+    "expected_skill": "supply_chain_management",
+    "acceptable_skills": ["cross_border_ecommerce_operation", "inventory_management"],
+    "difficulty": "hard",
+    "notes": "跨供应商、物流与仓库的协同问题，属供应链管理；跨境和库存只是背景信息。"
+  },
+  {
+    "id": "ecommerce_019",
+    "domain": "跨境电商/运营",
+    "input": "根据商品表现调整运营策略",
+    "type": "ambiguous",
+    "expected_skill": "product_operation",
+    "acceptable_skills": ["ecommerce_operation", "data_analysis"],
+    "difficulty": "hard",
+    "notes": "输入同时含商品与运营信号；商品表现证据更强，若强调店铺整体则可接受电商运营。"
+  },
+  {
+    "id": "ecommerce_020",
+    "domain": "跨境电商/运营",
+    "input": "负责库存周转与滞销清理，控制库存风险",
+    "type": "ambiguous",
+    "expected_skill": "inventory_control",
+    "acceptable_skills": ["inventory_management"],
+    "difficulty": "hard",
+    "notes": "动作是存量管控而非补货；父技能库存管理可接受，补货管理不应被接受。"
+  },
+  {
+    "id": "ecommerce_021",
+    "domain": "跨境电商/运营",
+    "input": "分析销售数据并制定库存补货计划",
+    "type": "ambiguous",
+    "expected_skill": "replenishment_management",
+    "acceptable_skills": ["data_analysis", "inventory_management"],
+    "difficulty": "hard",
+    "notes": "该输入本身包含多技能信号，补货计划是主要动作，父技能库存管理可接受。"
+  },
+  {
+    "id": "ecommerce_022",
+    "domain": "跨境电商/运营",
+    "input": "在TikTok Shop上做新品测款并跟进达人合作",
+    "type": "ambiguous",
+    "expected_skill": "tiktok_shop_operation",
+    "acceptable_skills": ["product_selection", "product_operation"],
+    "difficulty": "hard",
+    "notes": "平台专属运营与测款动作混合；taxonomy 无达人营销技能，达人合作部分不应强行映射。"
+  },
+  {
+    "id": "ecommerce_023",
+    "domain": "跨境电商/运营",
+    "input": "有主人翁意识",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "软性素质不属于专业技能，应返回 unknown，不得强制映射到任何技能。"
+  },
+  {
+    "id": "ecommerce_024",
+    "domain": "跨境电商/运营",
+    "input": "TikTok达人建联与寄样跟进",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "hard",
+    "notes": "taxonomy 无达人营销/红人合作技能；映射到 TikTok Shop运营 属于强行匹配，应返回 unknown。"
+  },
+
+  {
+    "id": "hr_001",
+    "domain": "HR/招聘",
+    "input": "简历筛选",
+    "type": "canonical",
+    "expected_skill": "resume_screening",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "标准技能名称，应精确命中。"
+  },
+  {
+    "id": "hr_002",
+    "domain": "HR/招聘",
+    "input": "JD撰写",
+    "type": "canonical",
+    "expected_skill": "jd_writing",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "标准技能名称，不应落到更泛化的招聘。"
+  },
+  {
+    "id": "hr_003",
+    "domain": "HR/招聘",
+    "input": "人才招聘",
+    "type": "alias",
+    "expected_skill": "recruitment",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "人才招聘是招聘的稳定别称。"
+  },
+  {
+    "id": "hr_004",
+    "domain": "HR/招聘",
+    "input": "简历初筛",
+    "type": "alias",
+    "expected_skill": "resume_screening",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "简历初筛是简历筛选的别称。"
+  },
+  {
+    "id": "hr_005",
+    "domain": "HR/招聘",
+    "input": "面评",
+    "type": "alias",
+    "expected_skill": "interview_evaluation",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "面评是面试评估的行业口语别称。"
+  },
+  {
+    "id": "hr_006",
+    "domain": "HR/招聘",
+    "input": "招聘渠道维护",
+    "type": "alias",
+    "expected_skill": "recruitment_channel_management",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "招聘渠道维护是招聘渠道管理的别称。"
+  },
+  {
+    "id": "hr_007",
+    "domain": "HR/招聘",
+    "input": "offer沟通",
+    "type": "alias",
+    "expected_skill": "offer_management",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "offer 沟通是 Offer管理的别称，重点在录用后的沟通与手续。"
+  },
+  {
+    "id": "hr_008",
+    "domain": "HR/招聘",
+    "input": "在招聘网站和社交平台主动搜寻并联系潜在候选人",
+    "type": "semantic",
+    "expected_skill": "talent_sourcing",
+    "acceptable_skills": ["recruitment"],
+    "difficulty": "medium",
+    "notes": "强调主动获取候选人，属于人才寻访，不等同于筛选投递简历。"
+  },
+  {
+    "id": "hr_009",
+    "domain": "HR/招聘",
+    "input": "与业务部门确认岗位画像、招聘人数和到岗时间",
+    "type": "semantic",
+    "expected_skill": "recruitment_requirement_analysis",
+    "acceptable_skills": ["recruitment"],
+    "difficulty": "medium",
+    "notes": "回答招什么人、招多少的问题，属于招聘需求分析。"
+  },
+  {
+    "id": "hr_010",
+    "domain": "HR/招聘",
+    "input": "沉淀历史面试过的候选人信息并定期做二次触达",
+    "type": "semantic",
+    "expected_skill": "talent_pool_management",
+    "acceptable_skills": ["talent_sourcing"],
+    "difficulty": "medium",
+    "notes": "重点是历史候选人的沉淀与激活，属于人才库管理。"
+  },
+  {
+    "id": "hr_011",
+    "domain": "HR/招聘",
+    "input": "统计各渠道简历量和转化漏斗，评估招聘效果",
+    "type": "semantic",
+    "expected_skill": "recruitment_data_analysis",
+    "acceptable_skills": ["data_analysis"],
+    "difficulty": "medium",
+    "notes": "分析对象是招聘业务指标，因此不应只返回通用数据分析。"
+  },
+  {
+    "id": "hr_012",
+    "domain": "HR/招聘",
+    "input": "根据岗位要求编写职位描述与任职资格说明",
+    "type": "semantic",
+    "expected_skill": "jd_writing",
+    "acceptable_skills": ["recruitment"],
+    "difficulty": "medium",
+    "notes": "产出物是职位描述文本，属于 JD撰写。"
+  },
+  {
+    "id": "hr_013",
+    "domain": "HR/招聘",
+    "input": "协调多位业务面试官时间，安排跨部门面试流程并处理改期",
+    "type": "context",
+    "expected_skill": "interview_coordination",
+    "acceptable_skills": ["interview_scheduling", "recruitment"],
+    "difficulty": "medium",
+    "notes": "核心是面试官与流程的协调，不是向候选人发邀约。"
+  },
+  {
+    "id": "hr_014",
+    "domain": "HR/招聘",
+    "input": "筛选投递简历，判断候选人经验与岗位要求的匹配度并电话确认基本情况",
+    "type": "context",
+    "expected_skill": "resume_screening",
+    "acceptable_skills": ["candidate_communication", "recruitment"],
+    "difficulty": "medium",
+    "notes": "主要动作是对简历匹配度的判断，电话确认只是辅助动作。"
+  },
+  {
+    "id": "hr_015",
+    "domain": "HR/招聘",
+    "input": "与候选人沟通薪资期望、发放offer并跟进入职材料",
+    "type": "context",
+    "expected_skill": "offer_management",
+    "acceptable_skills": ["candidate_communication"],
+    "difficulty": "medium",
+    "notes": "发生在录用决策之后，属于 Offer管理，而非泛化的候选人沟通。"
+  },
+  {
+    "id": "hr_016",
+    "domain": "HR/招聘",
+    "input": "通过电话和微信邀约候选人确认面试时间并发送面试通知",
+    "type": "context",
+    "expected_skill": "interview_scheduling",
+    "acceptable_skills": ["interview_coordination"],
+    "difficulty": "easy",
+    "notes": "动作集中在候选人邀约与时间确认，属于面试邀约。"
+  },
+  {
+    "id": "hr_017",
+    "domain": "HR/招聘",
+    "input": "整理面试反馈表，汇总面试官评价并给出录用建议",
+    "type": "context",
+    "expected_skill": "interview_evaluation",
+    "acceptable_skills": ["recruitment"],
+    "difficulty": "medium",
+    "notes": "重点在面试反馈的汇总与判断，不属于面试安排。"
+  },
+  {
+    "id": "hr_018",
+    "domain": "HR/招聘",
+    "input": "拓展校园招聘与社会招聘渠道，管理渠道合作与投放预算",
+    "type": "context",
+    "expected_skill": "recruitment_channel_management",
+    "acceptable_skills": ["recruitment"],
+    "difficulty": "medium",
+    "notes": "对象是渠道资源与预算，属于招聘渠道管理。"
+  },
+  {
+    "id": "hr_019",
+    "domain": "HR/招聘",
+    "input": "负责招聘全流程管理，包括需求沟通、渠道投放和offer谈判",
+    "type": "ambiguous",
+    "expected_skill": "recruitment",
+    "acceptable_skills": ["recruitment_requirement_analysis", "recruitment_channel_management", "offer_management"],
+    "difficulty": "hard",
+    "notes": "该输入本身包含多技能信号，父技能招聘是最稳的答案。"
+  },
+  {
+    "id": "hr_020",
+    "domain": "HR/招聘",
+    "input": "与候选人保持沟通并安排面试时间",
+    "type": "ambiguous",
+    "expected_skill": "interview_scheduling",
+    "acceptable_skills": ["candidate_communication"],
+    "difficulty": "medium",
+    "notes": "沟通是铺垫，明确的行为是安排面试时间，因此以面试邀约为主。"
+  },
+  {
+    "id": "hr_021",
+    "domain": "HR/招聘",
+    "input": "通过电话初筛候选人并推荐给业务部门",
+    "type": "ambiguous",
+    "expected_skill": "resume_screening",
+    "acceptable_skills": ["candidate_communication", "talent_sourcing"],
+    "difficulty": "hard",
+    "notes": "电话初筛属于简历筛选的延伸；不应判为人才寻访。"
+  },
+  {
+    "id": "hr_022",
+    "domain": "HR/招聘",
+    "input": "负责招聘数据统计与人才库运营",
+    "type": "ambiguous",
+    "expected_skill": "recruitment_data_analysis",
+    "acceptable_skills": ["talent_pool_management"],
+    "difficulty": "hard",
+    "notes": "该输入本身包含两个技能，数据统计为主导动作，人才库运营应出现在 Top-K。"
+  },
+  {
+    "id": "hr_023",
+    "domain": "HR/招聘",
+    "input": "抗压能力强，能适应加班",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "性格与工作态度描述，不是专业技能，应返回 unknown。"
+  },
+  {
+    "id": "hr_024",
+    "domain": "HR/招聘",
+    "input": "熟悉雇主品牌建设与员工关系维护",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "taxonomy 无雇主品牌与员工关系技能，不应强行映射到招聘或招聘渠道管理。"
+  },
+
+  {
+    "id": "data_001",
+    "domain": "数据",
+    "input": "数据清洗",
+    "type": "canonical",
+    "expected_skill": "data_cleaning",
+    "acceptable_skills": ["data_processing"],
+    "difficulty": "easy",
+    "notes": "标准技能名称；父技能数据处理可接受但不加分。"
+  },
+  {
+    "id": "data_002",
+    "domain": "数据",
+    "input": "SQL",
+    "type": "canonical",
+    "expected_skill": "sql",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "技术名称保留英文，应精确命中 SQL。"
+  },
+  {
+    "id": "data_003",
+    "domain": "数据",
+    "input": "业务数据分析",
+    "type": "alias",
+    "expected_skill": "data_analysis",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "业务数据分析是数据分析的别称。"
+  },
+  {
+    "id": "data_004",
+    "domain": "数据",
+    "input": "可视化报表",
+    "type": "alias",
+    "expected_skill": "data_visualization",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "可视化报表强调的是呈现方式，属于数据可视化。"
+  },
+  {
+    "id": "data_005",
+    "domain": "数据",
+    "input": "数据校验",
+    "type": "alias",
+    "expected_skill": "data_quality_check",
+    "acceptable_skills": ["data_processing"],
+    "difficulty": "easy",
+    "notes": "数据校验对应数据质量检查，不等同于数据清洗。"
+  },
+  {
+    "id": "data_006",
+    "domain": "数据",
+    "input": "pandas数据分析",
+    "type": "alias",
+    "expected_skill": "python_data_analysis",
+    "acceptable_skills": ["python"],
+    "difficulty": "easy",
+    "notes": "pandas 属于 Python 数据分析工具链。"
+  },
+  {
+    "id": "data_007",
+    "domain": "数据",
+    "input": "数据整理",
+    "type": "alias",
+    "expected_skill": "data_processing",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "数据整理是数据处理的别称。"
+  },
+  {
+    "id": "data_008",
+    "domain": "数据",
+    "input": "从多张业务表里提取字段、对齐口径并处理缺失值",
+    "type": "semantic",
+    "expected_skill": "data_cleaning",
+    "acceptable_skills": ["data_processing"],
+    "difficulty": "medium",
+    "notes": "核心动作是缺失值与口径修正，属于数据清洗。"
+  },
+  {
+    "id": "data_009",
+    "domain": "数据",
+    "input": "把月度经营数据做成趋势图和看板，供管理层查看",
+    "type": "semantic",
+    "expected_skill": "data_visualization",
+    "acceptable_skills": ["report_generation"],
+    "difficulty": "medium",
+    "notes": "重点是用图表呈现，不包含分析结论的产出。"
+  },
+  {
+    "id": "data_010",
+    "domain": "数据",
+    "input": "通过A/B实验和假设检验判断策略效果",
+    "type": "semantic",
+    "expected_skill": "statistical_analysis",
+    "acceptable_skills": ["data_analysis"],
+    "difficulty": "hard",
+    "notes": "需要推断性统计方法，属于统计分析，不应只返回数据分析。"
+  },
+  {
+    "id": "data_011",
+    "domain": "数据",
+    "input": "搭建核心指标体系，监控日活、留存和付费转化",
+    "type": "semantic",
+    "expected_skill": "metric_analysis",
+    "acceptable_skills": ["data_analysis"],
+    "difficulty": "medium",
+    "notes": "围绕指标体系做监控与归因，属于指标分析。"
+  },
+  {
+    "id": "data_012",
+    "domain": "数据",
+    "input": "用pandas做分组聚合和环比计算",
+    "type": "semantic",
+    "expected_skill": "python_data_analysis",
+    "acceptable_skills": ["python", "data_analysis"],
+    "difficulty": "medium",
+    "notes": "工具与方法都指向 Python 数据分析。"
+  },
+  {
+    "id": "data_013",
+    "domain": "数据",
+    "input": "分析点击率、转化率和销量变化并调整运营策略",
+    "type": "context",
+    "expected_skill": "data_analysis",
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "业务场景虽然属于运营，但核心能力是数据分析。"
+  },
+  {
+    "id": "data_014",
+    "domain": "数据",
+    "input": "编写SQL完成多表关联查询，产出每日销售明细",
+    "type": "context",
+    "expected_skill": "sql",
+    "acceptable_skills": ["data_processing"],
+    "difficulty": "easy",
+    "notes": "产出方式是 SQL 查询，不涉及表结构设计。"
+  },
+  {
+    "id": "data_015",
+    "domain": "数据",
+    "input": "整理客户表并去除重复、补全缺失字段，输出干净数据表",
+    "type": "context",
+    "expected_skill": "data_cleaning",
+    "acceptable_skills": ["data_processing", "excel"],
+    "difficulty": "medium",
+    "notes": "去重与补全是典型清洗动作，工具（是否 Excel）只是手段。"
+  },
+  {
+    "id": "data_016",
+    "domain": "数据",
+    "input": "基于历史数据构建销量预测模型",
+    "type": "context",
+    "expected_skill": "data_modeling",
+    "acceptable_skills": ["data_analysis"],
+    "difficulty": "medium",
+    "notes": "强调建模方法本身；库存预测是业务侧的库存需求判断，两者不应混淆。"
+  },
+  {
+    "id": "data_017",
+    "domain": "数据",
+    "input": "搭建周报与月报模板，自动汇总各区域销售数据",
+    "type": "context",
+    "expected_skill": "report_generation",
+    "acceptable_skills": ["excel", "data_visualization"],
+    "difficulty": "medium",
+    "notes": "交付物是固定周期报表，重点是汇总与交付。"
+  },
+  {
+    "id": "data_018",
+    "domain": "数据",
+    "input": "对指标口径做一致性校验，排查异常值与重复数据",
+    "type": "context",
+    "expected_skill": "data_quality_check",
+    "acceptable_skills": ["data_cleaning"],
+    "difficulty": "medium",
+    "notes": "以发现和报告数据问题为主，属于数据质量检查。"
+  },
+  {
+    "id": "data_019",
+    "domain": "数据",
+    "input": "用Excel做数据透视并输出分析结论",
+    "type": "ambiguous",
+    "expected_skill": "excel_data_analysis",
+    "acceptable_skills": ["excel", "data_analysis"],
+    "difficulty": "hard",
+    "notes": "工具与分析方法同时出现，交叉技能 Excel数据分析 最贴切；也可接受两个父技能。"
+  },
+  {
+    "id": "data_020",
+    "domain": "数据",
+    "input": "对业务数据做清洗和统计分析",
+    "type": "ambiguous",
+    "expected_skill": "data_analysis",
+    "acceptable_skills": ["data_cleaning", "data_processing"],
+    "difficulty": "hard",
+    "notes": "输入包含清洗与分析两个动作，无明确主技能时以分析为主线。"
+  },
+  {
+    "id": "data_021",
+    "domain": "数据",
+    "input": "搭建BI看板并维护数据口径",
+    "type": "ambiguous",
+    "expected_skill": "data_visualization",
+    "acceptable_skills": ["metric_analysis", "data_quality_check"],
+    "difficulty": "hard",
+    "notes": "看板搭建是主要交付物，口径维护是配套动作。"
+  },
+  {
+    "id": "data_022",
+    "domain": "数据",
+    "input": "处理大批量日志数据并做转化漏斗分析",
+    "type": "ambiguous",
+    "expected_skill": "data_processing",
+    "acceptable_skills": ["data_analysis"],
+    "difficulty": "hard",
+    "notes": "该输入本身包含多技能信号，数据处理为前置主要动作。"
+  },
+  {
+    "id": "data_023",
+    "domain": "数据",
+    "input": "熟悉数据合规与个人信息保护（GDPR）要求",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "taxonomy 无数据合规/隐私技能，不应映射到数据质量检查。"
+  },
+  {
+    "id": "data_024",
+    "domain": "数据",
+    "input": "具备较强的逻辑思维与数据敏感度",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "素质类描述而非具体技能，应返回 unknown。"
+  },
+
+  {
+    "id": "office_001",
+    "domain": "办公软件",
+    "input": "数据透视表",
+    "type": "canonical",
+    "expected_skill": "pivot_table",
+    "acceptable_skills": ["excel"],
+    "difficulty": "easy",
+    "notes": "标准技能名称；若粒度合并到 Excel 也可接受。"
+  },
+  {
+    "id": "office_002",
+    "domain": "办公软件",
+    "input": "Word",
+    "type": "canonical",
+    "expected_skill": "word",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "技术/工具名称保留英文，应精确命中。"
+  },
+  {
+    "id": "office_003",
+    "domain": "办公软件",
+    "input": "电子表格",
+    "type": "alias",
+    "expected_skill": "excel",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "电子表格是 Excel 的别称。"
+  },
+  {
+    "id": "office_004",
+    "domain": "办公软件",
+    "input": "PPT",
+    "type": "alias",
+    "expected_skill": "powerpoint",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "PPT 是 PowerPoint 的稳定别称。"
+  },
+  {
+    "id": "office_005",
+    "domain": "办公软件",
+    "input": "VLOOKUP函数",
+    "type": "alias",
+    "expected_skill": "vlookup",
+    "acceptable_skills": ["excel"],
+    "difficulty": "easy",
+    "notes": "具体函数名对应 VLOOKUP/XLOOKUP 技能。"
+  },
+  {
+    "id": "office_006",
+    "domain": "办公软件",
+    "input": "Office办公软件",
+    "type": "alias",
+    "expected_skill": "office_suite",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "Office办公软件是综合办公技能 Office 的别称。"
+  },
+  {
+    "id": "office_007",
+    "domain": "办公软件",
+    "input": "演示文稿制作",
+    "type": "alias",
+    "expected_skill": "ppt_design",
+    "acceptable_skills": ["powerpoint"],
+    "difficulty": "easy",
+    "notes": "语境偏向完整演示材料制作，父技能 PowerPoint 可接受。"
+  },
+  {
+    "id": "office_008",
+    "domain": "办公软件",
+    "input": "用函数按条件汇总并分组统计大量行数据",
+    "type": "semantic",
+    "expected_skill": "pivot_table",
+    "acceptable_skills": ["excel"],
+    "difficulty": "medium",
+    "notes": "分组汇总与交叉统计是透视表的核心用途。"
+  },
+  {
+    "id": "office_009",
+    "domain": "办公软件",
+    "input": "统一全文的字体、行距与标题编号，输出符合规范的文档",
+    "type": "semantic",
+    "expected_skill": "document_formatting",
+    "acceptable_skills": ["word"],
+    "difficulty": "medium",
+    "notes": "重点是版式规范，属于文档排版。"
+  },
+  {
+    "id": "office_010",
+    "domain": "办公软件",
+    "input": "根据客户编号从另一张表带出对应负责人信息",
+    "type": "semantic",
+    "expected_skill": "vlookup",
+    "acceptable_skills": ["excel"],
+    "difficulty": "medium",
+    "notes": "跨表按键值匹配是查找函数的典型场景。"
+  },
+  {
+    "id": "office_011",
+    "domain": "办公软件",
+    "input": "制作季度汇报用的演示材料，梳理内容逻辑并统一视觉风格",
+    "type": "semantic",
+    "expected_skill": "ppt_design",
+    "acceptable_skills": ["powerpoint"],
+    "difficulty": "medium",
+    "notes": "强调交付质量与表达效果，属于 PPT制作。"
+  },
+  {
+    "id": "office_012",
+    "domain": "办公软件",
+    "input": "编写并规范合同、通知等正式文件",
+    "type": "semantic",
+    "expected_skill": "business_document_writing",
+    "acceptable_skills": ["word"],
+    "difficulty": "medium",
+    "notes": "重点是正式文档内容规范，不是纯排版。"
+  },
+  {
+    "id": "office_013",
+    "domain": "办公软件",
+    "input": "使用数据透视表和VLOOKUP汇总月度业务数据",
+    "type": "context",
+    "expected_skill": "excel",
+    "acceptable_skills": ["spreadsheet_processing"],
+    "difficulty": "easy",
+    "notes": "出现多个 Excel 典型功能，整体体现的是 Excel 工具能力。"
+  },
+  {
+    "id": "office_014",
+    "domain": "办公软件",
+    "input": "维护部门共享表格，统一字段格式并限制输入内容",
+    "type": "context",
+    "expected_skill": "spreadsheet_processing",
+    "acceptable_skills": ["excel"],
+    "difficulty": "medium",
+    "notes": "日常表格维护而非透视或函数分析，属于表格处理。"
+  },
+  {
+    "id": "office_015",
+    "domain": "办公软件",
+    "input": "为管理层制作年度总结PPT，包含数据图表和汇报讲稿",
+    "type": "context",
+    "expected_skill": "ppt_design",
+    "acceptable_skills": ["powerpoint", "data_visualization"],
+    "difficulty": "medium",
+    "notes": "产出物是完整汇报材料，属于 PPT制作而非单纯软件操作。"
+  },
+  {
+    "id": "office_016",
+    "domain": "办公软件",
+    "input": "调整公司报告模板的行距、字号与标题层级，使其符合排版规范",
+    "type": "context",
+    "expected_skill": "document_formatting",
+    "acceptable_skills": ["word"],
+    "difficulty": "medium",
+    "notes": "目标是版式规范，属于文档排版。"
+  },
+  {
+    "id": "office_017",
+    "domain": "办公软件",
+    "input": "使用Word的修订与批注功能完成合同评审并统一文档模板",
+    "type": "context",
+    "expected_skill": "word",
+    "acceptable_skills": ["business_document_writing"],
+    "difficulty": "medium",
+    "notes": "重点是 Word 的修订批注与模板操作，属于工具能力。"
+  },
+  {
+    "id": "office_018",
+    "domain": "办公软件",
+    "input": "起草项目立项书与会议纪要等正式内部文件",
+    "type": "context",
+    "expected_skill": "business_document_writing",
+    "acceptable_skills": ["word"],
+    "difficulty": "medium",
+    "notes": "产出物是正式商务文档内容。"
+  },
+  {
+    "id": "office_019",
+    "domain": "办公软件",
+    "input": "Excel数据处理与分析",
+    "type": "ambiguous",
+    "expected_skill": "excel",
+    "acceptable_skills": ["excel_data_analysis", "data_analysis"],
+    "difficulty": "hard",
+    "notes": "输入同时命中 Excel 与数据分析；强调工具本身时取 Excel，强调分析结论时交叉技能也可接受。"
+  },
+  {
+    "id": "office_020",
+    "domain": "办公软件",
+    "input": "表格处理与数据整理",
+    "type": "ambiguous",
+    "expected_skill": "spreadsheet_processing",
+    "acceptable_skills": ["excel", "data_processing"],
+    "difficulty": "hard",
+    "notes": "两个近义表达叠加，表格处理为最直接的技能。"
+  },
+  {
+    "id": "office_021",
+    "domain": "办公软件",
+    "input": "制作PPT并做数据展示",
+    "type": "ambiguous",
+    "expected_skill": "ppt_design",
+    "acceptable_skills": ["data_visualization", "powerpoint"],
+    "difficulty": "hard",
+    "notes": "主要交付物是演示材料，数据展示是其中一部分。"
+  },
+  {
+    "id": "office_022",
+    "domain": "办公软件",
+    "input": "文档排版与PPT美化",
+    "type": "ambiguous",
+    "expected_skill": "document_formatting",
+    "acceptable_skills": ["ppt_design", "word", "powerpoint"],
+    "difficulty": "hard",
+    "notes": "输入包含两个并列技能且无明确主技能，按输入顺序取前者；两个技能都应出现在 Top-K。"
+  },
+  {
+    "id": "office_023",
+    "domain": "办公软件",
+    "input": "熟练使用打印机和扫描仪",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "硬件设备操作不属于办公软件技能，应返回 unknown。"
+  },
+  {
+    "id": "office_024",
+    "domain": "办公软件",
+    "input": "会用飞书/钉钉进行日常审批",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "飞书/钉钉属于协作平台，与 Office 办公软件不是同一技能，不应映射到 office_suite。"
+  },
+
+  {
+    "id": "software_001",
+    "domain": "软件开发",
+    "input": "FastAPI",
+    "type": "canonical",
+    "expected_skill": "fastapi",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "框架名称保留英文，应精确命中。"
+  },
+  {
+    "id": "software_002",
+    "domain": "软件开发",
+    "input": "React",
+    "type": "canonical",
+    "expected_skill": "react",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "框架名称保留英文，应精确命中。"
+  },
+  {
+    "id": "software_003",
+    "domain": "软件开发",
+    "input": "Python编程",
+    "type": "alias",
+    "expected_skill": "python",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "Python编程是 Python 的别称，不应落到 Python后端开发。"
+  },
+  {
+    "id": "software_004",
+    "domain": "软件开发",
+    "input": "Git版本控制",
+    "type": "alias",
+    "expected_skill": "git",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "Git版本控制是 Git 的别称。"
+  },
+  {
+    "id": "software_005",
+    "domain": "软件开发",
+    "input": "REST接口",
+    "type": "alias",
+    "expected_skill": "rest_api",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "REST接口对应 REST API 技能。"
+  },
+  {
+    "id": "software_006",
+    "domain": "软件开发",
+    "input": "容器化",
+    "type": "alias",
+    "expected_skill": "docker",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "容器化在本 taxonomy 中等同于 Docker 应用能力。"
+  },
+  {
+    "id": "software_007",
+    "domain": "软件开发",
+    "input": "JS",
+    "type": "alias",
+    "expected_skill": "javascript",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "JS 是 JavaScript 的通用缩写。"
+  },
+  {
+    "id": "software_008",
+    "domain": "软件开发",
+    "input": "搭建Web接口并对接前端完成数据交互",
+    "type": "semantic",
+    "expected_skill": "rest_api",
+    "acceptable_skills": ["backend_development"],
+    "difficulty": "medium",
+    "notes": "重点是接口设计与交互，不限定框架。"
+  },
+  {
+    "id": "software_009",
+    "domain": "软件开发",
+    "input": "为服务编写自动化用例，覆盖异常分支",
+    "type": "semantic",
+    "expected_skill": "unit_testing",
+    "acceptable_skills": ["python", "java"],
+    "difficulty": "medium",
+    "notes": "核心是测试用例编写，语言只是实现手段。"
+  },
+  {
+    "id": "software_010",
+    "domain": "软件开发",
+    "input": "把应用打包成镜像并在服务器上部署运行",
+    "type": "semantic",
+    "expected_skill": "docker",
+    "acceptable_skills": ["linux"],
+    "difficulty": "medium",
+    "notes": "镜像打包与容器运行是 Docker 能力，不包含集群编排。"
+  },
+  {
+    "id": "software_011",
+    "domain": "软件开发",
+    "input": "在服务器上排查进程与日志，配置定时任务",
+    "type": "semantic",
+    "expected_skill": "linux",
+    "acceptable_skills": ["docker"],
+    "difficulty": "medium",
+    "notes": "典型 Linux 服务器操作与排查。"
+  },
+  {
+    "id": "software_012",
+    "domain": "软件开发",
+    "input": "用组件化方式开发可复用的页面模块",
+    "type": "semantic",
+    "expected_skill": "react",
+    "acceptable_skills": ["frontend_development", "javascript"],
+    "difficulty": "medium",
+    "notes": "组件化开发在 taxonomy 中由 React 承载，通用前端开发可接受。"
+  },
+  {
+    "id": "software_013",
+    "domain": "软件开发",
+    "input": "使用FastAPI开发REST接口，并通过Pydantic校验请求参数",
+    "type": "context",
+    "expected_skill": "fastapi",
+    "acceptable_skills": ["python_backend_development", "rest_api"],
+    "difficulty": "easy",
+    "notes": "FastAPI 是直接出现且最具体的技术能力。"
+  },
+  {
+    "id": "software_014",
+    "domain": "软件开发",
+    "input": "使用React和TypeScript开发管理后台页面，并对接后端接口",
+    "type": "context",
+    "expected_skill": "react",
+    "acceptable_skills": ["typescript", "frontend_development"],
+    "difficulty": "medium",
+    "notes": "输入包含多技术栈，React 是主要开发框架，TypeScript 为配套语言。"
+  },
+  {
+    "id": "software_015",
+    "domain": "软件开发",
+    "input": "编写SQL完成多表关联查询并优化慢查询",
+    "type": "context",
+    "expected_skill": "sql",
+    "acceptable_skills": ["database_development"],
+    "difficulty": "medium",
+    "notes": "查询编写是主线；涉及性能优化时可接受数据库开发。"
+  },
+  {
+    "id": "software_016",
+    "domain": "软件开发",
+    "input": "使用Git进行分支管理、代码合并和冲突解决",
+    "type": "context",
+    "expected_skill": "git",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "版本管理动作明确，属于 Git。"
+  },
+  {
+    "id": "software_017",
+    "domain": "软件开发",
+    "input": "基于Python搭建后端服务，设计数据模型并实现业务接口",
+    "type": "context",
+    "expected_skill": "python_backend_development",
+    "acceptable_skills": ["backend_development", "python"],
+    "difficulty": "medium",
+    "notes": "语言与方向都很明确，交叉技能 Python后端开发 最贴切。"
+  },
+  {
+    "id": "software_018",
+    "domain": "软件开发",
+    "input": "开发前端页面并适配移动端布局",
+    "type": "context",
+    "expected_skill": "frontend_development",
+    "acceptable_skills": ["javascript", "react"],
+    "difficulty": "medium",
+    "notes": "未指定框架，属于通用前端开发。"
+  },
+  {
+    "id": "software_019",
+    "domain": "软件开发",
+    "input": "使用Python和FastAPI完成后端接口开发",
+    "type": "ambiguous",
+    "expected_skill": "fastapi",
+    "acceptable_skills": ["python", "python_backend_development", "backend_development"],
+    "difficulty": "hard",
+    "notes": "该输入包含多维技能信号，FastAPI 最具体；语言与通用后端技能均可接受。"
+  },
+  {
+    "id": "software_020",
+    "domain": "软件开发",
+    "input": "开发后端接口并完成数据库表结构设计",
+    "type": "ambiguous",
+    "expected_skill": "backend_development",
+    "acceptable_skills": ["database_development", "rest_api"],
+    "difficulty": "hard",
+    "notes": "接口开发为主动作，表结构设计为并列技能，两者都应出现在 Top-K。"
+  },
+  {
+    "id": "software_021",
+    "domain": "软件开发",
+    "input": "使用SQL进行数据查询与数据分析",
+    "type": "ambiguous",
+    "expected_skill": "sql",
+    "acceptable_skills": ["data_analysis"],
+    "difficulty": "hard",
+    "notes": "工具明确为 SQL，分析倾向只能作为可接受答案。"
+  },
+  {
+    "id": "software_022",
+    "domain": "软件开发",
+    "input": "熟悉Java和Spring Boot框架",
+    "type": "ambiguous",
+    "expected_skill": "java",
+    "acceptable_skills": [],
+    "difficulty": "hard",
+    "notes": "Spring Boot 未收录，但 Java 明确出现，因此不应整体判 unknown；建议后续新增 spring_boot。"
+  },
+  {
+    "id": "software_023",
+    "domain": "软件开发",
+    "input": "熟悉Kubernetes集群运维",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "taxonomy 无容器编排/集群运维技能，Docker 不等价，不应映射。"
+  },
+  {
+    "id": "software_024",
+    "domain": "软件开发",
+    "input": "具备较强的学习能力和团队协作意识",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "软性素质，不是技术技能，应返回 unknown。"
+  },
+
+  {
+    "id": "product_001",
+    "domain": "产品",
+    "input": "需求管理",
+    "type": "canonical",
+    "expected_skill": "requirements_management",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "标准技能名称，不应落到需求分析或产品管理。"
+  },
+  {
+    "id": "product_002",
+    "domain": "产品",
+    "input": "竞品分析",
+    "type": "canonical",
+    "expected_skill": "competitor_analysis",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "标准技能名称，应精确命中。"
+  },
+  {
+    "id": "product_003",
+    "domain": "产品",
+    "input": "用户调研",
+    "type": "alias",
+    "expected_skill": "user_research",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "用户调研是用户研究的别称。"
+  },
+  {
+    "id": "product_004",
+    "domain": "产品",
+    "input": "版本迭代",
+    "type": "alias",
+    "expected_skill": "product_iteration",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "版本迭代是产品迭代的别称。"
+  },
+  {
+    "id": "product_005",
+    "domain": "产品",
+    "input": "原型制作",
+    "type": "alias",
+    "expected_skill": "prototyping",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "原型制作是原型设计的别称。"
+  },
+  {
+    "id": "product_006",
+    "domain": "产品",
+    "input": "业务需求分析",
+    "type": "alias",
+    "expected_skill": "requirements_analysis",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "业务需求分析是需求分析的别称。"
+  },
+  {
+    "id": "product_007",
+    "domain": "产品",
+    "input": "跨团队协作",
+    "type": "alias",
+    "expected_skill": "cross_functional_collaboration",
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "跨团队协作是跨部门协作的别称。"
+  },
+  {
+    "id": "product_008",
+    "domain": "产品",
+    "input": "通过访谈和问卷了解目标用户的使用痛点",
+    "type": "semantic",
+    "expected_skill": "user_research",
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "使用研究方法主动获取洞察，属于用户研究。"
+  },
+  {
+    "id": "product_009",
+    "domain": "产品",
+    "input": "对比同类产品功能与价格，输出差异化机会点",
+    "type": "semantic",
+    "expected_skill": "competitor_analysis",
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "外部产品对比，属于竞品分析。"
+  },
+  {
+    "id": "product_010",
+    "domain": "产品",
+    "input": "把零散的用户诉求整理成结构化需求并同步给研发",
+    "type": "semantic",
+    "expected_skill": "requirements_management",
+    "acceptable_skills": ["requirements_analysis", "user_feedback_analysis"],
+    "difficulty": "medium",
+    "notes": "重点是需求的整理与流转，属于需求管理。"
+  },
+  {
+    "id": "product_011",
+    "domain": "产品",
+    "input": "规划未来半年的功能方向与版本节奏",
+    "type": "semantic",
+    "expected_skill": "product_planning",
+    "acceptable_skills": ["product_iteration"],
+    "difficulty": "medium",
+    "notes": "中长期方向与节奏设计，属于产品规划。"
+  },
+  {
+    "id": "product_012",
+    "domain": "产品",
+    "input": "绘制页面流程与交互稿，确认关键路径",
+    "type": "semantic",
+    "expected_skill": "prototyping",
+    "acceptable_skills": ["requirements_analysis"],
+    "difficulty": "medium",
+    "notes": "产出物是原型与交互稿，属于原型设计。"
+  },
+  {
+    "id": "product_013",
+    "domain": "产品",
+    "input": "整理用户反馈并输出需求优先级，推动研发完成版本迭代",
+    "type": "context",
+    "expected_skill": "requirements_management",
+    "acceptable_skills": ["requirement_prioritization", "product_management"],
+    "difficulty": "medium",
+    "notes": "重点是需求收集、排序和推进，属于需求管理；该输入本身含多技能信号。"
+  },
+  {
+    "id": "product_014",
+    "domain": "产品",
+    "input": "撰写PRD文档，明确功能逻辑、字段规则和异常流程",
+    "type": "context",
+    "expected_skill": "prd",
+    "acceptable_skills": ["requirements_management"],
+    "difficulty": "easy",
+    "notes": "产出物是 PRD，直接命中该技能。"
+  },
+  {
+    "id": "product_015",
+    "domain": "产品",
+    "input": "拉通设计、研发和测试，推动版本按期上线",
+    "type": "context",
+    "expected_skill": "cross_functional_collaboration",
+    "acceptable_skills": ["project_management", "product_iteration"],
+    "difficulty": "hard",
+    "notes": "核心是横向协调多方，属于跨部门协作；若强调交付计划则可接受项目管理。"
+  },
+  {
+    "id": "product_016",
+    "domain": "产品",
+    "input": "监控功能上线后的使用数据，评估迭代效果",
+    "type": "context",
+    "expected_skill": "product_data_analysis",
+    "acceptable_skills": ["data_analysis"],
+    "difficulty": "medium",
+    "notes": "分析对象是产品功能数据，属于产品数据分析。"
+  },
+  {
+    "id": "product_017",
+    "domain": "产品",
+    "input": "收集应用商店差评与客服工单，归纳高频问题",
+    "type": "context",
+    "expected_skill": "user_feedback_analysis",
+    "acceptable_skills": ["requirements_management"],
+    "difficulty": "medium",
+    "notes": "重点是反馈信息的收集归纳，不等同于用研访谈。"
+  },
+  {
+    "id": "product_018",
+    "domain": "产品",
+    "input": "根据上线反馈规划下一版本的功能范围",
+    "type": "context",
+    "expected_skill": "product_iteration",
+    "acceptable_skills": ["product_planning"],
+    "difficulty": "medium",
+    "notes": "范围限定在下一个版本，属于产品迭代而非长期规划。"
+  },
+  {
+    "id": "product_019",
+    "domain": "产品",
+    "input": "负责需求收集、评审、排期和上线跟进",
+    "type": "ambiguous",
+    "expected_skill": "requirements_management",
+    "acceptable_skills": ["product_iteration", "project_management"],
+    "difficulty": "hard",
+    "notes": "该输入本身包含多技能信号，需求全流程管理为主线。"
+  },
+  {
+    "id": "product_020",
+    "domain": "产品",
+    "input": "协调各方资源推进项目按计划交付",
+    "type": "ambiguous",
+    "expected_skill": "project_management",
+    "acceptable_skills": ["cross_functional_collaboration"],
+    "difficulty": "hard",
+    "notes": "重点是项目计划与交付，跨部门协作只是手段。"
+  },
+  {
+    "id": "product_021",
+    "domain": "产品",
+    "input": "负责产品全生命周期管理，包括需求分析、规划和上线",
+    "type": "ambiguous",
+    "expected_skill": "product_management",
+    "acceptable_skills": ["requirements_analysis", "product_planning", "product_iteration"],
+    "difficulty": "hard",
+    "notes": "覆盖多个子技能且无单一主技能，父技能产品管理最稳。"
+  },
+  {
+    "id": "product_022",
+    "domain": "产品",
+    "input": "根据数据表现调整需求优先级",
+    "type": "ambiguous",
+    "expected_skill": "requirement_prioritization",
+    "acceptable_skills": ["product_data_analysis", "requirements_management"],
+    "difficulty": "hard",
+    "notes": "落点是需求排序，数据只是判断依据。"
+  },
+  {
+    "id": "product_023",
+    "domain": "产品",
+    "input": "熟悉产品视觉设计规范",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "medium",
+    "notes": "taxonomy 无视觉/UI设计技能，不应映射到原型设计。"
+  },
+  {
+    "id": "product_024",
+    "domain": "产品",
+    "input": "有创业经历，具备较强的商业敏感度",
+    "type": "unknown",
+    "expected_skill": null,
+    "acceptable_skills": [],
+    "difficulty": "easy",
+    "notes": "经历与素质类描述，不是具体产品技能，应返回 unknown。"
+  }
+]

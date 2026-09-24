@@ -27,7 +27,7 @@ python -m unittest discover -s tests -v
 ## 前端页面
 
 项目新增了 `frontend/` 前端页面与 `api_server.py` 桥接层。
-桥接层仅导入现有 `app/` 模块，未修改任何后端代码。
+桥接层复用 `SkillNormalizer`，并和 CLI 使用同一套本地 BGE 语义匹配流程。
 
 ```bash
 pip install -r requirements.txt
@@ -40,4 +40,4 @@ uvicorn api_server:app --reload --host 127.0.0.1 --port 8000
 - 批量技能标准化
 - Taxonomy 浏览与搜索
 
-注意：当前语义模型尚未接入，因此只有精确匹配（标准名称或 Alias）会返回 `exact` 结果；其余表达会按现有逻辑返回 `review` 或 `unknown`。
+API 进程启动时不会立即加载模型；首次出现未命中 Alias 的请求时，才从 `models/bge-small-zh-v1.5` 加载模型。后续请求复用同一个模型和 Taxonomy Embedding。
