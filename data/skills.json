@@ -1,0 +1,647 @@
+[
+  {
+    "id": "cross_border_ecommerce_operation",
+    "name": "跨境电商运营",
+    "domain": "跨境电商/运营",
+    "description": "面向海外市场开展平台店铺与商品运营，涉及跨境物流、合规和海外市场需求判断。区别于面向国内市场的电商运营。",
+    "aliases": ["跨境电商", "跨境运营"],
+    "parent_id": null
+  },
+  {
+    "id": "ecommerce_operation",
+    "name": "电商运营",
+    "domain": "跨境电商/运营",
+    "description": "负责电商平台店铺的整体运营，统筹流量、转化、活动和销售目标。重点是店铺整体经营，不等同于单个商品的运营动作。",
+    "aliases": ["电商平台运营", "网店运营", "店铺运营"],
+    "parent_id": null
+  },
+  {
+    "id": "product_operation",
+    "name": "商品运营",
+    "domain": "跨境电商/运营",
+    "description": "围绕商品生命周期开展上新、商品表现监控、商品信息优化和淘汰等运营活动。重点是商品本身，不等同于店铺整体运营。",
+    "aliases": ["商品管理", "商品运营能力"],
+    "parent_id": null
+  },
+  {
+    "id": "product_listing",
+    "name": "商品上新",
+    "domain": "跨境电商/运营",
+    "description": "完成新品资料准备、上架发布与类目属性维护，强调商品进入销售前的发布动作，不包含选品决策。",
+    "aliases": ["商品上架", "新品上架"],
+    "parent_id": "product_operation"
+  },
+  {
+    "id": "product_selection",
+    "name": "选品",
+    "domain": "跨境电商/运营",
+    "description": "基于市场需求、竞品表现和利润空间挑选待销售商品，重点是决定卖什么，不包含上架执行。",
+    "aliases": ["商品选品", "选款"],
+    "parent_id": "product_operation"
+  },
+  {
+    "id": "pricing_strategy",
+    "name": "定价",
+    "domain": "跨境电商/运营",
+    "description": "结合成本、竞品价格和促销目标制定商品售价与价格带策略，核心是价格决策本身。",
+    "aliases": ["商品定价", "价格策略"],
+    "parent_id": "product_operation"
+  },
+  {
+    "id": "campaign_operation",
+    "name": "活动运营",
+    "domain": "跨境电商/运营",
+    "description": "策划并执行平台大促和日常促销活动，包括活动报名、优惠规则和资源位投放。重点是活动方案与执行，区别于商品日常运营。",
+    "aliases": ["促销活动运营", "大促运营"],
+    "parent_id": null
+  },
+  {
+    "id": "conversion_rate_optimization",
+    "name": "转化率优化",
+    "domain": "跨境电商/运营",
+    "description": "通过详情页、评价、价格和流量结构等环节的优化提升下单转化率，核心指标是转化率而不是流量规模。",
+    "aliases": ["转化优化", "详情页转化优化"],
+    "parent_id": null
+  },
+  {
+    "id": "traffic_analysis",
+    "name": "流量分析",
+    "domain": "跨境电商/运营",
+    "description": "分析店铺或商品的曝光、点击、访客来源和流量结构，定位流量变化原因。重点是流量本身，不包含成交和库存判断。",
+    "aliases": ["流量结构分析", "渠道流量分析"],
+    "parent_id": null
+  },
+  {
+    "id": "inventory_management",
+    "name": "库存管理",
+    "domain": "跨境电商/运营",
+    "description": "对库存水平进行规划、监控和控制，包括库存风险、周转及整体库存状态管理，是库存预测、补货管理和库存控制的父技能。",
+    "aliases": ["库存管控", "库存管理能力"],
+    "parent_id": null
+  },
+  {
+    "id": "inventory_forecasting",
+    "name": "库存预测",
+    "domain": "跨境电商/运营",
+    "description": "基于历史销量、需求和业务计划预测未来库存需求。重点是预测，不包含实际补货执行。",
+    "aliases": ["库存需求预测", "库存量预测"],
+    "parent_id": "inventory_management"
+  },
+  {
+    "id": "replenishment_management",
+    "name": "补货管理",
+    "domain": "跨境电商/运营",
+    "description": "根据库存状态和需求预测制定或执行补货计划。重点是补货决策与执行，不包含需求预测本身。",
+    "aliases": ["补货计划", "补货管理能力"],
+    "parent_id": "inventory_management"
+  },
+  {
+    "id": "inventory_control",
+    "name": "库存控制",
+    "domain": "跨境电商/运营",
+    "description": "通过库存结构、周转和安全库存等手段控制积压与缺货风险。重点是存量管控，区别于补货执行动作。",
+    "aliases": ["库存风险控制", "库存周转管理"],
+    "parent_id": "inventory_management"
+  },
+  {
+    "id": "order_management",
+    "name": "订单管理",
+    "domain": "跨境电商/运营",
+    "description": "处理订单生成、发货、退换货和异常订单，保证履约时效与准确性。",
+    "aliases": ["订单处理", "订单履约跟进"],
+    "parent_id": null
+  },
+  {
+    "id": "supply_chain_management",
+    "name": "供应链管理",
+    "domain": "跨境电商/运营",
+    "description": "协同供应商、采购、仓储和物流等环节保障履约，覆盖范围大于单一库存或订单环节。",
+    "aliases": ["供应链运营", "供应链协同"],
+    "parent_id": null
+  },
+  {
+    "id": "tiktok_shop_operation",
+    "name": "TikTok Shop运营",
+    "domain": "跨境电商/运营",
+    "description": "在 TikTok Shop 平台完成店铺搭建、商品上架和平台活动报名等店铺侧运营工作，不包含达人合作与红人营销。",
+    "aliases": ["TikTok Shop", "TK小店运营"],
+    "parent_id": "cross_border_ecommerce_operation"
+  },
+
+  {
+    "id": "recruitment",
+    "name": "招聘",
+    "domain": "HR/招聘",
+    "description": "负责招聘工作的整体推进，涵盖需求确认、人才寻访、筛选、面试和录用等环节，是招聘类子技能的父技能。",
+    "aliases": ["人才招聘", "招聘管理"],
+    "parent_id": null
+  },
+  {
+    "id": "resume_screening",
+    "name": "简历筛选",
+    "domain": "HR/招聘",
+    "description": "根据岗位要求判断简历与候选人的匹配度并筛出进入下一轮的人选，重点是对简历文本的判断。",
+    "aliases": ["简历初筛", "简历评估"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "talent_sourcing",
+    "name": "人才寻访",
+    "domain": "HR/招聘",
+    "description": "通过招聘网站、社交平台等渠道主动寻找并接触潜在候选人。重点是主动获取候选人，不等同于筛选投递简历。",
+    "aliases": ["人才搜寻", "候选人寻访"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "candidate_communication",
+    "name": "候选人沟通",
+    "domain": "HR/招聘",
+    "description": "与候选人保持日常沟通，包括意向确认、流程说明和关系维护。重点是沟通本身，不包含面试安排和录用手续。",
+    "aliases": ["候选沟通", "候选人关系维护"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "interview_scheduling",
+    "name": "面试邀约",
+    "domain": "HR/招聘",
+    "description": "联系候选人确认面试时间并发送面试通知。重点是候选人侧的邀约与时间确认。",
+    "aliases": ["面试安排", "面试通知"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "interview_coordination",
+    "name": "面试协调",
+    "domain": "HR/招聘",
+    "description": "协调业务面试官时间、面试形式与流程调整，重点是多方时间与流程协调，区别于单纯的候选人邀约。",
+    "aliases": ["面试协调安排", "面试流程协调"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "interview_evaluation",
+    "name": "面试评估",
+    "domain": "HR/招聘",
+    "description": "整理面试官评价并形成候选人评估结论，重点是面试反馈的汇总与判断，不包含面试安排。",
+    "aliases": ["面试评价", "面评"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "recruitment_channel_management",
+    "name": "招聘渠道管理",
+    "domain": "HR/招聘",
+    "description": "负责招聘渠道的开拓、投放效果和合作关系管理，重点是渠道资源与渠道效率，而非单个候选人。",
+    "aliases": ["招聘渠道维护", "渠道运营管理"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "recruitment_requirement_analysis",
+    "name": "招聘需求分析",
+    "domain": "HR/招聘",
+    "description": "与业务方确认岗位画像、招聘数量、优先级和到岗时间，回答招什么人、招多少的问题。",
+    "aliases": ["招聘需求梳理", "职位需求分析"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "jd_writing",
+    "name": "JD撰写",
+    "domain": "HR/招聘",
+    "description": "根据岗位要求编写职位描述与任职资格，重点是职位文本的产出。",
+    "aliases": ["职位描述撰写", "岗位JD编写"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "recruitment_data_analysis",
+    "name": "招聘数据分析",
+    "domain": "HR/招聘",
+    "description": "统计简历量、渠道转化、招聘周期等指标，评估招聘效率，重点是招聘业务侧的数据分析。",
+    "aliases": ["招聘数据统计", "招聘漏斗分析"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "offer_management",
+    "name": "Offer管理",
+    "domain": "HR/招聘",
+    "description": "负责薪资沟通、offer 发放与录用跟进，重点是录用决策之后的沟通与手续办理。",
+    "aliases": ["offer沟通", "录用沟通"],
+    "parent_id": "recruitment"
+  },
+  {
+    "id": "talent_pool_management",
+    "name": "人才库管理",
+    "domain": "HR/招聘",
+    "description": "维护历史候选人的信息与标签，支持后续职位的二次触达，重点是人才资产的沉淀与运营。",
+    "aliases": ["人才库运营", "候选人库管理"],
+    "parent_id": "recruitment"
+  },
+
+  {
+    "id": "data_analysis",
+    "name": "数据分析",
+    "domain": "数据",
+    "description": "对业务数据进行整理、统计和解读，并据此支持业务判断，是数据类技能中较通用的分析能力。",
+    "aliases": ["数据分析能力", "业务数据分析"],
+    "parent_id": null
+  },
+  {
+    "id": "data_processing",
+    "name": "数据处理",
+    "domain": "数据",
+    "description": "对原始数据进行提取、转换、合并和格式化等加工处理，为分析或建模准备可用数据。",
+    "aliases": ["数据整理", "数据加工"],
+    "parent_id": null
+  },
+  {
+    "id": "data_cleaning",
+    "name": "数据清洗",
+    "domain": "数据",
+    "description": "处理缺失值、重复值和异常值以提升数据可用性，重点是数据质量修正，区别于通用数据处理。",
+    "aliases": ["数据清洗能力", "脏数据处理"],
+    "parent_id": "data_processing"
+  },
+  {
+    "id": "data_visualization",
+    "name": "数据可视化",
+    "domain": "数据",
+    "description": "使用图表和看板呈现数据结论，重点是呈现方式，不包含分析结论本身的产出。",
+    "aliases": ["可视化报表", "数据图表制作"],
+    "parent_id": null
+  },
+  {
+    "id": "statistical_analysis",
+    "name": "统计分析",
+    "domain": "数据",
+    "description": "使用统计方法和假设检验对数据进行推断性分析，常用于实验效果和显著性判断。",
+    "aliases": ["统计分析方法", "数理统计"],
+    "parent_id": null
+  },
+  {
+    "id": "excel_data_analysis",
+    "name": "Excel数据分析",
+    "domain": "数据",
+    "description": "使用 Excel 完成数据汇总与分析并输出业务结论，是 Excel 工具能力与数据分析能力的交叉技能。",
+    "aliases": ["Excel数据统计分析", "Excel业务分析"],
+    "parent_id": null
+  },
+  {
+    "id": "sql",
+    "name": "SQL",
+    "domain": "数据",
+    "description": "使用 SQL 编写查询语句完成数据提取、关联与聚合，重点是查询语言本身，不包含表结构设计与调优。",
+    "aliases": ["SQL查询", "数据库查询"],
+    "parent_id": null
+  },
+  {
+    "id": "python_data_analysis",
+    "name": "Python数据分析",
+    "domain": "数据",
+    "description": "使用 Python（pandas 等）完成数据清洗、聚合与统计分析，重点是 Python 工具链下的数据分析。",
+    "aliases": ["Python数据统计分析", "pandas数据分析"],
+    "parent_id": null
+  },
+  {
+    "id": "metric_analysis",
+    "name": "指标分析",
+    "domain": "数据",
+    "description": "围绕业务指标体系进行监控、拆解和归因，重点在指标口径定义与指标变化解释。",
+    "aliases": ["业务指标分析", "核心指标监控"],
+    "parent_id": "data_analysis"
+  },
+  {
+    "id": "report_generation",
+    "name": "报表制作",
+    "domain": "数据",
+    "description": "按固定周期制作报表，强调数据汇总和按期交付，不必然包含深度分析与结论输出。",
+    "aliases": ["报表产出", "数据报表制作"],
+    "parent_id": null
+  },
+  {
+    "id": "data_modeling",
+    "name": "数据建模",
+    "domain": "数据",
+    "description": "基于业务与统计方法构建预测、评分或分层模型，重点是模型方法，不包含数据仓库分层建模。",
+    "aliases": ["数据模型设计", "业务数据建模"],
+    "parent_id": null
+  },
+  {
+    "id": "data_quality_check",
+    "name": "数据质量检查",
+    "domain": "数据",
+    "description": "校验数据口径、完整性和一致性，发现并报告数据问题，重点在质量校验而非数据修正执行。",
+    "aliases": ["数据校验", "数据质量校验"],
+    "parent_id": "data_processing"
+  },
+
+  {
+    "id": "excel",
+    "name": "Excel",
+    "domain": "办公软件",
+    "description": "使用 Excel 完成表格录入、公式计算和数据整理，重点是工具本身；数据透视表和查找函数属于其子技能。",
+    "aliases": ["电子表格", "Excel表格"],
+    "parent_id": null
+  },
+  {
+    "id": "pivot_table",
+    "name": "数据透视表",
+    "domain": "办公软件",
+    "description": "使用透视表对大量明细数据做分组汇总和交叉统计，重点是透视分析这一具体功能。",
+    "aliases": ["透视表", "数据透视分析"],
+    "parent_id": "excel"
+  },
+  {
+    "id": "vlookup",
+    "name": "VLOOKUP/XLOOKUP",
+    "domain": "办公软件",
+    "description": "使用查找类函数完成跨表数据匹配，重点是键值匹配与数据核对。",
+    "aliases": ["VLOOKUP函数", "查找函数", "XLOOKUP"],
+    "parent_id": "excel"
+  },
+  {
+    "id": "spreadsheet_processing",
+    "name": "表格处理",
+    "domain": "办公软件",
+    "description": "对表格做结构维护、格式统一和批量整理，重点在表格数据的日常维护，不强调函数或透视分析。",
+    "aliases": ["表格处理能力", "电子表格处理"],
+    "parent_id": "excel"
+  },
+  {
+    "id": "word",
+    "name": "Word",
+    "domain": "办公软件",
+    "description": "使用 Word 撰写、编辑和修订文档，重点是文档内容生产与工具使用，排版规范属于其子技能。",
+    "aliases": ["Word文档", "微软Word"],
+    "parent_id": null
+  },
+  {
+    "id": "document_formatting",
+    "name": "文档排版",
+    "domain": "办公软件",
+    "description": "统一文档的字体、行距、标题层级和页码等版式规范，重点是版式质量而非内容撰写。",
+    "aliases": ["排版美化", "文档格式调整"],
+    "parent_id": "word"
+  },
+  {
+    "id": "powerpoint",
+    "name": "PowerPoint",
+    "domain": "办公软件",
+    "description": "使用 PowerPoint 完成演示文稿的基础制作和编辑，重点是软件操作本身。",
+    "aliases": ["PPT", "幻灯片"],
+    "parent_id": null
+  },
+  {
+    "id": "ppt_design",
+    "name": "PPT制作",
+    "domain": "办公软件",
+    "description": "从内容逻辑到视觉风格完成一套演示材料，强调交付质量与表达效果，而不只是软件操作。",
+    "aliases": ["演示文稿制作", "PPT美化"],
+    "parent_id": "powerpoint"
+  },
+  {
+    "id": "office_suite",
+    "name": "Office",
+    "domain": "办公软件",
+    "description": "综合使用 Word、Excel、PowerPoint 等办公软件完成日常办公任务，强调跨软件的综合办公能力。",
+    "aliases": ["Office办公软件", "微软Office"],
+    "parent_id": null
+  },
+  {
+    "id": "business_document_writing",
+    "name": "商务文档制作",
+    "domain": "办公软件",
+    "description": "撰写合同、报告、通知等正式商务文档，重点是文档内容的规范与完整，而非纯排版。",
+    "aliases": ["商务文档撰写", "商业文档制作"],
+    "parent_id": null
+  },
+
+  {
+    "id": "python",
+    "name": "Python",
+    "domain": "软件开发",
+    "description": "使用 Python 进行软件开发、脚本编写和自动化处理，重点是语言本身。",
+    "aliases": ["Python编程", "Python开发"],
+    "parent_id": null
+  },
+  {
+    "id": "java",
+    "name": "Java",
+    "domain": "软件开发",
+    "description": "使用 Java 进行服务端或应用开发，重点是语言本身，具体框架需要单独描述。",
+    "aliases": ["Java编程", "Java开发"],
+    "parent_id": null
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "domain": "软件开发",
+    "description": "使用 JavaScript 进行页面或脚本开发，重点是语言本身。",
+    "aliases": ["JS", "JS开发"],
+    "parent_id": null
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "domain": "软件开发",
+    "description": "使用 TypeScript 进行带类型约束的前端或 Node 开发，重点是类型化语言能力。",
+    "aliases": ["TS", "TS开发"],
+    "parent_id": null
+  },
+  {
+    "id": "react",
+    "name": "React",
+    "domain": "软件开发",
+    "description": "使用 React 构建组件化前端界面，重点是组件开发与状态管理，不等同于通用前端开发。",
+    "aliases": ["React开发", "React前端"],
+    "parent_id": null
+  },
+  {
+    "id": "fastapi",
+    "name": "FastAPI",
+    "domain": "软件开发",
+    "description": "使用 FastAPI 框架开发 Python Web 接口，包括路由、参数校验和依赖注入。",
+    "aliases": ["FastAPI开发", "FastAPI框架"],
+    "parent_id": null
+  },
+  {
+    "id": "rest_api",
+    "name": "REST API",
+    "domain": "软件开发",
+    "description": "按照 REST 规范设计并开发 HTTP 接口，重点是接口设计与交互，不限定具体框架。",
+    "aliases": ["REST接口", "HTTP接口开发"],
+    "parent_id": null
+  },
+  {
+    "id": "backend_development",
+    "name": "后端开发",
+    "domain": "软件开发",
+    "description": "负责服务端业务逻辑、接口和数据交互的整体开发，是通用后端能力，不限定语言与框架。",
+    "aliases": ["服务端开发", "后端服务开发"],
+    "parent_id": null
+  },
+  {
+    "id": "python_backend_development",
+    "name": "Python后端开发",
+    "domain": "软件开发",
+    "description": "使用 Python 开发服务端业务接口与数据逻辑，是 Python 与后端开发的交叉技能。",
+    "aliases": ["Python服务端开发"],
+    "parent_id": "backend_development"
+  },
+  {
+    "id": "frontend_development",
+    "name": "前端开发",
+    "domain": "软件开发",
+    "description": "负责网页界面与交互实现，包括布局适配，是通用前端能力，不限定具体框架。",
+    "aliases": ["Web前端", "前端页面开发"],
+    "parent_id": null
+  },
+  {
+    "id": "database_development",
+    "name": "数据库开发",
+    "domain": "软件开发",
+    "description": "负责数据库表结构设计、索引与查询优化等开发工作，区别于单纯的 SQL 查询使用。",
+    "aliases": ["数据库设计开发", "数据库设计与开发"],
+    "parent_id": null
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "domain": "软件开发",
+    "description": "使用 Git 进行版本管理，包括分支、合并、冲突解决和协作流程。",
+    "aliases": ["Git版本控制", "代码版本管理"],
+    "parent_id": null
+  },
+  {
+    "id": "unit_testing",
+    "name": "单元测试",
+    "domain": "软件开发",
+    "description": "为代码编写自动化测试用例并覆盖异常分支，重点是测试编写与质量保障。",
+    "aliases": ["单测", "单元测试编写"],
+    "parent_id": null
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "domain": "软件开发",
+    "description": "使用 Docker 构建镜像并运行容器化应用，重点是容器化打包与部署，不包含集群编排。",
+    "aliases": ["容器化", "Docker容器"],
+    "parent_id": null
+  },
+  {
+    "id": "linux",
+    "name": "Linux",
+    "domain": "软件开发",
+    "description": "在 Linux 服务器上进行操作、排查和脚本运维，包括进程、日志与定时任务。",
+    "aliases": ["Linux操作", "Linux服务器"],
+    "parent_id": null
+  },
+
+  {
+    "id": "product_management",
+    "name": "产品管理",
+    "domain": "产品",
+    "description": "负责产品从规划到上线的整体管理，是需求、规划、迭代等子技能的父技能，范围大于单个需求环节。",
+    "aliases": ["产品经理能力", "产品策划"],
+    "parent_id": null
+  },
+  {
+    "id": "requirements_analysis",
+    "name": "需求分析",
+    "domain": "产品",
+    "description": "对业务和用户诉求进行拆解、澄清与可行性判断，重点是把需求想清楚，不包含后续排期与流转。",
+    "aliases": ["业务需求分析", "用户需求分析"],
+    "parent_id": null
+  },
+  {
+    "id": "requirements_management",
+    "name": "需求管理",
+    "domain": "产品",
+    "description": "负责需求的收集、评审、记录、排序与流转，重点是需求全生命周期的维护，是需求优先级的父技能。",
+    "aliases": ["需求管理能力", "需求池管理"],
+    "parent_id": null
+  },
+  {
+    "id": "requirement_prioritization",
+    "name": "需求优先级",
+    "domain": "产品",
+    "description": "根据价值和成本对需求排序并决定先后顺序，是需求管理中的排序环节。",
+    "aliases": ["需求优先级管理", "优先级排序"],
+    "parent_id": "requirements_management"
+  },
+  {
+    "id": "product_planning",
+    "name": "产品规划",
+    "domain": "产品",
+    "description": "规划产品方向、功能节奏和路线图，重点在中长期方向与版本节奏的设计。",
+    "aliases": ["产品路线规划", "产品规划能力"],
+    "parent_id": null
+  },
+  {
+    "id": "user_research",
+    "name": "用户研究",
+    "domain": "产品",
+    "description": "通过访谈、问卷等方式理解目标用户的需求与行为，重点是研究方法和用户洞察，区别于被动收集反馈。",
+    "aliases": ["用户调研", "用户访谈"],
+    "parent_id": null
+  },
+  {
+    "id": "competitor_analysis",
+    "name": "竞品分析",
+    "domain": "产品",
+    "description": "对比竞品功能、策略与数据并输出可借鉴的差异点，重点在外部产品对比。",
+    "aliases": ["竞品调研", "竞对分析"],
+    "parent_id": null
+  },
+  {
+    "id": "prototyping",
+    "name": "原型设计",
+    "domain": "产品",
+    "description": "使用原型工具绘制页面结构与交互流程，重点是方案表达，不包含视觉设计规范制定。",
+    "aliases": ["原型制作", "交互原型设计"],
+    "parent_id": null
+  },
+  {
+    "id": "prd",
+    "name": "PRD",
+    "domain": "产品",
+    "description": "编写产品需求文档，明确功能逻辑、字段规则和异常流程，重点是需求文档的产出。",
+    "aliases": ["PRD撰写", "需求文档撰写"],
+    "parent_id": null
+  },
+  {
+    "id": "product_iteration",
+    "name": "产品迭代",
+    "domain": "产品",
+    "description": "按版本推进功能优化与上线闭环，重点是迭代节奏与版本交付，不等于长期方向规划。",
+    "aliases": ["版本迭代", "迭代管理"],
+    "parent_id": null
+  },
+  {
+    "id": "cross_functional_collaboration",
+    "name": "跨部门协作",
+    "domain": "产品",
+    "description": "协调设计、研发、测试、运营等多方资源推进事项，重点是横向沟通协调，不负责项目计划本身。",
+    "aliases": ["跨团队协作", "部门协同"],
+    "parent_id": null
+  },
+  {
+    "id": "project_management",
+    "name": "项目管理",
+    "domain": "产品",
+    "description": "负责项目计划、进度、风险和交付管理，重点是项目整体推进，区别于产品需求本身的管理。",
+    "aliases": ["项目管理能力", "项目推进"],
+    "parent_id": null
+  },
+  {
+    "id": "product_data_analysis",
+    "name": "产品数据分析",
+    "domain": "产品",
+    "description": "分析功能使用、转化和留存等产品数据以评估产品效果，重点是产品视角的数据分析。",
+    "aliases": ["产品数据监控", "功能数据分析"],
+    "parent_id": null
+  },
+  {
+    "id": "user_feedback_analysis",
+    "name": "用户反馈分析",
+    "domain": "产品",
+    "description": "收集并归纳用户反馈，提炼高频问题与改进方向，重点是反馈信息的处理，不等同于用研访谈。",
+    "aliases": ["用户反馈整理", "反馈分析"],
+    "parent_id": null
+  }
+]

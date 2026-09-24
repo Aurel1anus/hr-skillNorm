@@ -1,0 +1,9 @@
+# 现有后端标准库即可运行；以下为本项目额外需要的依赖。
+
+# 前端桥接（api_server.py）
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+python-multipart>=0.0.6
+
+# 语义匹配（可选，注入 semantic_matcher 时使用）
+sentence-transformers>=3.0,<6

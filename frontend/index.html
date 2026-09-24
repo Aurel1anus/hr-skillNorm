@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skill Normalizer</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Skill Normalizer</h1>
+      <p class="subtitle">将原始技能表达映射为 Taxonomy 中的标准技能</p>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="single" role="tab" aria-selected="true">单条标准化</button>
+      <button class="tab" data-tab="batch" role="tab">批量标准化</button>
+      <button class="tab" data-tab="taxonomy" role="tab">Taxonomy 浏览</button>
+    </nav>
+
+    <main>
+      <section id="single" class="panel active">
+        <div class="card">
+          <label for="single-input">输入一个技能表达</label>
+          <div class="input-row">
+            <input id="single-input" type="text" placeholder="例如：库存预测" autocomplete="off" />
+            <button id="single-btn" class="btn-primary">标准化</button>
+          </div>
+          <div id="single-result" class="result-area"></div>
+        </div>
+      </section>
+
+      <section id="batch" class="panel">
+        <div class="card">
+          <label for="batch-input">输入多个技能表达，每行一个</label>
+          <textarea id="batch-input" rows="8" placeholder="例如：&#10;库存预测&#10;数据分析&#10;神秘能力"></textarea>
+          <div class="actions">
+            <button id="batch-btn" class="btn-primary">批量标准化</button>
+            <button id="batch-clear" class="btn-secondary">清空</button>
+          </div>
+          <div id="batch-result" class="result-area"></div>
+        </div>
+      </section>
+
+      <section id="taxonomy" class="panel">
+        <div class="card">
+          <div class="toolbar">
+            <input id="taxonomy-search" type="text" placeholder="搜索标准技能或别名..." />
+            <span id="taxonomy-count" class="count"></span>
+          </div>
+          <div id="taxonomy-list" class="taxonomy-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>当前未接入语义模型，仅精确匹配（标准名称与 Alias）可返回 exact 结果。</p>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
