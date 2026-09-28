@@ -6,28 +6,30 @@
 
 - `data/skills.json`：可人工维护的 Taxonomy
 - 标准名称和 Alias 精确匹配
-- 稳定的输出 Schema、Top-K 候选和 threshold/margin 决策逻辑
+- 稳定的输出 Schema、Top-K 候选和审核决策
 - 批量 `normalize_many()` 接口
-- BGE Embedding 语义匹配
-- CLI 和不下载模型的单元测试
+- DeepSeek 语义判定
+- CLI 和单元测试
 
-Embedding Matcher 从项目内的 `models/bge-small-zh-v1.5` 加载 BGE 模型，并将 Taxonomy 文档 Embedding 一次后常驻内存。`SkillNormalizer` 仍支持注入 Matcher，因此单元测试不需要加载模型。
+架构：标准名称或 Alias 本地精确命中时立即返回；未命中时，把完整 Taxonomy 和输入交给 DeepSeek 判定为自动匹配、待审核或未知技能。
 
 ## 运行
 
 ```bash
 pip install -r requirements.txt
+# PowerShell: $env:DEEPSEEK_API_KEY="your-api-key"
+# Bash: export DEEPSEEK_API_KEY="your-api-key"
 python main.py "库存预测"
 python main.py "根据销量制定补货计划"
 python -m unittest discover -s tests -v
 ```
 
-复制项目时需要保留 `models/bge-small-zh-v1.5` 目录。目标电脑安装依赖后即可离线加载模型，不再访问 Hugging Face。
+标准名称和 Alias 查询不需要 API Key；只有未命中时才调用 DeepSeek。可用 `DEEPSEEK_MODEL` 与 `DEEPSEEK_BASE_URL` 覆盖默认配置。
 
 ## 前端页面
 
 项目新增了 `frontend/` 前端页面与 `api_server.py` 桥接层。
-桥接层复用 `SkillNormalizer`，并和 CLI 使用同一套本地 BGE 语义匹配流程。
+桥接层复用 `SkillNormalizer`，并和 CLI 使用同一套本地精确匹配与 DeepSeek fallback 流程。
 
 ```bash
 pip install -r requirements.txt
@@ -40,4 +42,4 @@ uvicorn api_server:app --reload --host 127.0.0.1 --port 8000
 - 批量技能标准化
 - Taxonomy 浏览与搜索
 
-API 进程启动时不会立即加载模型；首次出现未命中 Alias 的请求时，才从 `models/bge-small-zh-v1.5` 加载模型。后续请求复用同一个模型和 Taxonomy Embedding。
+API 进程启动时不会调用 DeepSeek；只有未命中名称或 Alias 的请求才会发起 API 调用。

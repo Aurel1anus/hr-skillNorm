@@ -1,9 +1,9 @@
 from .normalizer import SkillNormalizer
 from .schemas import Skill, SkillCandidate, SkillNormalizationResult
-from .embedding_matcher import EmbeddingMatcher
+from .deepseek_matcher import DeepSeekMatcher
 
 __all__ = [
-    "EmbeddingMatcher",
+    "DeepSeekMatcher",
     "Skill",
     "SkillCandidate",
     "SkillNormalizationResult",

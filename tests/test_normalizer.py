@@ -1,7 +1,7 @@
 import unittest
 
 from app.normalizer import SkillNormalizer
-from app.schemas import Skill, SkillCandidate
+from app.schemas import Skill, SkillNormalizationResult
 
 
 SKILLS = [
@@ -22,16 +22,13 @@ class SkillNormalizerTests(unittest.TestCase):
         self.assertEqual(result.match_type, "unknown")
         self.assertTrue(result.needs_review)
 
-    def test_threshold_and_margin(self):
-        def matcher(_text, _top_k):
-            return [
-                SkillCandidate("data_analysis", "数据分析", 0.84),
-                SkillCandidate("inventory_management", "库存管理", 0.83),
-            ]
+    def test_fallback_handles_non_exact_input(self):
+        def matcher(text):
+            return SkillNormalizationResult(text, "data_analysis", "数据分析", 0.9, "semantic", False)
 
         result = SkillNormalizer(SKILLS, matcher).normalize("分析业务")
-        self.assertEqual(result.match_type, "review")
-        self.assertIsNone(result.skill_id)
+        self.assertEqual(result.match_type, "semantic")
+        self.assertEqual(result.skill_id, "data_analysis")
 
 
 if __name__ == "__main__":

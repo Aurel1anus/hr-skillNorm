@@ -1,21 +1,14 @@
-"""HTTP bridge for the Skill Normalizer and its local BGE matcher."""
+"""HTTP bridge for exact/alias matching with DeepSeek fallback."""
 
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from app.config import (
-    MARGIN_THRESHOLD,
-    MODEL_PATH,
-    SEMANTIC_THRESHOLD,
-    TOP_K,
-    UNKNOWN_THRESHOLD,
-)
-from app.embedding_matcher import EmbeddingMatcher
+from app.deepseek_matcher import DeepSeekMatcher
 from app.normalizer import SkillNormalizer
 from app.taxonomy import load_skills
 
@@ -36,25 +29,7 @@ app.add_middleware(
 )
 
 _skills = load_skills(SKILLS_PATH)
-_matcher = None
-
-
-def semantic_match(text: str, top_k: int):
-    """Load the local model once, only when an exact match misses."""
-    global _matcher
-    if _matcher is None:
-        _matcher = EmbeddingMatcher(_skills, str(MODEL_PATH))
-    return _matcher.match(text, top_k)
-
-
-_normalizer = SkillNormalizer(
-    _skills,
-    semantic_matcher=semantic_match,
-    top_k=TOP_K,
-    semantic_threshold=SEMANTIC_THRESHOLD,
-    unknown_threshold=UNKNOWN_THRESHOLD,
-    margin_threshold=MARGIN_THRESHOLD,
-)
+_normalizer = SkillNormalizer(_skills, fallback_matcher=DeepSeekMatcher(_skills).match)
 
 
 class NormalizeRequest(BaseModel):
@@ -84,13 +59,20 @@ def list_skills():
 @app.post("/api/normalize")
 def normalize_one(req: NormalizeRequest):
     """Normalize a single skill expression."""
-    return _normalizer.normalize(req.text).to_dict()
+    return normalize_text(req.text).to_dict()
 
 
 @app.post("/api/normalize-many")
 def normalize_many(req: NormalizeManyRequest):
     """Normalize a batch of skill expressions."""
-    return [result.to_dict() for result in _normalizer.normalize_many(req.texts)]
+    return [normalize_text(text).to_dict() for text in req.texts]
+
+
+def normalize_text(text: str):
+    try:
+        return _normalizer.normalize(text)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
 
 
 # Serve the frontend from the `frontend/` folder.

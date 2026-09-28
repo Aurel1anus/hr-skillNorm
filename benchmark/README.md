@@ -13,18 +13,11 @@
 
 ```bash
 python benchmark/validate_benchmark.py
-python benchmark/run_benchmark.py
-```
-
-`run_benchmark.py` 会加载项目内的 BGE 模型，逐条运行全部 Case，并输出 Top1 Accuracy、Top3 Recall、Auto Match Precision、Review Rate、Unknown Rate 和 Unknown Rejection。需要保存完整结果时使用：
-
-```bash
-python benchmark/run_benchmark.py --json-out benchmark/results.json
 ```
 
 ## DeepSeek-only baseline
 
-该 baseline 只调用一次 DeepSeek 来完成每条技能归一化；不使用 BGE、关键词规则或 alias 精确匹配兜底。它沿用本 benchmark 的 `evaluate()`，结果可与本地 BGE 方案直接比较。
+该 baseline 只调用一次 DeepSeek 来完成每条技能归一化；不使用 BGE、关键词规则或 alias 精确匹配兜底。它输出 Top1 Accuracy、Top3 Recall、Auto Match Precision、Review Rate、Unknown Rate 和 Unknown Rejection。
 
 ```powershell
 $env:DEEPSEEK_API_KEY="your-api-key"

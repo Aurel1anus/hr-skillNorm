@@ -4,6 +4,3 @@
 fastapi>=0.100.0
 uvicorn[standard]>=0.23.0
 python-multipart>=0.0.6
-
-# 语义匹配（可选，注入 semantic_matcher 时使用）
-sentence-transformers>=3.0,<6

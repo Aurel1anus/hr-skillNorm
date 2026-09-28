@@ -24,7 +24,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.taxonomy import load_skills  # noqa: E402
-from benchmark.run_benchmark import evaluate, print_report  # noqa: E402
+from benchmark.evaluation import evaluate, print_report  # noqa: E402
 
 
 SKILLS_PATH = PROJECT_ROOT / "data" / "skills.json"
