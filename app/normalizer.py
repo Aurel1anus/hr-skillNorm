@@ -1,6 +1,7 @@
 from collections.abc import Callable, Sequence
 
 from .alias_matcher import AliasMatcher
+from .config import MARGIN_THRESHOLD, SEMANTIC_THRESHOLD, TOP_K, UNKNOWN_THRESHOLD
 from .schemas import Skill, SkillCandidate, SkillNormalizationResult
 
 
@@ -12,10 +13,10 @@ class SkillNormalizer:
         self,
         skills: list[Skill],
         semantic_matcher: SemanticMatcher | None = None,
-        top_k: int = 5,
-        semantic_threshold: float = 0.82,
-        unknown_threshold: float = 0.70,
-        margin_threshold: float = 0.05,
+        top_k: int = TOP_K,
+        semantic_threshold: float = SEMANTIC_THRESHOLD,
+        unknown_threshold: float = UNKNOWN_THRESHOLD,
+        margin_threshold: float = MARGIN_THRESHOLD,
     ):
         if top_k < 1:
             raise ValueError("top_k must be at least 1")

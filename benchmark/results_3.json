@@ -1,0 +1,4378 @@
+{
+  "metrics": {
+    "total": 144,
+    "known_cases": 132,
+    "unknown_cases": 12,
+    "top1_accuracy": 0.9242,
+    "top3_recall": 0.9697,
+    "auto_match_precision": 1.0,
+    "auto_match_count": 46,
+    "review_rate": 0.2778,
+    "unknown_rate": 0.4028,
+    "unknown_rejection": 1.0,
+    "errors": [
+      {
+        "id": "ecommerce_013",
+        "input": "根据商品销量和销售周期制定补货数量",
+        "expected": "replenishment_management",
+        "actual_top1": "product_selection",
+        "match_type": "unknown",
+        "score": 0.6456618309020996,
+        "top3": [
+          "product_selection",
+          "replenishment_management",
+          "inventory_forecasting"
+        ]
+      },
+      {
+        "id": "data_008",
+        "input": "从多张业务表里提取字段、对齐口径并处理缺失值",
+        "expected": "data_cleaning",
+        "actual_top1": "spreadsheet_processing",
+        "match_type": "unknown",
+        "score": 0.56029212474823,
+        "top3": [
+          "spreadsheet_processing",
+          "data_processing",
+          "data_cleaning"
+        ]
+      },
+      {
+        "id": "data_013",
+        "input": "分析点击率、转化率和销量变化并调整运营策略",
+        "expected": "data_analysis",
+        "actual_top1": "conversion_rate_optimization",
+        "match_type": "unknown",
+        "score": 0.6661210060119629,
+        "top3": [
+          "conversion_rate_optimization",
+          "traffic_analysis",
+          "requirements_analysis"
+        ]
+      },
+      {
+        "id": "data_019",
+        "input": "用Excel做数据透视并输出分析结论",
+        "expected": "excel_data_analysis",
+        "actual_top1": "pivot_table",
+        "match_type": "review",
+        "score": 0.7359879016876221,
+        "top3": [
+          "pivot_table",
+          "excel_data_analysis",
+          "data_visualization"
+        ]
+      },
+      {
+        "id": "data_022",
+        "input": "处理大批量日志数据并做转化漏斗分析",
+        "expected": "data_processing",
+        "actual_top1": "data_cleaning",
+        "match_type": "unknown",
+        "score": 0.5740284323692322,
+        "top3": [
+          "data_cleaning",
+          "data_processing",
+          "recruitment_data_analysis"
+        ]
+      },
+      {
+        "id": "office_010",
+        "input": "根据客户编号从另一张表带出对应负责人信息",
+        "expected": "vlookup",
+        "actual_top1": "report_generation",
+        "match_type": "unknown",
+        "score": 0.5184489488601685,
+        "top3": [
+          "report_generation",
+          "offer_management",
+          "order_management"
+        ]
+      },
+      {
+        "id": "office_013",
+        "input": "使用数据透视表和VLOOKUP汇总月度业务数据",
+        "expected": "excel",
+        "actual_top1": "pivot_table",
+        "match_type": "unknown",
+        "score": 0.6849715113639832,
+        "top3": [
+          "pivot_table",
+          "excel_data_analysis",
+          "vlookup"
+        ]
+      },
+      {
+        "id": "office_015",
+        "input": "为管理层制作年度总结PPT，包含数据图表和汇报讲稿",
+        "expected": "ppt_design",
+        "actual_top1": "report_generation",
+        "match_type": "unknown",
+        "score": 0.6706938743591309,
+        "top3": [
+          "report_generation",
+          "ppt_design",
+          "data_visualization"
+        ]
+      },
+      {
+        "id": "office_019",
+        "input": "Excel数据处理与分析",
+        "expected": "excel",
+        "actual_top1": "data_processing",
+        "match_type": "review",
+        "score": 0.7191848754882812,
+        "top3": [
+          "data_processing",
+          "excel_data_analysis",
+          "python_data_analysis"
+        ]
+      },
+      {
+        "id": "product_013",
+        "input": "整理用户反馈并输出需求优先级，推动研发完成版本迭代",
+        "expected": "requirements_management",
+        "actual_top1": "product_iteration",
+        "match_type": "review",
+        "score": 0.7269747257232666,
+        "top3": [
+          "product_iteration",
+          "user_feedback_analysis",
+          "user_research"
+        ]
+      }
+    ]
+  },
+  "results": [
+    {
+      "raw_text": "库存管理",
+      "skill_id": "inventory_management",
+      "canonical_name": "库存管理",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "inventory_management",
+        "canonical_name": "库存管理"
+      }
+    },
+    {
+      "raw_text": "补货管理",
+      "skill_id": "replenishment_management",
+      "canonical_name": "补货管理",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "replenishment_management",
+        "canonical_name": "补货管理"
+      }
+    },
+    {
+      "raw_text": "库存管控",
+      "skill_id": "inventory_management",
+      "canonical_name": "库存管理",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "inventory_management",
+        "canonical_name": "库存管理"
+      }
+    },
+    {
+      "raw_text": "跨境运营",
+      "skill_id": "cross_border_ecommerce_operation",
+      "canonical_name": "跨境电商运营",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "cross_border_ecommerce_operation",
+        "canonical_name": "跨境电商运营"
+      }
+    },
+    {
+      "raw_text": "大促运营",
+      "skill_id": "campaign_operation",
+      "canonical_name": "活动运营",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "campaign_operation",
+        "canonical_name": "活动运营"
+      }
+    },
+    {
+      "raw_text": "网店运营",
+      "skill_id": "ecommerce_operation",
+      "canonical_name": "电商运营",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "ecommerce_operation",
+        "canonical_name": "电商运营"
+      }
+    },
+    {
+      "raw_text": "商品上架",
+      "skill_id": "product_listing",
+      "canonical_name": "商品上新",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "product_listing",
+        "canonical_name": "商品上新"
+      }
+    },
+    {
+      "raw_text": "根据历史销量和市场趋势判断未来需要备多少货",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.650170087814331,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "inventory_forecasting",
+          "name": "库存预测",
+          "score": 0.650170087814331
+        },
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.5991151332855225
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5404047966003418
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5383556485176086
+        },
+        {
+          "skill_id": "traffic_analysis",
+          "name": "流量分析",
+          "score": 0.5186676383018494
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "跟进平台热销榜和竞品数据，挑选下一季主推款",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6399912238121033,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.6399912238121033
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.577275276184082
+        },
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.5130903720855713
+        },
+        {
+          "skill_id": "campaign_operation",
+          "name": "活动运营",
+          "score": 0.5091678500175476
+        },
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.4922724962234497
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "监控各渠道曝光、点击与访客来源，定位流量下滑原因",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7173023223876953,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "traffic_analysis",
+          "name": "流量分析",
+          "score": 0.7173023223876953
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.5311712026596069
+        },
+        {
+          "skill_id": "conversion_rate_optimization",
+          "name": "转化率优化",
+          "score": 0.5245182514190674
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5175686478614807
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.49783170223236084
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "梳理价格带并参考成本与竞品价格制定售价",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7370161414146423,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "pricing_strategy",
+          "name": "定价",
+          "score": 0.7370161414146423
+        },
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.5775800943374634
+        },
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.5403960347175598
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5315307974815369
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.4958646893501282
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "统筹店铺整体经营，协调活动、订单和商品维护等日常事务",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7063295841217041,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "ecommerce_operation",
+          "name": "电商运营",
+          "score": 0.7063295841217041
+        },
+        {
+          "skill_id": "product_operation",
+          "name": "商品运营",
+          "score": 0.6646813154220581
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.6342260837554932
+        },
+        {
+          "skill_id": "campaign_operation",
+          "name": "活动运营",
+          "score": 0.6153607368469238
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5957534313201904
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "根据商品销量和销售周期制定补货数量",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6456618309020996,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.6456618309020996
+        },
+        {
+          "skill_id": "replenishment_management",
+          "name": "补货管理",
+          "score": 0.637653648853302
+        },
+        {
+          "skill_id": "inventory_forecasting",
+          "name": "库存预测",
+          "score": 0.6190540790557861
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.602433443069458
+        },
+        {
+          "skill_id": "product_operation",
+          "name": "商品运营",
+          "score": 0.5572385191917419
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "优化商品详情页的标题、主图和卖点描述以提升点击",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6228874325752258,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "conversion_rate_optimization",
+          "name": "转化率优化",
+          "score": 0.6228874325752258
+        },
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.5981642603874207
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5898440480232239
+        },
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.5408062934875488
+        },
+        {
+          "skill_id": "user_research",
+          "name": "用户研究",
+          "score": 0.5407108068466187
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "策划并执行黑五促销活动，设置满减规则与站内资源位投放",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5762176513671875,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "campaign_operation",
+          "name": "活动运营",
+          "score": 0.5762176513671875
+        },
+        {
+          "skill_id": "cross_functional_collaboration",
+          "name": "跨部门协作",
+          "score": 0.45620766282081604
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.4471330940723419
+        },
+        {
+          "skill_id": "recruitment_channel_management",
+          "name": "招聘渠道管理",
+          "score": 0.44437259435653687
+        },
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.42039403319358826
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "分析各环节转化数据，找出详情页流失节点并推动优化",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7188388109207153,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "conversion_rate_optimization",
+          "name": "转化率优化",
+          "score": 0.7188388109207153
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.631397545337677
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.6008616089820862
+        },
+        {
+          "skill_id": "traffic_analysis",
+          "name": "流量分析",
+          "score": 0.6007504463195801
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.5971487164497375
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "处理每日订单发货、退换货及异常订单，保证履约时效",
+      "skill_id": "order_management",
+      "canonical_name": "订单管理",
+      "score": 0.8269975781440735,
+      "match_type": "semantic",
+      "needs_review": false,
+      "candidates": [
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.8269975781440735
+        },
+        {
+          "skill_id": "supply_chain_management",
+          "name": "供应链管理",
+          "score": 0.6026094555854797
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5745295882225037
+        },
+        {
+          "skill_id": "replenishment_management",
+          "name": "补货管理",
+          "score": 0.5351656675338745
+        },
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.5283995866775513
+        }
+      ],
+      "normalized": {
+        "skill_id": "order_management",
+        "canonical_name": "订单管理"
+      }
+    },
+    {
+      "raw_text": "负责跨境店铺商品资料、物流时效与海外仓库存的协调跟进",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5995079874992371,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "cross_border_ecommerce_operation",
+          "name": "跨境电商运营",
+          "score": 0.5995079874992371
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.5855898261070251
+        },
+        {
+          "skill_id": "supply_chain_management",
+          "name": "供应链管理",
+          "score": 0.564025342464447
+        },
+        {
+          "skill_id": "cross_functional_collaboration",
+          "name": "跨部门协作",
+          "score": 0.5546421408653259
+        },
+        {
+          "skill_id": "ecommerce_operation",
+          "name": "电商运营",
+          "score": 0.52953040599823
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "根据商品表现调整运营策略",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6549501419067383,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_operation",
+          "name": "商品运营",
+          "score": 0.6549501419067383
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.6116307973861694
+        },
+        {
+          "skill_id": "campaign_operation",
+          "name": "活动运营",
+          "score": 0.5978911519050598
+        },
+        {
+          "skill_id": "ecommerce_operation",
+          "name": "电商运营",
+          "score": 0.5964621901512146
+        },
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.5774534940719604
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "负责库存周转与滞销清理，控制库存风险",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7095199227333069,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "inventory_control",
+          "name": "库存控制",
+          "score": 0.7095199227333069
+        },
+        {
+          "skill_id": "inventory_management",
+          "name": "库存管理",
+          "score": 0.6404415965080261
+        },
+        {
+          "skill_id": "replenishment_management",
+          "name": "补货管理",
+          "score": 0.5850760340690613
+        },
+        {
+          "skill_id": "inventory_forecasting",
+          "name": "库存预测",
+          "score": 0.5775481462478638
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.576924204826355
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "分析销售数据并制定库存补货计划",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6832278370857239,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "replenishment_management",
+          "name": "补货管理",
+          "score": 0.6832278370857239
+        },
+        {
+          "skill_id": "inventory_forecasting",
+          "name": "库存预测",
+          "score": 0.6656230688095093
+        },
+        {
+          "skill_id": "inventory_control",
+          "name": "库存控制",
+          "score": 0.5863282680511475
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.5722171068191528
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5648341178894043
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "在TikTok Shop上做新品测款并跟进达人合作",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7282663583755493,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "tiktok_shop_operation",
+          "name": "TikTok Shop运营",
+          "score": 0.7282663583755493
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5106871128082275
+        },
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.4728044271469116
+        },
+        {
+          "skill_id": "cross_border_ecommerce_operation",
+          "name": "跨境电商运营",
+          "score": 0.4412479102611542
+        },
+        {
+          "skill_id": "ppt_design",
+          "name": "PPT制作",
+          "score": 0.43187016248703003
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "有主人翁意识",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.4646952748298645,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "talent_pool_management",
+          "name": "人才库管理",
+          "score": 0.4646952748298645
+        },
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.4256770610809326
+        },
+        {
+          "skill_id": "user_research",
+          "name": "用户研究",
+          "score": 0.4216752052307129
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.41162219643592834
+        },
+        {
+          "skill_id": "requirements_management",
+          "name": "需求管理",
+          "score": 0.4102042615413666
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "TikTok达人建联与寄样跟进",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5620279312133789,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "tiktok_shop_operation",
+          "name": "TikTok Shop运营",
+          "score": 0.5620279312133789
+        },
+        {
+          "skill_id": "git",
+          "name": "Git",
+          "score": 0.37656185030937195
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.36342141032218933
+        },
+        {
+          "skill_id": "vlookup",
+          "name": "VLOOKUP/XLOOKUP",
+          "score": 0.3615753650665283
+        },
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.3552998900413513
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "简历筛选",
+      "skill_id": "resume_screening",
+      "canonical_name": "简历筛选",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "resume_screening",
+        "canonical_name": "简历筛选"
+      }
+    },
+    {
+      "raw_text": "JD撰写",
+      "skill_id": "jd_writing",
+      "canonical_name": "JD撰写",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "jd_writing",
+        "canonical_name": "JD撰写"
+      }
+    },
+    {
+      "raw_text": "人才招聘",
+      "skill_id": "recruitment",
+      "canonical_name": "招聘",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "recruitment",
+        "canonical_name": "招聘"
+      }
+    },
+    {
+      "raw_text": "简历初筛",
+      "skill_id": "resume_screening",
+      "canonical_name": "简历筛选",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "resume_screening",
+        "canonical_name": "简历筛选"
+      }
+    },
+    {
+      "raw_text": "面评",
+      "skill_id": "interview_evaluation",
+      "canonical_name": "面试评估",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "interview_evaluation",
+        "canonical_name": "面试评估"
+      }
+    },
+    {
+      "raw_text": "招聘渠道维护",
+      "skill_id": "recruitment_channel_management",
+      "canonical_name": "招聘渠道管理",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "recruitment_channel_management",
+        "canonical_name": "招聘渠道管理"
+      }
+    },
+    {
+      "raw_text": "offer沟通",
+      "skill_id": "offer_management",
+      "canonical_name": "Offer管理",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "offer_management",
+        "canonical_name": "Offer管理"
+      }
+    },
+    {
+      "raw_text": "在招聘网站和社交平台主动搜寻并联系潜在候选人",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.8120638728141785,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.8120638728141785
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.6588302850723267
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.6153146624565125
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.5929527282714844
+        },
+        {
+          "skill_id": "recruitment_requirement_analysis",
+          "name": "招聘需求分析",
+          "score": 0.5820522308349609
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "与业务部门确认岗位画像、招聘人数和到岗时间",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7339237332344055,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "recruitment_requirement_analysis",
+          "name": "招聘需求分析",
+          "score": 0.7339237332344055
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.6058397889137268
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.5958377718925476
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.57233726978302
+        },
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.5460077524185181
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "沉淀历史面试过的候选人信息并定期做二次触达",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6704930663108826,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "talent_pool_management",
+          "name": "人才库管理",
+          "score": 0.6704930663108826
+        },
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.5957012176513672
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.5640115141868591
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.555345356464386
+        },
+        {
+          "skill_id": "interview_evaluation",
+          "name": "面试评估",
+          "score": 0.5436984300613403
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "统计各渠道简历量和转化漏斗，评估招聘效果",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7993007302284241,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.7993007302284241
+        },
+        {
+          "skill_id": "recruitment_channel_management",
+          "name": "招聘渠道管理",
+          "score": 0.6272503733634949
+        },
+        {
+          "skill_id": "recruitment_requirement_analysis",
+          "name": "招聘需求分析",
+          "score": 0.6183763742446899
+        },
+        {
+          "skill_id": "resume_screening",
+          "name": "简历筛选",
+          "score": 0.6109708547592163
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.6038643717765808
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "根据岗位要求编写职位描述与任职资格说明",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7610412836074829,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "jd_writing",
+          "name": "JD撰写",
+          "score": 0.7610412836074829
+        },
+        {
+          "skill_id": "recruitment_requirement_analysis",
+          "name": "招聘需求分析",
+          "score": 0.599162220954895
+        },
+        {
+          "skill_id": "resume_screening",
+          "name": "简历筛选",
+          "score": 0.5829538702964783
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.570023775100708
+        },
+        {
+          "skill_id": "talent_pool_management",
+          "name": "人才库管理",
+          "score": 0.5529683232307434
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "协调多位业务面试官时间，安排跨部门面试流程并处理改期",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7447754740715027,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "interview_coordination",
+          "name": "面试协调",
+          "score": 0.7447754740715027
+        },
+        {
+          "skill_id": "cross_functional_collaboration",
+          "name": "跨部门协作",
+          "score": 0.6490734815597534
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.624610424041748
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.6056536436080933
+        },
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.5881329774856567
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "筛选投递简历，判断候选人经验与岗位要求的匹配度并电话确认基本情况",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.8069037199020386,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "resume_screening",
+          "name": "简历筛选",
+          "score": 0.8069037199020386
+        },
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.7248535752296448
+        },
+        {
+          "skill_id": "recruitment_requirement_analysis",
+          "name": "招聘需求分析",
+          "score": 0.6625936627388
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.6623481512069702
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.6578550934791565
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "与候选人沟通薪资期望、发放offer并跟进入职材料",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7331223487854004,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.7331223487854004
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.7097644805908203
+        },
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.6361132264137268
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.6210166811943054
+        },
+        {
+          "skill_id": "talent_pool_management",
+          "name": "人才库管理",
+          "score": 0.585747480392456
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "通过电话和微信邀约候选人确认面试时间并发送面试通知",
+      "skill_id": "interview_scheduling",
+      "canonical_name": "面试邀约",
+      "score": 0.8604235649108887,
+      "match_type": "semantic",
+      "needs_review": false,
+      "candidates": [
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.8604235649108887
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.6768656969070435
+        },
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.6411128044128418
+        },
+        {
+          "skill_id": "interview_coordination",
+          "name": "面试协调",
+          "score": 0.6309717893600464
+        },
+        {
+          "skill_id": "interview_evaluation",
+          "name": "面试评估",
+          "score": 0.586233913898468
+        }
+      ],
+      "normalized": {
+        "skill_id": "interview_scheduling",
+        "canonical_name": "面试邀约"
+      }
+    },
+    {
+      "raw_text": "整理面试反馈表，汇总面试官评价并给出录用建议",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.8151692152023315,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "interview_evaluation",
+          "name": "面试评估",
+          "score": 0.8151692152023315
+        },
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.6600857973098755
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.6373352408409119
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.6346950531005859
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.6162524223327637
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "拓展校园招聘与社会招聘渠道，管理渠道合作与投放预算",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7329381704330444,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "recruitment_channel_management",
+          "name": "招聘渠道管理",
+          "score": 0.7329381704330444
+        },
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.6042202711105347
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.5978466272354126
+        },
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.5843819975852966
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.5582873225212097
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "负责招聘全流程管理，包括需求沟通、渠道投放和offer谈判",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.778239369392395,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.778239369392395
+        },
+        {
+          "skill_id": "recruitment_channel_management",
+          "name": "招聘渠道管理",
+          "score": 0.7557768821716309
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.6933303475379944
+        },
+        {
+          "skill_id": "requirements_management",
+          "name": "需求管理",
+          "score": 0.6499707698822021
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.6455367803573608
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "与候选人保持沟通并安排面试时间",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7902956008911133,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.7902956008911133
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.7178781628608704
+        },
+        {
+          "skill_id": "interview_coordination",
+          "name": "面试协调",
+          "score": 0.6658937931060791
+        },
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.6437907218933105
+        },
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.6219158172607422
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "通过电话初筛候选人并推荐给业务部门",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6400777101516724,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "talent_sourcing",
+          "name": "人才寻访",
+          "score": 0.6400777101516724
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.6161245703697205
+        },
+        {
+          "skill_id": "resume_screening",
+          "name": "简历筛选",
+          "score": 0.6141383647918701
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.5715966820716858
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.5611404180526733
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "负责招聘数据统计与人才库运营",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7141245603561401,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.7141245603561401
+        },
+        {
+          "skill_id": "talent_pool_management",
+          "name": "人才库管理",
+          "score": 0.6739376783370972
+        },
+        {
+          "skill_id": "recruitment_channel_management",
+          "name": "招聘渠道管理",
+          "score": 0.6391326189041138
+        },
+        {
+          "skill_id": "database_development",
+          "name": "数据库开发",
+          "score": 0.6309988498687744
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.6199011206626892
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "抗压能力强，能适应加班",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.49939194321632385,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "requirements_management",
+          "name": "需求管理",
+          "score": 0.49939194321632385
+        },
+        {
+          "skill_id": "cross_functional_collaboration",
+          "name": "跨部门协作",
+          "score": 0.491435170173645
+        },
+        {
+          "skill_id": "project_management",
+          "name": "项目管理",
+          "score": 0.47542744874954224
+        },
+        {
+          "skill_id": "inventory_control",
+          "name": "库存控制",
+          "score": 0.47273316979408264
+        },
+        {
+          "skill_id": "product_management",
+          "name": "产品管理",
+          "score": 0.4721953272819519
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "熟悉雇主品牌建设与员工关系维护",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5401289463043213,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "recruitment_channel_management",
+          "name": "招聘渠道管理",
+          "score": 0.5401289463043213
+        },
+        {
+          "skill_id": "talent_pool_management",
+          "name": "人才库管理",
+          "score": 0.5178871154785156
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.5103499889373779
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.49938634037971497
+        },
+        {
+          "skill_id": "product_management",
+          "name": "产品管理",
+          "score": 0.48822319507598877
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "数据清洗",
+      "skill_id": "data_cleaning",
+      "canonical_name": "数据清洗",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "data_cleaning",
+        "canonical_name": "数据清洗"
+      }
+    },
+    {
+      "raw_text": "SQL",
+      "skill_id": "sql",
+      "canonical_name": "SQL",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "sql",
+        "canonical_name": "SQL"
+      }
+    },
+    {
+      "raw_text": "业务数据分析",
+      "skill_id": "data_analysis",
+      "canonical_name": "数据分析",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "data_analysis",
+        "canonical_name": "数据分析"
+      }
+    },
+    {
+      "raw_text": "可视化报表",
+      "skill_id": "data_visualization",
+      "canonical_name": "数据可视化",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "data_visualization",
+        "canonical_name": "数据可视化"
+      }
+    },
+    {
+      "raw_text": "数据校验",
+      "skill_id": "data_quality_check",
+      "canonical_name": "数据质量检查",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "data_quality_check",
+        "canonical_name": "数据质量检查"
+      }
+    },
+    {
+      "raw_text": "pandas数据分析",
+      "skill_id": "python_data_analysis",
+      "canonical_name": "Python数据分析",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "python_data_analysis",
+        "canonical_name": "Python数据分析"
+      }
+    },
+    {
+      "raw_text": "数据整理",
+      "skill_id": "data_processing",
+      "canonical_name": "数据处理",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "data_processing",
+        "canonical_name": "数据处理"
+      }
+    },
+    {
+      "raw_text": "从多张业务表里提取字段、对齐口径并处理缺失值",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.56029212474823,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "spreadsheet_processing",
+          "name": "表格处理",
+          "score": 0.56029212474823
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.5502936840057373
+        },
+        {
+          "skill_id": "data_cleaning",
+          "name": "数据清洗",
+          "score": 0.5452240705490112
+        },
+        {
+          "skill_id": "sql",
+          "name": "SQL",
+          "score": 0.5305250287055969
+        },
+        {
+          "skill_id": "data_quality_check",
+          "name": "数据质量检查",
+          "score": 0.5248199105262756
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "把月度经营数据做成趋势图和看板，供管理层查看",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5956027507781982,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.5956027507781982
+        },
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.5727882385253906
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.5643654465675354
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5602178573608398
+        },
+        {
+          "skill_id": "product_data_analysis",
+          "name": "产品数据分析",
+          "score": 0.552660346031189
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "通过A/B实验和假设检验判断策略效果",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6281401515007019,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "statistical_analysis",
+          "name": "统计分析",
+          "score": 0.6281401515007019
+        },
+        {
+          "skill_id": "data_quality_check",
+          "name": "数据质量检查",
+          "score": 0.5087546706199646
+        },
+        {
+          "skill_id": "user_research",
+          "name": "用户研究",
+          "score": 0.4800592362880707
+        },
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.4705238938331604
+        },
+        {
+          "skill_id": "interview_evaluation",
+          "name": "面试评估",
+          "score": 0.4673154354095459
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "搭建核心指标体系，监控日活、留存和付费转化",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6651777029037476,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "metric_analysis",
+          "name": "指标分析",
+          "score": 0.6651777029037476
+        },
+        {
+          "skill_id": "inventory_management",
+          "name": "库存管理",
+          "score": 0.5726662874221802
+        },
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.5707363486289978
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.5650053024291992
+        },
+        {
+          "skill_id": "supply_chain_management",
+          "name": "供应链管理",
+          "score": 0.5648549199104309
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "用pandas做分组聚合和环比计算",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.621406078338623,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "python_data_analysis",
+          "name": "Python数据分析",
+          "score": 0.621406078338623
+        },
+        {
+          "skill_id": "pivot_table",
+          "name": "数据透视表",
+          "score": 0.5240256190299988
+        },
+        {
+          "skill_id": "docker",
+          "name": "Docker",
+          "score": 0.5094571709632874
+        },
+        {
+          "skill_id": "sql",
+          "name": "SQL",
+          "score": 0.5079745650291443
+        },
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.4905860722064972
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "分析点击率、转化率和销量变化并调整运营策略",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6661210060119629,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "conversion_rate_optimization",
+          "name": "转化率优化",
+          "score": 0.6661210060119629
+        },
+        {
+          "skill_id": "traffic_analysis",
+          "name": "流量分析",
+          "score": 0.6120991706848145
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5733685493469238
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.5666111707687378
+        },
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.5619197487831116
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "编写SQL完成多表关联查询，产出每日销售明细",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7310641407966614,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "sql",
+          "name": "SQL",
+          "score": 0.7310641407966614
+        },
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.6018387675285339
+        },
+        {
+          "skill_id": "database_development",
+          "name": "数据库开发",
+          "score": 0.5984792709350586
+        },
+        {
+          "skill_id": "vlookup",
+          "name": "VLOOKUP/XLOOKUP",
+          "score": 0.5759811997413635
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.5645700693130493
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "整理客户表并去除重复、补全缺失字段，输出干净数据表",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6176105737686157,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "data_cleaning",
+          "name": "数据清洗",
+          "score": 0.6176105737686157
+        },
+        {
+          "skill_id": "spreadsheet_processing",
+          "name": "表格处理",
+          "score": 0.6145111322402954
+        },
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.588004469871521
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.5767430067062378
+        },
+        {
+          "skill_id": "sql",
+          "name": "SQL",
+          "score": 0.5661460161209106
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "基于历史数据构建销量预测模型",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5766990780830383,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "data_modeling",
+          "name": "数据建模",
+          "score": 0.5766990780830383
+        },
+        {
+          "skill_id": "inventory_forecasting",
+          "name": "库存预测",
+          "score": 0.5455752015113831
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.471599817276001
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.4705340564250946
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.4600772559642792
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "搭建周报与月报模板，自动汇总各区域销售数据",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6603702902793884,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.6603702902793884
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.5710856914520264
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5637650489807129
+        },
+        {
+          "skill_id": "data_modeling",
+          "name": "数据建模",
+          "score": 0.5599079132080078
+        },
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.5587719678878784
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "对指标口径做一致性校验，排查异常值与重复数据",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7525902390480042,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "data_quality_check",
+          "name": "数据质量检查",
+          "score": 0.7525902390480042
+        },
+        {
+          "skill_id": "data_cleaning",
+          "name": "数据清洗",
+          "score": 0.5951293110847473
+        },
+        {
+          "skill_id": "metric_analysis",
+          "name": "指标分析",
+          "score": 0.5775555968284607
+        },
+        {
+          "skill_id": "vlookup",
+          "name": "VLOOKUP/XLOOKUP",
+          "score": 0.555251955986023
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.553802490234375
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "用Excel做数据透视并输出分析结论",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7359879016876221,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "pivot_table",
+          "name": "数据透视表",
+          "score": 0.7359879016876221
+        },
+        {
+          "skill_id": "excel_data_analysis",
+          "name": "Excel数据分析",
+          "score": 0.7014266848564148
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.7008676528930664
+        },
+        {
+          "skill_id": "python_data_analysis",
+          "name": "Python数据分析",
+          "score": 0.6603822708129883
+        },
+        {
+          "skill_id": "excel",
+          "name": "Excel",
+          "score": 0.6582638025283813
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "对业务数据做清洗和统计分析",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7128686904907227,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "data_cleaning",
+          "name": "数据清洗",
+          "score": 0.7128686904907227
+        },
+        {
+          "skill_id": "data_analysis",
+          "name": "数据分析",
+          "score": 0.6793550848960876
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.6423894166946411
+        },
+        {
+          "skill_id": "statistical_analysis",
+          "name": "统计分析",
+          "score": 0.6385626792907715
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.6378576159477234
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "搭建BI看板并维护数据口径",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6220765113830566,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.6220765113830566
+        },
+        {
+          "skill_id": "pivot_table",
+          "name": "数据透视表",
+          "score": 0.492018461227417
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.48432064056396484
+        },
+        {
+          "skill_id": "git",
+          "name": "Git",
+          "score": 0.47194069623947144
+        },
+        {
+          "skill_id": "spreadsheet_processing",
+          "name": "表格处理",
+          "score": 0.46971380710601807
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "处理大批量日志数据并做转化漏斗分析",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5740284323692322,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "data_cleaning",
+          "name": "数据清洗",
+          "score": 0.5740284323692322
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.573809027671814
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.5638077259063721
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5508472323417664
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.5341799855232239
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "熟悉数据合规与个人信息保护（GDPR）要求",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5858961343765259,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.5858961343765259
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5414571762084961
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.5244274139404297
+        },
+        {
+          "skill_id": "data_analysis",
+          "name": "数据分析",
+          "score": 0.524177074432373
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.5230461955070496
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "具备较强的逻辑思维与数据敏感度",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5497245192527771,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.5497245192527771
+        },
+        {
+          "skill_id": "data_cleaning",
+          "name": "数据清洗",
+          "score": 0.5412942171096802
+        },
+        {
+          "skill_id": "data_analysis",
+          "name": "数据分析",
+          "score": 0.540331244468689
+        },
+        {
+          "skill_id": "data_quality_check",
+          "name": "数据质量检查",
+          "score": 0.5381534099578857
+        },
+        {
+          "skill_id": "product_data_analysis",
+          "name": "产品数据分析",
+          "score": 0.5305047631263733
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "数据透视表",
+      "skill_id": "pivot_table",
+      "canonical_name": "数据透视表",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "pivot_table",
+        "canonical_name": "数据透视表"
+      }
+    },
+    {
+      "raw_text": "Word",
+      "skill_id": "word",
+      "canonical_name": "Word",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "word",
+        "canonical_name": "Word"
+      }
+    },
+    {
+      "raw_text": "电子表格",
+      "skill_id": "excel",
+      "canonical_name": "Excel",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "excel",
+        "canonical_name": "Excel"
+      }
+    },
+    {
+      "raw_text": "PPT",
+      "skill_id": "powerpoint",
+      "canonical_name": "PowerPoint",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "powerpoint",
+        "canonical_name": "PowerPoint"
+      }
+    },
+    {
+      "raw_text": "VLOOKUP函数",
+      "skill_id": "vlookup",
+      "canonical_name": "VLOOKUP/XLOOKUP",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "vlookup",
+        "canonical_name": "VLOOKUP/XLOOKUP"
+      }
+    },
+    {
+      "raw_text": "Office办公软件",
+      "skill_id": "office_suite",
+      "canonical_name": "Office",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "office_suite",
+        "canonical_name": "Office"
+      }
+    },
+    {
+      "raw_text": "演示文稿制作",
+      "skill_id": "ppt_design",
+      "canonical_name": "PPT制作",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "ppt_design",
+        "canonical_name": "PPT制作"
+      }
+    },
+    {
+      "raw_text": "用函数按条件汇总并分组统计大量行数据",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5858675241470337,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "pivot_table",
+          "name": "数据透视表",
+          "score": 0.5858675241470337
+        },
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.5784972310066223
+        },
+        {
+          "skill_id": "excel_data_analysis",
+          "name": "Excel数据分析",
+          "score": 0.566895067691803
+        },
+        {
+          "skill_id": "excel",
+          "name": "Excel",
+          "score": 0.557021975517273
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.5468765497207642
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "统一全文的字体、行距与标题编号，输出符合规范的文档",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.759306788444519,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "document_formatting",
+          "name": "文档排版",
+          "score": 0.759306788444519
+        },
+        {
+          "skill_id": "word",
+          "name": "Word",
+          "score": 0.6268875002861023
+        },
+        {
+          "skill_id": "business_document_writing",
+          "name": "商务文档制作",
+          "score": 0.5830328464508057
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.5227124691009521
+        },
+        {
+          "skill_id": "powerpoint",
+          "name": "PowerPoint",
+          "score": 0.5201440453529358
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "根据客户编号从另一张表带出对应负责人信息",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5184489488601685,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.5184489488601685
+        },
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.505392849445343
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.5019711256027222
+        },
+        {
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
+          "score": 0.49710938334465027
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.4877015948295593
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "制作季度汇报用的演示材料，梳理内容逻辑并统一视觉风格",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7256147861480713,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "ppt_design",
+          "name": "PPT制作",
+          "score": 0.7256147861480713
+        },
+        {
+          "skill_id": "powerpoint",
+          "name": "PowerPoint",
+          "score": 0.6170146465301514
+        },
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.6128750443458557
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.6070246696472168
+        },
+        {
+          "skill_id": "product_planning",
+          "name": "产品规划",
+          "score": 0.5662389397621155
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "编写并规范合同、通知等正式文件",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6100766658782959,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "business_document_writing",
+          "name": "商务文档制作",
+          "score": 0.6100766658782959
+        },
+        {
+          "skill_id": "jd_writing",
+          "name": "JD撰写",
+          "score": 0.5320850610733032
+        },
+        {
+          "skill_id": "document_formatting",
+          "name": "文档排版",
+          "score": 0.5251291990280151
+        },
+        {
+          "skill_id": "word",
+          "name": "Word",
+          "score": 0.5225632190704346
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.5100401639938354
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "使用数据透视表和VLOOKUP汇总月度业务数据",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6849715113639832,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "pivot_table",
+          "name": "数据透视表",
+          "score": 0.6849715113639832
+        },
+        {
+          "skill_id": "excel_data_analysis",
+          "name": "Excel数据分析",
+          "score": 0.6239033937454224
+        },
+        {
+          "skill_id": "vlookup",
+          "name": "VLOOKUP/XLOOKUP",
+          "score": 0.6161893606185913
+        },
+        {
+          "skill_id": "excel",
+          "name": "Excel",
+          "score": 0.5866706371307373
+        },
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.5691540837287903
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "维护部门共享表格，统一字段格式并限制输入内容",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5869555473327637,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "spreadsheet_processing",
+          "name": "表格处理",
+          "score": 0.5869555473327637
+        },
+        {
+          "skill_id": "document_formatting",
+          "name": "文档排版",
+          "score": 0.5845267176628113
+        },
+        {
+          "skill_id": "cross_functional_collaboration",
+          "name": "跨部门协作",
+          "score": 0.5499172806739807
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.5324313044548035
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5274958610534668
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "为管理层制作年度总结PPT，包含数据图表和汇报讲稿",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6706938743591309,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.6706938743591309
+        },
+        {
+          "skill_id": "ppt_design",
+          "name": "PPT制作",
+          "score": 0.6449265480041504
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.6082159280776978
+        },
+        {
+          "skill_id": "powerpoint",
+          "name": "PowerPoint",
+          "score": 0.6032660007476807
+        },
+        {
+          "skill_id": "excel_data_analysis",
+          "name": "Excel数据分析",
+          "score": 0.5818195343017578
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "调整公司报告模板的行距、字号与标题层级，使其符合排版规范",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7198845148086548,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "document_formatting",
+          "name": "文档排版",
+          "score": 0.7198845148086548
+        },
+        {
+          "skill_id": "word",
+          "name": "Word",
+          "score": 0.603289008140564
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.5586641430854797
+        },
+        {
+          "skill_id": "product_planning",
+          "name": "产品规划",
+          "score": 0.5462163686752319
+        },
+        {
+          "skill_id": "ppt_design",
+          "name": "PPT制作",
+          "score": 0.5432212352752686
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "使用Word的修订与批注功能完成合同评审并统一文档模板",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6423739790916443,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "word",
+          "name": "Word",
+          "score": 0.6423739790916443
+        },
+        {
+          "skill_id": "document_formatting",
+          "name": "文档排版",
+          "score": 0.6007286310195923
+        },
+        {
+          "skill_id": "business_document_writing",
+          "name": "商务文档制作",
+          "score": 0.5907813906669617
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.5476627945899963
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.5464900732040405
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "起草项目立项书与会议纪要等正式内部文件",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.48010915517807007,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "business_document_writing",
+          "name": "商务文档制作",
+          "score": 0.48010915517807007
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.4446740448474884
+        },
+        {
+          "skill_id": "project_management",
+          "name": "项目管理",
+          "score": 0.4439769387245178
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.4405096769332886
+        },
+        {
+          "skill_id": "jd_writing",
+          "name": "JD撰写",
+          "score": 0.4298642873764038
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "Excel数据处理与分析",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7191848754882812,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.7191848754882812
+        },
+        {
+          "skill_id": "excel_data_analysis",
+          "name": "Excel数据分析",
+          "score": 0.7114485502243042
+        },
+        {
+          "skill_id": "python_data_analysis",
+          "name": "Python数据分析",
+          "score": 0.6547874212265015
+        },
+        {
+          "skill_id": "data_analysis",
+          "name": "数据分析",
+          "score": 0.6511322855949402
+        },
+        {
+          "skill_id": "product_data_analysis",
+          "name": "产品数据分析",
+          "score": 0.6319427490234375
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "表格处理与数据整理",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7504531741142273,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "spreadsheet_processing",
+          "name": "表格处理",
+          "score": 0.7504531741142273
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.7025021314620972
+        },
+        {
+          "skill_id": "excel",
+          "name": "Excel",
+          "score": 0.6358759999275208
+        },
+        {
+          "skill_id": "data_cleaning",
+          "name": "数据清洗",
+          "score": 0.60539710521698
+        },
+        {
+          "skill_id": "data_quality_check",
+          "name": "数据质量检查",
+          "score": 0.5820529460906982
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "制作PPT并做数据展示",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.731956958770752,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "ppt_design",
+          "name": "PPT制作",
+          "score": 0.731956958770752
+        },
+        {
+          "skill_id": "powerpoint",
+          "name": "PowerPoint",
+          "score": 0.6596773266792297
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.628258466720581
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.5631694197654724
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.5528756976127625
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "文档排版与PPT美化",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7783122062683105,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "document_formatting",
+          "name": "文档排版",
+          "score": 0.7783122062683105
+        },
+        {
+          "skill_id": "word",
+          "name": "Word",
+          "score": 0.7108120918273926
+        },
+        {
+          "skill_id": "ppt_design",
+          "name": "PPT制作",
+          "score": 0.7054727077484131
+        },
+        {
+          "skill_id": "powerpoint",
+          "name": "PowerPoint",
+          "score": 0.6278440356254578
+        },
+        {
+          "skill_id": "business_document_writing",
+          "name": "商务文档制作",
+          "score": 0.6131765246391296
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "熟练使用打印机和扫描仪",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.48584914207458496,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "excel",
+          "name": "Excel",
+          "score": 0.48584914207458496
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.4789985716342926
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.4637363851070404
+        },
+        {
+          "skill_id": "data_cleaning",
+          "name": "数据清洗",
+          "score": 0.4628331661224365
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.45396745204925537
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "会用飞书/钉钉进行日常审批",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.47694727778434753,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.47694727778434753
+        },
+        {
+          "skill_id": "office_suite",
+          "name": "Office",
+          "score": 0.43217167258262634
+        },
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.4079224467277527
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.40356332063674927
+        },
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.40202468633651733
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "FastAPI",
+      "skill_id": "fastapi",
+      "canonical_name": "FastAPI",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "fastapi",
+        "canonical_name": "FastAPI"
+      }
+    },
+    {
+      "raw_text": "React",
+      "skill_id": "react",
+      "canonical_name": "React",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "react",
+        "canonical_name": "React"
+      }
+    },
+    {
+      "raw_text": "Python编程",
+      "skill_id": "python",
+      "canonical_name": "Python",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "python",
+        "canonical_name": "Python"
+      }
+    },
+    {
+      "raw_text": "Git版本控制",
+      "skill_id": "git",
+      "canonical_name": "Git",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "git",
+        "canonical_name": "Git"
+      }
+    },
+    {
+      "raw_text": "REST接口",
+      "skill_id": "rest_api",
+      "canonical_name": "REST API",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "rest_api",
+        "canonical_name": "REST API"
+      }
+    },
+    {
+      "raw_text": "容器化",
+      "skill_id": "docker",
+      "canonical_name": "Docker",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "docker",
+        "canonical_name": "Docker"
+      }
+    },
+    {
+      "raw_text": "JS",
+      "skill_id": "javascript",
+      "canonical_name": "JavaScript",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "javascript",
+        "canonical_name": "JavaScript"
+      }
+    },
+    {
+      "raw_text": "搭建Web接口并对接前端完成数据交互",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6320292353630066,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.6320292353630066
+        },
+        {
+          "skill_id": "frontend_development",
+          "name": "前端开发",
+          "score": 0.6171793937683105
+        },
+        {
+          "skill_id": "python_backend_development",
+          "name": "Python后端开发",
+          "score": 0.6079301834106445
+        },
+        {
+          "skill_id": "fastapi",
+          "name": "FastAPI",
+          "score": 0.5841915607452393
+        },
+        {
+          "skill_id": "backend_development",
+          "name": "后端开发",
+          "score": 0.5727726817131042
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "为服务编写自动化用例，覆盖异常分支",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6941478252410889,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "unit_testing",
+          "name": "单元测试",
+          "score": 0.6941478252410889
+        },
+        {
+          "skill_id": "data_processing",
+          "name": "数据处理",
+          "score": 0.5299015045166016
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.511212944984436
+        },
+        {
+          "skill_id": "git",
+          "name": "Git",
+          "score": 0.49328625202178955
+        },
+        {
+          "skill_id": "report_generation",
+          "name": "报表制作",
+          "score": 0.48819196224212646
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "把应用打包成镜像并在服务器上部署运行",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6746184229850769,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "docker",
+          "name": "Docker",
+          "score": 0.6746184229850769
+        },
+        {
+          "skill_id": "git",
+          "name": "Git",
+          "score": 0.5165308713912964
+        },
+        {
+          "skill_id": "fastapi",
+          "name": "FastAPI",
+          "score": 0.5158877372741699
+        },
+        {
+          "skill_id": "linux",
+          "name": "Linux",
+          "score": 0.5130875110626221
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.502718985080719
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "在服务器上排查进程与日志，配置定时任务",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.685630202293396,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "linux",
+          "name": "Linux",
+          "score": 0.685630202293396
+        },
+        {
+          "skill_id": "git",
+          "name": "Git",
+          "score": 0.5166561007499695
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5145349502563477
+        },
+        {
+          "skill_id": "vlookup",
+          "name": "VLOOKUP/XLOOKUP",
+          "score": 0.5125353336334229
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.5113811492919922
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "用组件化方式开发可复用的页面模块",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5727839469909668,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "react",
+          "name": "React",
+          "score": 0.5727839469909668
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.5488976240158081
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.539688766002655
+        },
+        {
+          "skill_id": "unit_testing",
+          "name": "单元测试",
+          "score": 0.5331185460090637
+        },
+        {
+          "skill_id": "frontend_development",
+          "name": "前端开发",
+          "score": 0.5316766500473022
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "使用FastAPI开发REST接口，并通过Pydantic校验请求参数",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7652469873428345,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "fastapi",
+          "name": "FastAPI",
+          "score": 0.7652469873428345
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.6641640663146973
+        },
+        {
+          "skill_id": "typescript",
+          "name": "TypeScript",
+          "score": 0.5625394582748413
+        },
+        {
+          "skill_id": "vlookup",
+          "name": "VLOOKUP/XLOOKUP",
+          "score": 0.5470044612884521
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.5345625281333923
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "使用React和TypeScript开发管理后台页面，并对接后端接口",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7261738777160645,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "typescript",
+          "name": "TypeScript",
+          "score": 0.7261738777160645
+        },
+        {
+          "skill_id": "react",
+          "name": "React",
+          "score": 0.71816086769104
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.7086372971534729
+        },
+        {
+          "skill_id": "javascript",
+          "name": "JavaScript",
+          "score": 0.6465362906455994
+        },
+        {
+          "skill_id": "python_backend_development",
+          "name": "Python后端开发",
+          "score": 0.6188997030258179
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "编写SQL完成多表关联查询并优化慢查询",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7543965578079224,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "sql",
+          "name": "SQL",
+          "score": 0.7543965578079224
+        },
+        {
+          "skill_id": "database_development",
+          "name": "数据库开发",
+          "score": 0.6130717992782593
+        },
+        {
+          "skill_id": "vlookup",
+          "name": "VLOOKUP/XLOOKUP",
+          "score": 0.589210569858551
+        },
+        {
+          "skill_id": "spreadsheet_processing",
+          "name": "表格处理",
+          "score": 0.5452098846435547
+        },
+        {
+          "skill_id": "unit_testing",
+          "name": "单元测试",
+          "score": 0.5303268432617188
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "使用Git进行分支管理、代码合并和冲突解决",
+      "skill_id": "git",
+      "canonical_name": "Git",
+      "score": 0.8396643400192261,
+      "match_type": "semantic",
+      "needs_review": false,
+      "candidates": [
+        {
+          "skill_id": "git",
+          "name": "Git",
+          "score": 0.8396643400192261
+        },
+        {
+          "skill_id": "docker",
+          "name": "Docker",
+          "score": 0.5799006223678589
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.561751127243042
+        },
+        {
+          "skill_id": "react",
+          "name": "React",
+          "score": 0.5565112829208374
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.5545445680618286
+        }
+      ],
+      "normalized": {
+        "skill_id": "git",
+        "canonical_name": "Git"
+      }
+    },
+    {
+      "raw_text": "基于Python搭建后端服务，设计数据模型并实现业务接口",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7914964556694031,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "python_backend_development",
+          "name": "Python后端开发",
+          "score": 0.7914964556694031
+        },
+        {
+          "skill_id": "backend_development",
+          "name": "后端开发",
+          "score": 0.6822288036346436
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.6670718789100647
+        },
+        {
+          "skill_id": "python",
+          "name": "Python",
+          "score": 0.6548131108283997
+        },
+        {
+          "skill_id": "fastapi",
+          "name": "FastAPI",
+          "score": 0.6508916020393372
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "开发前端页面并适配移动端布局",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6880985498428345,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "frontend_development",
+          "name": "前端开发",
+          "score": 0.6880985498428345
+        },
+        {
+          "skill_id": "react",
+          "name": "React",
+          "score": 0.6218705177307129
+        },
+        {
+          "skill_id": "typescript",
+          "name": "TypeScript",
+          "score": 0.6039645671844482
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.578768789768219
+        },
+        {
+          "skill_id": "javascript",
+          "name": "JavaScript",
+          "score": 0.5760740637779236
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "使用Python和FastAPI完成后端接口开发",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7773255109786987,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "fastapi",
+          "name": "FastAPI",
+          "score": 0.7773255109786987
+        },
+        {
+          "skill_id": "python_backend_development",
+          "name": "Python后端开发",
+          "score": 0.7100577354431152
+        },
+        {
+          "skill_id": "python",
+          "name": "Python",
+          "score": 0.638542115688324
+        },
+        {
+          "skill_id": "typescript",
+          "name": "TypeScript",
+          "score": 0.6088388562202454
+        },
+        {
+          "skill_id": "java",
+          "name": "Java",
+          "score": 0.6054831147193909
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "开发后端接口并完成数据库表结构设计",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6195082664489746,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "backend_development",
+          "name": "后端开发",
+          "score": 0.6195082664489746
+        },
+        {
+          "skill_id": "database_development",
+          "name": "数据库开发",
+          "score": 0.6163873076438904
+        },
+        {
+          "skill_id": "sql",
+          "name": "SQL",
+          "score": 0.6014372706413269
+        },
+        {
+          "skill_id": "python_backend_development",
+          "name": "Python后端开发",
+          "score": 0.5972992181777954
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.5949268341064453
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "使用SQL进行数据查询与数据分析",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7688843607902527,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "sql",
+          "name": "SQL",
+          "score": 0.7688843607902527
+        },
+        {
+          "skill_id": "database_development",
+          "name": "数据库开发",
+          "score": 0.7091050148010254
+        },
+        {
+          "skill_id": "excel_data_analysis",
+          "name": "Excel数据分析",
+          "score": 0.6674325466156006
+        },
+        {
+          "skill_id": "python_data_analysis",
+          "name": "Python数据分析",
+          "score": 0.6656531095504761
+        },
+        {
+          "skill_id": "vlookup",
+          "name": "VLOOKUP/XLOOKUP",
+          "score": 0.6582151055335999
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "熟悉Java和Spring Boot框架",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.686128556728363,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "java",
+          "name": "Java",
+          "score": 0.686128556728363
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.6458255052566528
+        },
+        {
+          "skill_id": "fastapi",
+          "name": "FastAPI",
+          "score": 0.6345750093460083
+        },
+        {
+          "skill_id": "react",
+          "name": "React",
+          "score": 0.6153336763381958
+        },
+        {
+          "skill_id": "frontend_development",
+          "name": "前端开发",
+          "score": 0.5928249359130859
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "熟悉Kubernetes集群运维",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5033688545227051,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "tiktok_shop_operation",
+          "name": "TikTok Shop运营",
+          "score": 0.5033688545227051
+        },
+        {
+          "skill_id": "docker",
+          "name": "Docker",
+          "score": 0.49025899171829224
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.47527259588241577
+        },
+        {
+          "skill_id": "linux",
+          "name": "Linux",
+          "score": 0.4734766483306885
+        },
+        {
+          "skill_id": "fastapi",
+          "name": "FastAPI",
+          "score": 0.45857128500938416
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "具备较强的学习能力和团队协作意识",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5731492042541504,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "cross_functional_collaboration",
+          "name": "跨部门协作",
+          "score": 0.5731492042541504
+        },
+        {
+          "skill_id": "candidate_communication",
+          "name": "候选人沟通",
+          "score": 0.5214079022407532
+        },
+        {
+          "skill_id": "requirements_management",
+          "name": "需求管理",
+          "score": 0.5181694626808167
+        },
+        {
+          "skill_id": "recruitment",
+          "name": "招聘",
+          "score": 0.4985268712043762
+        },
+        {
+          "skill_id": "offer_management",
+          "name": "Offer管理",
+          "score": 0.4979425072669983
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "需求管理",
+      "skill_id": "requirements_management",
+      "canonical_name": "需求管理",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "requirements_management",
+        "canonical_name": "需求管理"
+      }
+    },
+    {
+      "raw_text": "竞品分析",
+      "skill_id": "competitor_analysis",
+      "canonical_name": "竞品分析",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "competitor_analysis",
+        "canonical_name": "竞品分析"
+      }
+    },
+    {
+      "raw_text": "用户调研",
+      "skill_id": "user_research",
+      "canonical_name": "用户研究",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "user_research",
+        "canonical_name": "用户研究"
+      }
+    },
+    {
+      "raw_text": "版本迭代",
+      "skill_id": "product_iteration",
+      "canonical_name": "产品迭代",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "product_iteration",
+        "canonical_name": "产品迭代"
+      }
+    },
+    {
+      "raw_text": "原型制作",
+      "skill_id": "prototyping",
+      "canonical_name": "原型设计",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "prototyping",
+        "canonical_name": "原型设计"
+      }
+    },
+    {
+      "raw_text": "业务需求分析",
+      "skill_id": "requirements_analysis",
+      "canonical_name": "需求分析",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "requirements_analysis",
+        "canonical_name": "需求分析"
+      }
+    },
+    {
+      "raw_text": "跨团队协作",
+      "skill_id": "cross_functional_collaboration",
+      "canonical_name": "跨部门协作",
+      "score": 1.0,
+      "match_type": "exact",
+      "needs_review": false,
+      "candidates": [],
+      "normalized": {
+        "skill_id": "cross_functional_collaboration",
+        "canonical_name": "跨部门协作"
+      }
+    },
+    {
+      "raw_text": "通过访谈和问卷了解目标用户的使用痛点",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7612494230270386,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "user_research",
+          "name": "用户研究",
+          "score": 0.7612494230270386
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.6488174200057983
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5551620125770569
+        },
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.5170485973358154
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.5116890072822571
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "对比同类产品功能与价格，输出差异化机会点",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7160021066665649,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.7160021066665649
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.6260288953781128
+        },
+        {
+          "skill_id": "product_data_analysis",
+          "name": "产品数据分析",
+          "score": 0.5999384522438049
+        },
+        {
+          "skill_id": "pricing_strategy",
+          "name": "定价",
+          "score": 0.5916171669960022
+        },
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.5894221067428589
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "把零散的用户诉求整理成结构化需求并同步给研发",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5995323657989502,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5995323657989502
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.5481237173080444
+        },
+        {
+          "skill_id": "user_research",
+          "name": "用户研究",
+          "score": 0.5453208088874817
+        },
+        {
+          "skill_id": "requirements_management",
+          "name": "需求管理",
+          "score": 0.5326256155967712
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.5114616751670837
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "规划未来半年的功能方向与版本节奏",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.715020477771759,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_planning",
+          "name": "产品规划",
+          "score": 0.715020477771759
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.6596423387527466
+        },
+        {
+          "skill_id": "cross_functional_collaboration",
+          "name": "跨部门协作",
+          "score": 0.49780356884002686
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.48913002014160156
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.4712918996810913
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "绘制页面流程与交互稿，确认关键路径",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6378933191299438,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "prototyping",
+          "name": "原型设计",
+          "score": 0.6378933191299438
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.6187885403633118
+        },
+        {
+          "skill_id": "product_planning",
+          "name": "产品规划",
+          "score": 0.6057888269424438
+        },
+        {
+          "skill_id": "rest_api",
+          "name": "REST API",
+          "score": 0.5998321771621704
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.5970361828804016
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "整理用户反馈并输出需求优先级，推动研发完成版本迭代",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7269747257232666,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.7269747257232666
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.6781296730041504
+        },
+        {
+          "skill_id": "user_research",
+          "name": "用户研究",
+          "score": 0.6096144914627075
+        },
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.6032443046569824
+        },
+        {
+          "skill_id": "requirements_management",
+          "name": "需求管理",
+          "score": 0.5896446704864502
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "撰写PRD文档，明确功能逻辑、字段规则和异常流程",
+      "skill_id": "prd",
+      "canonical_name": "PRD",
+      "score": 0.8239882588386536,
+      "match_type": "semantic",
+      "needs_review": false,
+      "candidates": [
+        {
+          "skill_id": "prd",
+          "name": "PRD",
+          "score": 0.8239882588386536
+        },
+        {
+          "skill_id": "jd_writing",
+          "name": "JD撰写",
+          "score": 0.681002140045166
+        },
+        {
+          "skill_id": "word",
+          "name": "Word",
+          "score": 0.6165024042129517
+        },
+        {
+          "skill_id": "ppt_design",
+          "name": "PPT制作",
+          "score": 0.5844660401344299
+        },
+        {
+          "skill_id": "document_formatting",
+          "name": "文档排版",
+          "score": 0.5813380479812622
+        }
+      ],
+      "normalized": {
+        "skill_id": "prd",
+        "canonical_name": "PRD"
+      }
+    },
+    {
+      "raw_text": "拉通设计、研发和测试，推动版本按期上线",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6087504625320435,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.6087504625320435
+        },
+        {
+          "skill_id": "product_planning",
+          "name": "产品规划",
+          "score": 0.553180992603302
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5382776260375977
+        },
+        {
+          "skill_id": "cross_functional_collaboration",
+          "name": "跨部门协作",
+          "score": 0.499208927154541
+        },
+        {
+          "skill_id": "prototyping",
+          "name": "原型设计",
+          "score": 0.4923287630081177
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "监控功能上线后的使用数据，评估迭代效果",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6728880405426025,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_data_analysis",
+          "name": "产品数据分析",
+          "score": 0.6728880405426025
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.6266864538192749
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.6063227653503418
+        },
+        {
+          "skill_id": "data_visualization",
+          "name": "数据可视化",
+          "score": 0.579153299331665
+        },
+        {
+          "skill_id": "competitor_analysis",
+          "name": "竞品分析",
+          "score": 0.5568874478340149
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "收集应用商店差评与客服工单，归纳高频问题",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6354615688323975,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.6354615688323975
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.568177342414856
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5389600992202759
+        },
+        {
+          "skill_id": "traffic_analysis",
+          "name": "流量分析",
+          "score": 0.537307620048523
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5165438055992126
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "根据上线反馈规划下一版本的功能范围",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6293821334838867,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.6293821334838867
+        },
+        {
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
+          "score": 0.6072556376457214
+        },
+        {
+          "skill_id": "product_planning",
+          "name": "产品规划",
+          "score": 0.6071094870567322
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5757319927215576
+        },
+        {
+          "skill_id": "product_management",
+          "name": "产品管理",
+          "score": 0.5334883332252502
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "负责需求收集、评审、排期和上线跟进",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6650975942611694,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "requirements_management",
+          "name": "需求管理",
+          "score": 0.6650975942611694
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5970940589904785
+        },
+        {
+          "skill_id": "requirement_prioritization",
+          "name": "需求优先级",
+          "score": 0.5755216479301453
+        },
+        {
+          "skill_id": "project_management",
+          "name": "项目管理",
+          "score": 0.563603401184082
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.5564771294593811
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "协调各方资源推进项目按计划交付",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6229211091995239,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "cross_functional_collaboration",
+          "name": "跨部门协作",
+          "score": 0.6229211091995239
+        },
+        {
+          "skill_id": "project_management",
+          "name": "项目管理",
+          "score": 0.5447327494621277
+        },
+        {
+          "skill_id": "product_iteration",
+          "name": "产品迭代",
+          "score": 0.525067925453186
+        },
+        {
+          "skill_id": "supply_chain_management",
+          "name": "供应链管理",
+          "score": 0.48309260606765747
+        },
+        {
+          "skill_id": "order_management",
+          "name": "订单管理",
+          "score": 0.48284798860549927
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "负责产品全生命周期管理，包括需求分析、规划和上线",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.7209619283676147,
+      "match_type": "review",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_management",
+          "name": "产品管理",
+          "score": 0.7209619283676147
+        },
+        {
+          "skill_id": "requirements_management",
+          "name": "需求管理",
+          "score": 0.7078948020935059
+        },
+        {
+          "skill_id": "project_management",
+          "name": "项目管理",
+          "score": 0.6678587198257446
+        },
+        {
+          "skill_id": "product_planning",
+          "name": "产品规划",
+          "score": 0.6512176990509033
+        },
+        {
+          "skill_id": "product_operation",
+          "name": "商品运营",
+          "score": 0.5927721261978149
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "根据数据表现调整需求优先级",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6778454780578613,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "requirement_prioritization",
+          "name": "需求优先级",
+          "score": 0.6778454780578613
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.6094698309898376
+        },
+        {
+          "skill_id": "requirements_management",
+          "name": "需求管理",
+          "score": 0.5627359747886658
+        },
+        {
+          "skill_id": "recruitment_data_analysis",
+          "name": "招聘数据分析",
+          "score": 0.5615617632865906
+        },
+        {
+          "skill_id": "conversion_rate_optimization",
+          "name": "转化率优化",
+          "score": 0.5581827759742737
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "熟悉产品视觉设计规范",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6568434238433838,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_planning",
+          "name": "产品规划",
+          "score": 0.6568434238433838
+        },
+        {
+          "skill_id": "prototyping",
+          "name": "原型设计",
+          "score": 0.607939600944519
+        },
+        {
+          "skill_id": "product_management",
+          "name": "产品管理",
+          "score": 0.6034274101257324
+        },
+        {
+          "skill_id": "product_data_analysis",
+          "name": "产品数据分析",
+          "score": 0.5926581621170044
+        },
+        {
+          "skill_id": "ppt_design",
+          "name": "PPT制作",
+          "score": 0.5605360865592957
+        }
+      ],
+      "normalized": null
+    },
+    {
+      "raw_text": "有创业经历，具备较强的商业敏感度",
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.5272250771522522,
+      "match_type": "unknown",
+      "needs_review": true,
+      "candidates": [
+        {
+          "skill_id": "product_selection",
+          "name": "选品",
+          "score": 0.5272250771522522
+        },
+        {
+          "skill_id": "product_listing",
+          "name": "商品上新",
+          "score": 0.5113529562950134
+        },
+        {
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
+          "score": 0.5092121362686157
+        },
+        {
+          "skill_id": "product_operation",
+          "name": "商品运营",
+          "score": 0.5072479248046875
+        },
+        {
+          "skill_id": "talent_pool_management",
+          "name": "人才库管理",
+          "score": 0.49723386764526367
+        }
+      ],
+      "normalized": null
+    }
+  ]
+}

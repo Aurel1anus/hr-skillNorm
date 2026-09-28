@@ -8,6 +8,7 @@
 | --- | --- |
 | `data/skills.json` | Taxonomy 草案，80 个 canonical skill，含 `domain` 与 `parent_id` |
 | `benchmark/cases.json` | 144 条 benchmark case，6 领域 × 6 类型 |
+| `benchmark/inputs.json` | 从 `cases.json` 提取的 144 条输入集，每条仅含 `id` 与 `input` |
 | `benchmark/validate_benchmark.py` | 自检脚本，校验 10 项规则 + benchmark 泄漏 |
 
 ```bash
@@ -20,6 +21,23 @@ python benchmark/run_benchmark.py
 ```bash
 python benchmark/run_benchmark.py --json-out benchmark/results.json
 ```
+
+## DeepSeek-only baseline
+
+该 baseline 只调用一次 DeepSeek 来完成每条技能归一化；不使用 BGE、关键词规则或 alias 精确匹配兜底。它沿用本 benchmark 的 `evaluate()`，结果可与本地 BGE 方案直接比较。
+
+```powershell
+$env:DEEPSEEK_API_KEY="your-api-key"
+python benchmark/run_deepseek_baseline.py --json-out benchmark/deepseek_results.json
+```
+
+可选的 alias 消融实验：
+
+```powershell
+python benchmark/run_deepseek_baseline.py --without-aliases --json-out benchmark/deepseek_no_aliases.json
+```
+
+结果包含 `metrics`、与现有 `results.json` 对齐的 `results`，以及每次请求的 `traces`（时延、token usage、原始 API 响应与错误）。不要提交含 API 原始响应的结果文件。
 
 ## 2. 统计摘要
 
