@@ -1,10 +1,28 @@
 import json
 import os
 from collections.abc import Sequence
+from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from .schemas import Skill, SkillCandidate, SkillNormalizationResult
+
+
+def load_env(path: Path) -> None:
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.removeprefix("export ").strip()
+        value = value.strip().strip("\"'")
+        if key:
+            os.environ.setdefault(key, value)
+
+
+load_env(Path(__file__).resolve().parents[1] / ".env")
 
 
 class DeepSeekMatcher:

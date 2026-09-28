@@ -17,8 +17,8 @@
 
 ```bash
 pip install -r requirements.txt
-# PowerShell: $env:DEEPSEEK_API_KEY="your-api-key"
-# Bash: export DEEPSEEK_API_KEY="your-api-key"
+# PowerShell: Copy-Item .env.example .env
+# Then set DEEPSEEK_API_KEY in .env
 python main.py "库存预测"
 python main.py "根据销量制定补货计划"
 python -m unittest discover -s tests -v

@@ -1,6 +1,9 @@
 import unittest
+import os
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
-from app.deepseek_matcher import DeepSeekMatcher
+from app.deepseek_matcher import DeepSeekMatcher, load_env
 from app.schemas import Skill
 
 
@@ -30,6 +33,23 @@ class DeepSeekMatcherTests(unittest.TestCase):
         )
         self.assertEqual(result.match_type, "review")
         self.assertTrue(result.needs_review)
+
+    def test_load_env_preserves_existing_environment(self):
+        old_value = os.environ.get("DEEPSEEK_TEST_VALUE")
+        try:
+            os.environ["DEEPSEEK_TEST_VALUE"] = "shell"
+            with TemporaryDirectory() as directory:
+                path = Path(directory) / ".env"
+                path.write_text('DEEPSEEK_TEST_VALUE=file\nDEEPSEEK_NEW_VALUE="new"\n', encoding="utf-8")
+                load_env(path)
+            self.assertEqual(os.environ["DEEPSEEK_TEST_VALUE"], "shell")
+            self.assertEqual(os.environ["DEEPSEEK_NEW_VALUE"], "new")
+        finally:
+            os.environ.pop("DEEPSEEK_NEW_VALUE", None)
+            if old_value is None:
+                os.environ.pop("DEEPSEEK_TEST_VALUE", None)
+            else:
+                os.environ["DEEPSEEK_TEST_VALUE"] = old_value
 
 
 if __name__ == "__main__":
