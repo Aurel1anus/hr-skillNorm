@@ -7,7 +7,7 @@
     "max_tokens": 256,
     "taxonomy_sha256": "cfc2bd724c01532f6684e2d6494d7139feae3db1bb9002bb95dbfdd7e5849039",
     "prompt_sha256": "183525fe2dddbd17611be291c99e71a9502858d26698fc162f09e533e10ae98a",
-    "run_at": "2026-09-28T02:26:10.540114+00:00"
+    "run_at": "2026-09-28T03:13:45.096404+00:00"
   },
   "metrics": {
     "total": 144,
@@ -15,9 +15,9 @@
     "unknown_cases": 12,
     "top1_accuracy": 0.9773,
     "top3_recall": 0.9924,
-    "auto_match_precision": 0.9841,
-    "auto_match_count": 126,
-    "review_rate": 0.0417,
+    "auto_match_precision": 0.984,
+    "auto_match_count": 125,
+    "review_rate": 0.0486,
     "unknown_rate": 0.0833,
     "unknown_rejection": 1.0,
     "errors": [
@@ -40,7 +40,7 @@
         "expected": "excel",
         "actual_top1": "pivot_table",
         "match_type": "semantic",
-        "score": 0.85,
+        "score": 0.6,
         "top3": [
           "pivot_table",
           "vlookup",
@@ -299,24 +299,24 @@
       "raw_text": "跟进平台热销榜和竞品数据，挑选下一季主推款",
       "skill_id": "product_selection",
       "canonical_name": "选品",
-      "score": 0.93,
+      "score": 0.95,
       "match_type": "semantic",
       "needs_review": false,
       "candidates": [
         {
           "skill_id": "product_selection",
           "name": "选品",
-          "score": 0.93
+          "score": 0.95
         },
         {
           "skill_id": "competitor_analysis",
           "name": "竞品分析",
-          "score": 0.92
+          "score": 0.94
         },
         {
-          "skill_id": "traffic_analysis",
-          "name": "流量分析",
-          "score": 0.91
+          "skill_id": "product_operation",
+          "name": "商品运营",
+          "score": 0.9299999999999999
         }
       ],
       "normalized": {
@@ -799,24 +799,24 @@
       "raw_text": "简历初筛",
       "skill_id": "resume_screening",
       "canonical_name": "简历筛选",
-      "score": 1.0,
+      "score": 0.98,
       "match_type": "semantic",
       "needs_review": false,
       "candidates": [
         {
           "skill_id": "resume_screening",
           "name": "简历筛选",
-          "score": 1.0
+          "score": 0.98
         },
         {
           "skill_id": "recruitment",
           "name": "招聘",
-          "score": 0.99
+          "score": 0.97
         },
         {
           "skill_id": "talent_sourcing",
           "name": "人才寻访",
-          "score": 0.98
+          "score": 0.96
         }
       ],
       "normalized": {
@@ -1133,8 +1133,8 @@
           "score": 0.94
         },
         {
-          "skill_id": "recruitment",
-          "name": "招聘",
+          "skill_id": "interview_scheduling",
+          "name": "面试邀约",
           "score": 0.9299999999999999
         }
       ],
@@ -1456,8 +1456,8 @@
           "score": 0.94
         },
         {
-          "skill_id": "excel_data_analysis",
-          "name": "Excel数据分析",
+          "skill_id": "data_analysis",
+          "name": "数据分析",
           "score": 0.9299999999999999
         }
       ],
@@ -1586,24 +1586,24 @@
       "raw_text": "把月度经营数据做成趋势图和看板，供管理层查看",
       "skill_id": "data_visualization",
       "canonical_name": "数据可视化",
-      "score": 0.95,
+      "score": 0.9,
       "match_type": "semantic",
       "needs_review": false,
       "candidates": [
         {
           "skill_id": "data_visualization",
           "name": "数据可视化",
-          "score": 0.95
+          "score": 0.9
         },
         {
           "skill_id": "report_generation",
           "name": "报表制作",
-          "score": 0.94
+          "score": 0.89
         },
         {
           "skill_id": "data_analysis",
           "name": "数据分析",
-          "score": 0.9299999999999999
+          "score": 0.88
         }
       ],
       "normalized": {
@@ -1644,24 +1644,24 @@
       "raw_text": "搭建核心指标体系，监控日活、留存和付费转化",
       "skill_id": "metric_analysis",
       "canonical_name": "指标分析",
-      "score": 0.9,
+      "score": 0.95,
       "match_type": "semantic",
       "needs_review": false,
       "candidates": [
         {
           "skill_id": "metric_analysis",
           "name": "指标分析",
-          "score": 0.9
+          "score": 0.95
         },
         {
           "skill_id": "data_analysis",
           "name": "数据分析",
-          "score": 0.89
+          "score": 0.94
         },
         {
           "skill_id": "product_data_analysis",
           "name": "产品数据分析",
-          "score": 0.88
+          "score": 0.9299999999999999
         }
       ],
       "normalized": {
@@ -1970,13 +1970,13 @@
           "score": 0.85
         },
         {
-          "skill_id": "metric_analysis",
-          "name": "指标分析",
+          "skill_id": "data_processing",
+          "name": "数据处理",
           "score": 0.84
         },
         {
-          "skill_id": "data_processing",
-          "name": "数据处理",
+          "skill_id": "metric_analysis",
+          "name": "指标分析",
           "score": 0.83
         }
       ],
@@ -2338,13 +2338,13 @@
           "score": 0.95
         },
         {
-          "skill_id": "word",
-          "name": "Word",
+          "skill_id": "document_formatting",
+          "name": "文档排版",
           "score": 0.94
         },
         {
-          "skill_id": "document_formatting",
-          "name": "文档排版",
+          "skill_id": "word",
+          "name": "Word",
           "score": 0.9299999999999999
         }
       ],
@@ -2357,24 +2357,24 @@
       "raw_text": "使用数据透视表和VLOOKUP汇总月度业务数据",
       "skill_id": "pivot_table",
       "canonical_name": "数据透视表",
-      "score": 0.85,
+      "score": 0.6,
       "match_type": "semantic",
       "needs_review": false,
       "candidates": [
         {
           "skill_id": "pivot_table",
           "name": "数据透视表",
-          "score": 0.85
+          "score": 0.6
         },
         {
           "skill_id": "vlookup",
           "name": "VLOOKUP/XLOOKUP",
-          "score": 0.84
+          "score": 0.59
         },
         {
           "skill_id": "excel_data_analysis",
           "name": "Excel数据分析",
-          "score": 0.83
+          "score": 0.58
         }
       ],
       "normalized": {
@@ -2415,24 +2415,24 @@
       "raw_text": "为管理层制作年度总结PPT，包含数据图表和汇报讲稿",
       "skill_id": "ppt_design",
       "canonical_name": "PPT制作",
-      "score": 0.82,
+      "score": 0.9,
       "match_type": "semantic",
       "needs_review": false,
       "candidates": [
         {
           "skill_id": "ppt_design",
           "name": "PPT制作",
-          "score": 0.82
+          "score": 0.9
         },
         {
           "skill_id": "data_visualization",
           "name": "数据可视化",
-          "score": 0.8099999999999999
+          "score": 0.89
         },
         {
           "skill_id": "powerpoint",
           "name": "PowerPoint",
-          "score": 0.7999999999999999
+          "score": 0.88
         }
       ],
       "normalized": {
@@ -2633,8 +2633,8 @@
           "score": 0.49
         },
         {
-          "skill_id": "powerpoint",
-          "name": "PowerPoint",
+          "skill_id": "office_suite",
+          "name": "Office",
           "score": 0.48
         }
       ],
@@ -3030,24 +3030,24 @@
       "raw_text": "编写SQL完成多表关联查询并优化慢查询",
       "skill_id": "sql",
       "canonical_name": "SQL",
-      "score": 0.95,
+      "score": 0.9,
       "match_type": "semantic",
       "needs_review": false,
       "candidates": [
         {
           "skill_id": "sql",
           "name": "SQL",
-          "score": 0.95
+          "score": 0.9
         },
         {
           "skill_id": "database_development",
           "name": "数据库开发",
-          "score": 0.94
+          "score": 0.89
         },
         {
           "skill_id": "data_processing",
           "name": "数据处理",
-          "score": 0.9299999999999999
+          "score": 0.88
         }
       ],
       "normalized": {
@@ -3163,32 +3163,29 @@
     },
     {
       "raw_text": "开发后端接口并完成数据库表结构设计",
-      "skill_id": "backend_development",
-      "canonical_name": "后端开发",
-      "score": 0.85,
-      "match_type": "semantic",
-      "needs_review": false,
+      "skill_id": null,
+      "canonical_name": null,
+      "score": 0.6,
+      "match_type": "review",
+      "needs_review": true,
       "candidates": [
         {
           "skill_id": "backend_development",
           "name": "后端开发",
-          "score": 0.85
+          "score": 0.6
         },
         {
           "skill_id": "database_development",
           "name": "数据库开发",
-          "score": 0.84
+          "score": 0.59
         },
         {
           "skill_id": "rest_api",
           "name": "REST API",
-          "score": 0.83
+          "score": 0.58
         }
       ],
-      "normalized": {
-        "skill_id": "backend_development",
-        "canonical_name": "后端开发"
-      }
+      "normalized": null
     },
     {
       "raw_text": "使用SQL进行数据查询与数据分析",
@@ -3209,8 +3206,8 @@
           "score": 0.94
         },
         {
-          "skill_id": "excel_data_analysis",
-          "name": "Excel数据分析",
+          "skill_id": "data_processing",
+          "name": "数据处理",
           "score": 0.9299999999999999
         }
       ],
@@ -3426,24 +3423,24 @@
       "raw_text": "跨团队协作",
       "skill_id": "cross_functional_collaboration",
       "canonical_name": "跨部门协作",
-      "score": 0.98,
+      "score": 0.95,
       "match_type": "semantic",
       "needs_review": false,
       "candidates": [
         {
           "skill_id": "cross_functional_collaboration",
           "name": "跨部门协作",
-          "score": 0.98
+          "score": 0.95
         },
         {
           "skill_id": "project_management",
           "name": "项目管理",
-          "score": 0.97
+          "score": 0.94
         },
         {
           "skill_id": "requirements_management",
           "name": "需求管理",
-          "score": 0.96
+          "score": 0.9299999999999999
         }
       ],
       "normalized": {
@@ -3494,13 +3491,13 @@
           "score": 0.95
         },
         {
-          "skill_id": "product_selection",
-          "name": "选品",
+          "skill_id": "product_planning",
+          "name": "产品规划",
           "score": 0.94
         },
         {
-          "skill_id": "pricing_strategy",
-          "name": "定价",
+          "skill_id": "requirements_analysis",
+          "name": "需求分析",
           "score": 0.9299999999999999
         }
       ],
@@ -3528,8 +3525,8 @@
           "score": 0.89
         },
         {
-          "skill_id": "cross_functional_collaboration",
-          "name": "跨部门协作",
+          "skill_id": "user_feedback_analysis",
+          "name": "用户反馈分析",
           "score": 0.88
         }
       ],
@@ -3771,24 +3768,24 @@
       "raw_text": "负责需求收集、评审、排期和上线跟进",
       "skill_id": "requirements_management",
       "canonical_name": "需求管理",
-      "score": 0.95,
+      "score": 0.9,
       "match_type": "semantic",
       "needs_review": false,
       "candidates": [
         {
           "skill_id": "requirements_management",
           "name": "需求管理",
-          "score": 0.95
+          "score": 0.9
         },
         {
           "skill_id": "requirement_prioritization",
           "name": "需求优先级",
-          "score": 0.94
+          "score": 0.89
         },
         {
           "skill_id": "product_iteration",
           "name": "产品迭代",
-          "score": 0.9299999999999999
+          "score": 0.88
         }
       ],
       "normalized": {
@@ -3907,21 +3904,21 @@
   "traces": [
     {
       "case_id": "ecommerce_001",
-      "latency_ms": 937,
+      "latency_ms": 761,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 55,
         "total_tokens": 5123,
         "prompt_tokens_details": {
-          "cached_tokens": 0
+          "cached_tokens": 4864
         },
-        "prompt_cache_hit_tokens": 0,
-        "prompt_cache_miss_tokens": 5068
+        "prompt_cache_hit_tokens": 4864,
+        "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "f3c7170d-feb9-4fa4-a255-30966aed7120",
+        "id": "6b0ace07-c255-485c-a97e-040c9e2f0b60",
         "object": "chat.completion",
-        "created": 1790562244,
+        "created": 1790565041,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -3939,10 +3936,10 @@
           "completion_tokens": 55,
           "total_tokens": 5123,
           "prompt_tokens_details": {
-            "cached_tokens": 0
+            "cached_tokens": 4864
           },
-          "prompt_cache_hit_tokens": 0,
-          "prompt_cache_miss_tokens": 5068
+          "prompt_cache_hit_tokens": 4864,
+          "prompt_cache_miss_tokens": 204
         },
         "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
       },
@@ -3950,7 +3947,7 @@
     },
     {
       "case_id": "ecommerce_002",
-      "latency_ms": 808,
+      "latency_ms": 1039,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 60,
@@ -3962,9 +3959,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "f9db19b1-22b3-4e3d-adb1-ddb27a7be79d",
+        "id": "55786f1b-927c-4780-b0c9-ba3fcea8a8a3",
         "object": "chat.completion",
-        "created": 1790562245,
+        "created": 1790565042,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -3993,7 +3990,7 @@
     },
     {
       "case_id": "ecommerce_003",
-      "latency_ms": 561,
+      "latency_ms": 770,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 53,
@@ -4005,9 +4002,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "3ddc7e4b-35cf-42d8-8dbe-2b775f9939ac",
+        "id": "6535226d-39eb-441b-a8ef-4c039c58f049",
         "object": "chat.completion",
-        "created": 1790562246,
+        "created": 1790565043,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4036,7 +4033,7 @@
     },
     {
       "case_id": "ecommerce_004",
-      "latency_ms": 884,
+      "latency_ms": 828,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 62,
@@ -4048,9 +4045,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "367236f3-cc6d-435d-aeb9-fc2db833530e",
+        "id": "404a9af5-5a10-4d72-946d-cffaac07b2e1",
         "object": "chat.completion",
-        "created": 1790562246,
+        "created": 1790565044,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4079,7 +4076,7 @@
     },
     {
       "case_id": "ecommerce_005",
-      "latency_ms": 687,
+      "latency_ms": 913,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 53,
@@ -4091,9 +4088,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "c6681066-0580-405d-becd-e2ba38b89ed9",
+        "id": "7fd6d263-e4a3-4247-9893-e490e535e8a7",
         "object": "chat.completion",
-        "created": 1790562247,
+        "created": 1790565045,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4122,7 +4119,7 @@
     },
     {
       "case_id": "ecommerce_006",
-      "latency_ms": 1087,
+      "latency_ms": 1355,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 56,
@@ -4134,9 +4131,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "d47f819c-8a2b-417d-b738-9c906057d3b6",
+        "id": "1dd32eda-4f47-4684-82e1-afdf3c47f059",
         "object": "chat.completion",
-        "created": 1790562248,
+        "created": 1790565046,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4165,11 +4162,11 @@
     },
     {
       "case_id": "ecommerce_007",
-      "latency_ms": 1032,
+      "latency_ms": 562,
       "usage": {
         "prompt_tokens": 5069,
-        "completion_tokens": 53,
-        "total_tokens": 5122,
+        "completion_tokens": 52,
+        "total_tokens": 5121,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -4177,16 +4174,16 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "0e2aa417-cdf2-4b94-886b-bc1407c75da8",
+        "id": "90f65857-131f-4469-a30c-48228254d6de",
         "object": "chat.completion",
-        "created": 1790562249,
+        "created": 1790565047,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"product_listing\",\"decision\":\"auto_match\",\"confidence\":0.98,\"top3_skill_ids\":[\"product_listing\",\"product_operation\",\"product_selection\"],\"reason\":\"商品上架是商品上新的别名，直接对应\"}"
+              "content": "{\"skill_id\":\"product_listing\",\"decision\":\"auto_match\",\"confidence\":0.98,\"top3_skill_ids\":[\"product_listing\",\"product_operation\",\"product_selection\"],\"reason\":\"商品上架是商品上新别名，直接对应\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -4194,8 +4191,8 @@
         ],
         "usage": {
           "prompt_tokens": 5069,
-          "completion_tokens": 53,
-          "total_tokens": 5122,
+          "completion_tokens": 52,
+          "total_tokens": 5121,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -4208,7 +4205,7 @@
     },
     {
       "case_id": "ecommerce_008",
-      "latency_ms": 737,
+      "latency_ms": 662,
       "usage": {
         "prompt_tokens": 5077,
         "completion_tokens": 64,
@@ -4220,9 +4217,9 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "4815049c-a6bb-4a23-90c9-610d6358f0e7",
+        "id": "c8b60059-796c-4380-a6e5-b64120b460d0",
         "object": "chat.completion",
-        "created": 1790562250,
+        "created": 1790565048,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4251,11 +4248,11 @@
     },
     {
       "case_id": "ecommerce_009",
-      "latency_ms": 577,
+      "latency_ms": 603,
       "usage": {
         "prompt_tokens": 5082,
-        "completion_tokens": 62,
-        "total_tokens": 5144,
+        "completion_tokens": 60,
+        "total_tokens": 5142,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -4263,16 +4260,16 @@
         "prompt_cache_miss_tokens": 218
       },
       "raw_response": {
-        "id": "7f53d0a5-4ba8-4b61-ad99-cfb95aeef0f5",
+        "id": "d027ef35-2a85-4d0b-b2d4-b7fc522cb20a",
         "object": "chat.completion",
-        "created": 1790562251,
+        "created": 1790565048,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"product_selection\",\"decision\":\"auto_match\",\"confidence\":0.93,\"top3_skill_ids\":[\"product_selection\",\"competitor_analysis\",\"traffic_analysis\"],\"reason\":\"依据热销榜与竞品数据挑选主推款，核心是选品决策\"}"
+              "content": "{\"skill_id\":\"product_selection\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"product_selection\",\"competitor_analysis\",\"product_operation\"],\"reason\":\"依据热销榜与竞品数据挑选主推款，属选品决策\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -4280,8 +4277,8 @@
         ],
         "usage": {
           "prompt_tokens": 5082,
-          "completion_tokens": 62,
-          "total_tokens": 5144,
+          "completion_tokens": 60,
+          "total_tokens": 5142,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -4294,7 +4291,7 @@
     },
     {
       "case_id": "ecommerce_010",
-      "latency_ms": 612,
+      "latency_ms": 991,
       "usage": {
         "prompt_tokens": 5081,
         "completion_tokens": 59,
@@ -4306,16 +4303,16 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "14101547-cbd3-4923-a1c9-028299f65760",
+        "id": "602b2a31-4626-4596-a2d4-640cc1e5f3f3",
         "object": "chat.completion",
-        "created": 1790562251,
+        "created": 1790565049,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"traffic_analysis\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"traffic_analysis\",\"metric_analysis\",\"data_analysis\"],\"reason\":\"监控曝光点击与访客来源并定位流量变化，属流量分析\"}"
+              "content": "{\"skill_id\":\"traffic_analysis\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"traffic_analysis\",\"metric_analysis\",\"data_analysis\"],\"reason\":\"监控曝光点击与访客来源、定位流量变化，属流量分析\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -4337,7 +4334,7 @@
     },
     {
       "case_id": "ecommerce_011",
-      "latency_ms": 1030,
+      "latency_ms": 813,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 57,
@@ -4349,9 +4346,9 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "59d7487b-1a7f-45ed-887d-462681b24b3f",
+        "id": "d5a19831-0b70-4612-99c8-2ed6cb66b757",
         "object": "chat.completion",
-        "created": 1790562252,
+        "created": 1790565050,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4380,7 +4377,7 @@
     },
     {
       "case_id": "ecommerce_012",
-      "latency_ms": 843,
+      "latency_ms": 595,
       "usage": {
         "prompt_tokens": 5081,
         "completion_tokens": 53,
@@ -4392,9 +4389,9 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "7a802dd1-b409-4656-af3e-7d65e913615f",
+        "id": "2aa39497-865b-400c-ab89-8abe3898b0ba",
         "object": "chat.completion",
-        "created": 1790562253,
+        "created": 1790565051,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4423,7 +4420,7 @@
     },
     {
       "case_id": "ecommerce_013",
-      "latency_ms": 665,
+      "latency_ms": 887,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 59,
@@ -4435,9 +4432,9 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "ef905081-7b84-42cf-8128-97c1725c79a3",
+        "id": "f09ea47b-137d-460a-8555-9be3de55889e",
         "object": "chat.completion",
-        "created": 1790562254,
+        "created": 1790565051,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4466,7 +4463,7 @@
     },
     {
       "case_id": "ecommerce_014",
-      "latency_ms": 850,
+      "latency_ms": 968,
       "usage": {
         "prompt_tokens": 5081,
         "completion_tokens": 59,
@@ -4478,9 +4475,9 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "08946f05-dbc5-4652-a80a-5f2c366dd81c",
+        "id": "9cd3a887-26b0-407a-b169-8f5ff321ceb0",
         "object": "chat.completion",
-        "created": 1790562254,
+        "created": 1790565052,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4509,11 +4506,11 @@
     },
     {
       "case_id": "ecommerce_015",
-      "latency_ms": 699,
+      "latency_ms": 974,
       "usage": {
         "prompt_tokens": 5084,
-        "completion_tokens": 64,
-        "total_tokens": 5148,
+        "completion_tokens": 63,
+        "total_tokens": 5147,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -4521,16 +4518,16 @@
         "prompt_cache_miss_tokens": 220
       },
       "raw_response": {
-        "id": "bbe426fe-166a-45ad-91f7-a0872ac8ac04",
+        "id": "22af74d5-b3d6-4a73-9a0a-0788f6feec9c",
         "object": "chat.completion",
-        "created": 1790562255,
+        "created": 1790565053,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"campaign_operation\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"campaign_operation\",\"ecommerce_operation\",\"conversion_rate_optimization\"],\"reason\":\"策划执行大促、满减规则与资源位投放，属活动运营\"}"
+              "content": "{\"skill_id\":\"campaign_operation\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"campaign_operation\",\"ecommerce_operation\",\"conversion_rate_optimization\"],\"reason\":\"策划执行大促、优惠规则与资源位投放，属活动运营\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -4538,8 +4535,8 @@
         ],
         "usage": {
           "prompt_tokens": 5084,
-          "completion_tokens": 64,
-          "total_tokens": 5148,
+          "completion_tokens": 63,
+          "total_tokens": 5147,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -4552,7 +4549,7 @@
     },
     {
       "case_id": "ecommerce_016",
-      "latency_ms": 916,
+      "latency_ms": 859,
       "usage": {
         "prompt_tokens": 5080,
         "completion_tokens": 63,
@@ -4564,16 +4561,16 @@
         "prompt_cache_miss_tokens": 216
       },
       "raw_response": {
-        "id": "0c1ee41f-a9aa-4596-a03b-4e169321003a",
+        "id": "a1c32328-f9a4-4054-9ad0-f73a01e88dd2",
         "object": "chat.completion",
-        "created": 1790562256,
+        "created": 1790565054,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"conversion_rate_optimization\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"conversion_rate_optimization\",\"traffic_analysis\",\"product_data_analysis\"],\"reason\":\"分析转化数据并优化详情页流失，属转化率优化\"}"
+              "content": "{\"skill_id\":\"conversion_rate_optimization\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"conversion_rate_optimization\",\"traffic_analysis\",\"product_data_analysis\"],\"reason\":\"围绕转化数据与详情页流失优化，属转化率优化\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -4595,7 +4592,7 @@
     },
     {
       "case_id": "ecommerce_017",
-      "latency_ms": 959,
+      "latency_ms": 975,
       "usage": {
         "prompt_tokens": 5081,
         "completion_tokens": 58,
@@ -4607,9 +4604,9 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "700b3a45-af17-40aa-8f86-b624c6d7e26d",
+        "id": "93144ea6-27a5-4779-b621-8440acf838b8",
         "object": "chat.completion",
-        "created": 1790562257,
+        "created": 1790565055,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4638,7 +4635,7 @@
     },
     {
       "case_id": "ecommerce_018",
-      "latency_ms": 745,
+      "latency_ms": 616,
       "usage": {
         "prompt_tokens": 5081,
         "completion_tokens": 67,
@@ -4650,9 +4647,9 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "fd122363-0333-44f3-8752-8e54f915f53b",
+        "id": "c9dac2ee-224d-4963-b4fa-bb78c4fd17e2",
         "object": "chat.completion",
-        "created": 1790562258,
+        "created": 1790565056,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4681,7 +4678,7 @@
     },
     {
       "case_id": "ecommerce_019",
-      "latency_ms": 1020,
+      "latency_ms": 905,
       "usage": {
         "prompt_tokens": 5072,
         "completion_tokens": 55,
@@ -4693,9 +4690,9 @@
         "prompt_cache_miss_tokens": 208
       },
       "raw_response": {
-        "id": "8a950c71-94da-43a2-ab11-eb0b64767a32",
+        "id": "b143f7a7-e76c-4013-b909-ddcd2a568e79",
         "object": "chat.completion",
-        "created": 1790562258,
+        "created": 1790565056,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4724,7 +4721,7 @@
     },
     {
       "case_id": "ecommerce_020",
-      "latency_ms": 1234,
+      "latency_ms": 1029,
       "usage": {
         "prompt_tokens": 5077,
         "completion_tokens": 56,
@@ -4736,9 +4733,9 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "8778d448-8f34-4136-bbf0-a892a640356d",
+        "id": "518bfa13-5fa3-476e-b2f3-1ecb5d1f2678",
         "object": "chat.completion",
-        "created": 1790562260,
+        "created": 1790565057,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4767,7 +4764,7 @@
     },
     {
       "case_id": "ecommerce_021",
-      "latency_ms": 1008,
+      "latency_ms": 719,
       "usage": {
         "prompt_tokens": 5075,
         "completion_tokens": 61,
@@ -4779,9 +4776,9 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "91254be4-f2ec-4018-bb37-46554025a3ef",
+        "id": "a1be3fd3-47fb-4727-84c4-087f0fd808d0",
         "object": "chat.completion",
-        "created": 1790562261,
+        "created": 1790565058,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4810,11 +4807,11 @@
     },
     {
       "case_id": "ecommerce_022",
-      "latency_ms": 730,
+      "latency_ms": 703,
       "usage": {
         "prompt_tokens": 5080,
-        "completion_tokens": 65,
-        "total_tokens": 5145,
+        "completion_tokens": 63,
+        "total_tokens": 5143,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -4822,16 +4819,16 @@
         "prompt_cache_miss_tokens": 216
       },
       "raw_response": {
-        "id": "fe6a8c28-db90-431c-bb47-2588c046ab69",
+        "id": "6578b67d-8192-4c77-ba7e-4747dabc8d38",
         "object": "chat.completion",
-        "created": 1790562262,
+        "created": 1790565059,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"tiktok_shop_operation\",\"decision\":\"review\",\"confidence\":0.6,\"top3_skill_ids\":[\"tiktok_shop_operation\",\"product_selection\",\"product_listing\"],\"reason\":\"含TikTok Shop运营与测款选品，主技能不唯一\"}"
+              "content": "{\"skill_id\":\"tiktok_shop_operation\",\"decision\":\"review\",\"confidence\":0.6,\"top3_skill_ids\":[\"tiktok_shop_operation\",\"product_selection\",\"product_listing\"],\"reason\":\"含TikTok Shop运营与达人合作，主技能不唯一\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -4839,8 +4836,8 @@
         ],
         "usage": {
           "prompt_tokens": 5080,
-          "completion_tokens": 65,
-          "total_tokens": 5145,
+          "completion_tokens": 63,
+          "total_tokens": 5143,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -4853,7 +4850,7 @@
     },
     {
       "case_id": "ecommerce_023",
-      "latency_ms": 766,
+      "latency_ms": 696,
       "usage": {
         "prompt_tokens": 5070,
         "completion_tokens": 34,
@@ -4865,9 +4862,9 @@
         "prompt_cache_miss_tokens": 206
       },
       "raw_response": {
-        "id": "4b8f2a16-a85c-4595-998e-b30b43ed1dfd",
+        "id": "47e45d26-8068-4018-92f5-199d4040eeb6",
         "object": "chat.completion",
-        "created": 1790562262,
+        "created": 1790565060,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4896,7 +4893,7 @@
     },
     {
       "case_id": "ecommerce_024",
-      "latency_ms": 900,
+      "latency_ms": 926,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 43,
@@ -4908,9 +4905,9 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "927df28c-5284-480f-b1f2-41f808e018c9",
+        "id": "8978302b-7441-4a1f-b8c5-d001df529f77",
         "object": "chat.completion",
-        "created": 1790562263,
+        "created": 1790565061,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -4939,7 +4936,7 @@
     },
     {
       "case_id": "hr_001",
-      "latency_ms": 1027,
+      "latency_ms": 1350,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 52,
@@ -4951,16 +4948,16 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "9e730854-ed52-44a1-b52e-6ba77b859bc7",
+        "id": "d43fd36b-97b5-480e-b3f4-ba9b13273811",
         "object": "chat.completion",
-        "created": 1790562264,
+        "created": 1790565062,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"resume_screening\",\"decision\":\"auto_match\",\"confidence\":1.0,\"top3_skill_ids\":[\"resume_screening\",\"recruitment\",\"talent_sourcing\"],\"reason\":\"文本与简历筛选标准技能完全一致\"}"
+              "content": "{\"skill_id\":\"resume_screening\",\"decision\":\"auto_match\",\"confidence\":1.0,\"top3_skill_ids\":[\"resume_screening\",\"recruitment\",\"talent_sourcing\"],\"reason\":\"文本与简历筛选标准名完全一致\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -4982,11 +4979,11 @@
     },
     {
       "case_id": "hr_002",
-      "latency_ms": 777,
+      "latency_ms": 1562,
       "usage": {
         "prompt_tokens": 5068,
-        "completion_tokens": 41,
-        "total_tokens": 5109,
+        "completion_tokens": 46,
+        "total_tokens": 5114,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -4994,16 +4991,16 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "f46ce24a-2ab8-497d-8e36-bd3933d06422",
+        "id": "8caa2ca0-9775-43d2-95ee-f45187b018e0",
         "object": "chat.completion",
-        "created": 1790562265,
+        "created": 1790565063,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"jd_writing\",\"decision\":\"auto_match\",\"confidence\":1.0,\"top3_skill_ids\":[\"jd_writing\"],\"reason\":\"JD撰写直接对应JD撰写技能\"}"
+              "content": "{\"skill_id\":\"jd_writing\",\"decision\":\"auto_match\",\"confidence\":1.0,\"top3_skill_ids\":[\"jd_writing\"],\"reason\":\"JD撰写即职位描述撰写，直接对应JD撰写技能\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -5011,8 +5008,8 @@
         ],
         "usage": {
           "prompt_tokens": 5068,
-          "completion_tokens": 41,
-          "total_tokens": 5109,
+          "completion_tokens": 46,
+          "total_tokens": 5114,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -5025,7 +5022,7 @@
     },
     {
       "case_id": "hr_003",
-      "latency_ms": 1065,
+      "latency_ms": 1031,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 51,
@@ -5037,9 +5034,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "54e4cf53-5974-4890-b5de-33bd9097adc1",
+        "id": "9c6e2de7-1229-4268-84e0-d213bb8b26ad",
         "object": "chat.completion",
-        "created": 1790562266,
+        "created": 1790565064,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5068,7 +5065,7 @@
     },
     {
       "case_id": "hr_004",
-      "latency_ms": 706,
+      "latency_ms": 946,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 52,
@@ -5080,16 +5077,16 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "d473aa42-4cfc-446e-b3ec-2c2292b9d94a",
+        "id": "876e03db-f10a-4474-a410-77f3657b72e1",
         "object": "chat.completion",
-        "created": 1790562267,
+        "created": 1790565065,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"resume_screening\",\"decision\":\"auto_match\",\"confidence\":1.0,\"top3_skill_ids\":[\"resume_screening\",\"recruitment\",\"talent_sourcing\"],\"reason\":\"简历初筛是简历筛选的别名\"}"
+              "content": "{\"skill_id\":\"resume_screening\",\"decision\":\"auto_match\",\"confidence\":0.98,\"top3_skill_ids\":[\"resume_screening\",\"recruitment\",\"talent_sourcing\"],\"reason\":\"简历初筛是简历筛选的别名\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -5111,11 +5108,11 @@
     },
     {
       "case_id": "hr_005",
-      "latency_ms": 807,
+      "latency_ms": 695,
       "usage": {
         "prompt_tokens": 5068,
-        "completion_tokens": 52,
-        "total_tokens": 5120,
+        "completion_tokens": 50,
+        "total_tokens": 5118,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -5123,16 +5120,16 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "e3ecfb89-5230-4565-9248-80de0bd932a1",
+        "id": "d428ed81-ca67-47be-813f-bc6974682d13",
         "object": "chat.completion",
-        "created": 1790562268,
+        "created": 1790565066,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"interview_evaluation\",\"decision\":\"auto_match\",\"confidence\":0.98,\"top3_skill_ids\":[\"interview_evaluation\",\"interview_coordination\",\"candidate_communication\"],\"reason\":\"面评即面试评价，对应面试评估\"}"
+              "content": "{\"skill_id\":\"interview_evaluation\",\"decision\":\"auto_match\",\"confidence\":0.98,\"top3_skill_ids\":[\"interview_evaluation\",\"interview_coordination\",\"candidate_communication\"],\"reason\":\"面评是面试评估的别名\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -5140,8 +5137,8 @@
         ],
         "usage": {
           "prompt_tokens": 5068,
-          "completion_tokens": 52,
-          "total_tokens": 5120,
+          "completion_tokens": 50,
+          "total_tokens": 5118,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -5154,7 +5151,7 @@
     },
     {
       "case_id": "hr_006",
-      "latency_ms": 1517,
+      "latency_ms": 647,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 56,
@@ -5166,9 +5163,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "89cc71c8-85d3-4948-815e-355fbd3bafb7",
+        "id": "ec1b26d3-51c8-4c38-9980-50a02d674a10",
         "object": "chat.completion",
-        "created": 1790562269,
+        "created": 1790565067,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5197,7 +5194,7 @@
     },
     {
       "case_id": "hr_007",
-      "latency_ms": 598,
+      "latency_ms": 945,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 48,
@@ -5209,9 +5206,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "48716c3b-d656-470e-9c2f-96db0c77839d",
+        "id": "fda6166e-1758-42b3-9fff-62d6b7ab2cfe",
         "object": "chat.completion",
-        "created": 1790562270,
+        "created": 1790565068,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5240,7 +5237,7 @@
     },
     {
       "case_id": "hr_008",
-      "latency_ms": 966,
+      "latency_ms": 709,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 54,
@@ -5252,16 +5249,16 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "7360d7fe-c3ff-45a9-86d6-41c4eb399b3d",
+        "id": "4efbe87c-2146-4f1f-8840-d0d0a05b11ab",
         "object": "chat.completion",
-        "created": 1790562271,
+        "created": 1790565069,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"talent_sourcing\",\"decision\":\"auto_match\",\"confidence\":0.97,\"top3_skill_ids\":[\"talent_sourcing\",\"candidate_communication\",\"recruitment\"],\"reason\":\"主动搜寻并联系候选人，属人才寻访\"}"
+              "content": "{\"skill_id\":\"talent_sourcing\",\"decision\":\"auto_match\",\"confidence\":0.97,\"top3_skill_ids\":[\"talent_sourcing\",\"candidate_communication\",\"recruitment\"],\"reason\":\"主动搜寻并联系候选人，对应人才寻访\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -5283,7 +5280,7 @@
     },
     {
       "case_id": "hr_009",
-      "latency_ms": 889,
+      "latency_ms": 784,
       "usage": {
         "prompt_tokens": 5079,
         "completion_tokens": 63,
@@ -5295,9 +5292,9 @@
         "prompt_cache_miss_tokens": 215
       },
       "raw_response": {
-        "id": "b582c715-d8fa-4053-a62e-6f6073163f87",
+        "id": "191f4de8-4943-414a-9047-3e2194e448df",
         "object": "chat.completion",
-        "created": 1790562272,
+        "created": 1790565069,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5326,7 +5323,7 @@
     },
     {
       "case_id": "hr_010",
-      "latency_ms": 1068,
+      "latency_ms": 590,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 60,
@@ -5338,9 +5335,9 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "e06a8bb0-b563-4272-896a-8e57d0ced23f",
+        "id": "38fec7b2-fb44-4e3e-8760-92b75725d106",
         "object": "chat.completion",
-        "created": 1790562273,
+        "created": 1790565070,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5369,7 +5366,7 @@
     },
     {
       "case_id": "hr_011",
-      "latency_ms": 835,
+      "latency_ms": 1062,
       "usage": {
         "prompt_tokens": 5077,
         "completion_tokens": 56,
@@ -5381,9 +5378,9 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "c6f48741-d43a-4a89-a5c9-a775dab784aa",
+        "id": "68981804-a5ca-4a77-be7c-8852ddaf3eae",
         "object": "chat.completion",
-        "created": 1790562274,
+        "created": 1790565071,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5412,7 +5409,7 @@
     },
     {
       "case_id": "hr_012",
-      "latency_ms": 958,
+      "latency_ms": 903,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 57,
@@ -5424,9 +5421,9 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "fa7591e3-e8d3-4456-8e57-dc5012a3abec",
+        "id": "1aa9611f-a930-4f88-8ba9-a13186bb9bbb",
         "object": "chat.completion",
-        "created": 1790562274,
+        "created": 1790565072,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5455,7 +5452,7 @@
     },
     {
       "case_id": "hr_013",
-      "latency_ms": 1063,
+      "latency_ms": 868,
       "usage": {
         "prompt_tokens": 5082,
         "completion_tokens": 58,
@@ -5467,9 +5464,9 @@
         "prompt_cache_miss_tokens": 218
       },
       "raw_response": {
-        "id": "2bad0427-295e-424b-9b5a-c397d02989b4",
+        "id": "d7981b20-8b03-415b-9373-97a157a06e17",
         "object": "chat.completion",
-        "created": 1790562275,
+        "created": 1790565073,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5498,7 +5495,7 @@
     },
     {
       "case_id": "hr_014",
-      "latency_ms": 761,
+      "latency_ms": 958,
       "usage": {
         "prompt_tokens": 5083,
         "completion_tokens": 54,
@@ -5510,9 +5507,9 @@
         "prompt_cache_miss_tokens": 219
       },
       "raw_response": {
-        "id": "922df314-f995-4f1a-8526-2bfc3fd48ac4",
+        "id": "57812473-5026-4ccb-aa42-18ab7307435c",
         "object": "chat.completion",
-        "created": 1790562276,
+        "created": 1790565074,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5541,11 +5538,11 @@
     },
     {
       "case_id": "hr_015",
-      "latency_ms": 517,
+      "latency_ms": 611,
       "usage": {
         "prompt_tokens": 5079,
-        "completion_tokens": 53,
-        "total_tokens": 5132,
+        "completion_tokens": 54,
+        "total_tokens": 5133,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -5553,16 +5550,16 @@
         "prompt_cache_miss_tokens": 215
       },
       "raw_response": {
-        "id": "80471b26-dbed-4035-b1ec-cd4bdb635556",
+        "id": "c22fe027-aea4-4066-8ae0-f43874e0b737",
         "object": "chat.completion",
-        "created": 1790562277,
+        "created": 1790565075,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"offer_management\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"offer_management\",\"candidate_communication\",\"recruitment\"],\"reason\":\"薪资沟通、发放offer及入职跟进属Offer管理\"}"
+              "content": "{\"skill_id\":\"offer_management\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"offer_management\",\"candidate_communication\",\"interview_scheduling\"],\"reason\":\"薪资沟通、发放offer及入职跟进属Offer管理\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -5570,8 +5567,8 @@
         ],
         "usage": {
           "prompt_tokens": 5079,
-          "completion_tokens": 53,
-          "total_tokens": 5132,
+          "completion_tokens": 54,
+          "total_tokens": 5133,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -5584,7 +5581,7 @@
     },
     {
       "case_id": "hr_016",
-      "latency_ms": 742,
+      "latency_ms": 777,
       "usage": {
         "prompt_tokens": 5080,
         "completion_tokens": 57,
@@ -5596,9 +5593,9 @@
         "prompt_cache_miss_tokens": 216
       },
       "raw_response": {
-        "id": "41bc2959-44bf-43f7-8f31-36a9be3a4d03",
+        "id": "f701699d-5264-4d5b-b55d-41e39b4c156a",
         "object": "chat.completion",
-        "created": 1790562278,
+        "created": 1790565075,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5627,11 +5624,11 @@
     },
     {
       "case_id": "hr_017",
-      "latency_ms": 800,
+      "latency_ms": 500,
       "usage": {
         "prompt_tokens": 5079,
-        "completion_tokens": 51,
-        "total_tokens": 5130,
+        "completion_tokens": 53,
+        "total_tokens": 5132,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -5639,16 +5636,16 @@
         "prompt_cache_miss_tokens": 215
       },
       "raw_response": {
-        "id": "5cbea2d9-5323-4b1a-832d-d3f870f91a2e",
+        "id": "3e6f4a9a-ff4f-4623-9b0a-8d81193f7d2e",
         "object": "chat.completion",
-        "created": 1790562278,
+        "created": 1790565076,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"interview_evaluation\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"interview_evaluation\",\"offer_management\",\"recruitment\"],\"reason\":\"整理面试反馈并汇总评价，对应面试评估\"}"
+              "content": "{\"skill_id\":\"interview_evaluation\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"interview_evaluation\",\"offer_management\",\"recruitment\"],\"reason\":\"汇总面试官评价并形成录用建议，属面试评估\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -5656,8 +5653,8 @@
         ],
         "usage": {
           "prompt_tokens": 5079,
-          "completion_tokens": 51,
-          "total_tokens": 5130,
+          "completion_tokens": 53,
+          "total_tokens": 5132,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -5670,7 +5667,7 @@
     },
     {
       "case_id": "hr_018",
-      "latency_ms": 819,
+      "latency_ms": 590,
       "usage": {
         "prompt_tokens": 5079,
         "completion_tokens": 55,
@@ -5682,9 +5679,9 @@
         "prompt_cache_miss_tokens": 215
       },
       "raw_response": {
-        "id": "2ca2d594-ccc4-4962-b61a-3e6532324631",
+        "id": "42f1c14d-7b60-4caa-9f3c-411f62335e8c",
         "object": "chat.completion",
-        "created": 1790562279,
+        "created": 1790565076,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5713,7 +5710,7 @@
     },
     {
       "case_id": "hr_019",
-      "latency_ms": 1421,
+      "latency_ms": 990,
       "usage": {
         "prompt_tokens": 5081,
         "completion_tokens": 60,
@@ -5725,9 +5722,9 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "518be546-34de-4295-919c-614c13d6f6c2",
+        "id": "81c6e811-32e2-4d4c-a0aa-c068e1252bee",
         "object": "chat.completion",
-        "created": 1790562280,
+        "created": 1790565077,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5756,7 +5753,7 @@
     },
     {
       "case_id": "hr_020",
-      "latency_ms": 1062,
+      "latency_ms": 702,
       "usage": {
         "prompt_tokens": 5074,
         "completion_tokens": 53,
@@ -5768,9 +5765,9 @@
         "prompt_cache_miss_tokens": 210
       },
       "raw_response": {
-        "id": "f398f4bd-3b23-46e5-b90d-003d4fc100e3",
+        "id": "a50879e1-d8b0-45da-8f86-132e917d149d",
         "object": "chat.completion",
-        "created": 1790562281,
+        "created": 1790565078,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5799,7 +5796,7 @@
     },
     {
       "case_id": "hr_021",
-      "latency_ms": 944,
+      "latency_ms": 836,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 54,
@@ -5811,9 +5808,9 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "38f310ba-0956-4177-bc1f-c64ab058ba2e",
+        "id": "62ee06ec-a8e3-4ea1-8932-994a3c0f17c9",
         "object": "chat.completion",
-        "created": 1790562283,
+        "created": 1790565079,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5842,7 +5839,7 @@
     },
     {
       "case_id": "hr_022",
-      "latency_ms": 885,
+      "latency_ms": 901,
       "usage": {
         "prompt_tokens": 5074,
         "completion_tokens": 56,
@@ -5854,9 +5851,9 @@
         "prompt_cache_miss_tokens": 210
       },
       "raw_response": {
-        "id": "dba7780a-7b9f-48fb-ad5c-879134136d2d",
+        "id": "4184de66-c392-48c1-975f-12aec8ed40bc",
         "object": "chat.completion",
-        "created": 1790562283,
+        "created": 1790565080,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5885,7 +5882,7 @@
     },
     {
       "case_id": "hr_023",
-      "latency_ms": 792,
+      "latency_ms": 744,
       "usage": {
         "prompt_tokens": 5073,
         "completion_tokens": 40,
@@ -5897,9 +5894,9 @@
         "prompt_cache_miss_tokens": 209
       },
       "raw_response": {
-        "id": "fdfb36c8-32c8-45f7-801c-ab877c8213b4",
+        "id": "dd86ebf9-1f0d-41f5-9e71-eea255f037e8",
         "object": "chat.completion",
-        "created": 1790562284,
+        "created": 1790565080,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5928,7 +5925,7 @@
     },
     {
       "case_id": "hr_024",
-      "latency_ms": 556,
+      "latency_ms": 796,
       "usage": {
         "prompt_tokens": 5074,
         "completion_tokens": 36,
@@ -5940,9 +5937,9 @@
         "prompt_cache_miss_tokens": 210
       },
       "raw_response": {
-        "id": "8d869ee1-b1db-4681-b6ba-5f2ee2c38362",
+        "id": "f8f36c54-f637-49f8-a3e8-bd3374d59fba",
         "object": "chat.completion",
-        "created": 1790562285,
+        "created": 1790565081,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -5971,7 +5968,7 @@
     },
     {
       "case_id": "data_001",
-      "latency_ms": 923,
+      "latency_ms": 971,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 53,
@@ -5983,9 +5980,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "53b549de-8ab2-437b-87f7-31636d1779f4",
+        "id": "fc6cf22b-94c6-4f60-9b49-5b1561516ab3",
         "object": "chat.completion",
-        "created": 1790562286,
+        "created": 1790565082,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6014,7 +6011,7 @@
     },
     {
       "case_id": "data_002",
-      "latency_ms": 722,
+      "latency_ms": 632,
       "usage": {
         "prompt_tokens": 5067,
         "completion_tokens": 35,
@@ -6026,9 +6023,9 @@
         "prompt_cache_miss_tokens": 203
       },
       "raw_response": {
-        "id": "42f99027-a1bc-4d61-a1af-cc5f96c2dd6b",
+        "id": "08fd8764-5c7b-4f03-ad72-f40079dafec7",
         "object": "chat.completion",
-        "created": 1790562287,
+        "created": 1790565083,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6057,7 +6054,7 @@
     },
     {
       "case_id": "data_003",
-      "latency_ms": 938,
+      "latency_ms": 1074,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 50,
@@ -6069,9 +6066,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "e3bbef79-1546-457f-804a-03a7c3da62df",
+        "id": "1c718261-1cab-45ae-864b-82235b247cf9",
         "object": "chat.completion",
-        "created": 1790562287,
+        "created": 1790565084,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6100,11 +6097,11 @@
     },
     {
       "case_id": "data_004",
-      "latency_ms": 1162,
+      "latency_ms": 427,
       "usage": {
         "prompt_tokens": 5068,
-        "completion_tokens": 51,
-        "total_tokens": 5119,
+        "completion_tokens": 49,
+        "total_tokens": 5117,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -6112,16 +6109,16 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "beea65ed-8247-4163-ae83-2e78ca96722b",
+        "id": "a291784a-14c7-4949-8b53-f0698c1bfe93",
         "object": "chat.completion",
-        "created": 1790562288,
+        "created": 1790565085,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"data_visualization\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"data_visualization\",\"report_generation\",\"excel_data_analysis\"],\"reason\":\"可视化报表对应数据可视化\"}"
+              "content": "{\"skill_id\":\"data_visualization\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"data_visualization\",\"report_generation\",\"data_analysis\"],\"reason\":\"可视化报表对应数据可视化\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -6129,8 +6126,8 @@
         ],
         "usage": {
           "prompt_tokens": 5068,
-          "completion_tokens": 51,
-          "total_tokens": 5119,
+          "completion_tokens": 49,
+          "total_tokens": 5117,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -6143,7 +6140,7 @@
     },
     {
       "case_id": "data_005",
-      "latency_ms": 708,
+      "latency_ms": 948,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 51,
@@ -6155,9 +6152,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "337c6dd9-f96c-4074-8c3c-dacca526f746",
+        "id": "011496ca-daaf-42a7-aabb-15079621fa23",
         "object": "chat.completion",
-        "created": 1790562289,
+        "created": 1790565085,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6186,7 +6183,7 @@
     },
     {
       "case_id": "data_006",
-      "latency_ms": 923,
+      "latency_ms": 977,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 49,
@@ -6198,9 +6195,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "b1b3d880-22da-4089-b025-3a3393af521b",
+        "id": "95127b38-a6a7-48c6-96dc-e09c56166484",
         "object": "chat.completion",
-        "created": 1790562290,
+        "created": 1790565086,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6229,7 +6226,7 @@
     },
     {
       "case_id": "data_007",
-      "latency_ms": 958,
+      "latency_ms": 977,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 51,
@@ -6241,9 +6238,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "bb5750a9-806c-49ea-8e90-71587522ebae",
+        "id": "9780b4e4-12ca-481e-8217-b1c988e32d3d",
         "object": "chat.completion",
-        "created": 1790562291,
+        "created": 1790565087,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6272,7 +6269,7 @@
     },
     {
       "case_id": "data_008",
-      "latency_ms": 805,
+      "latency_ms": 962,
       "usage": {
         "prompt_tokens": 5081,
         "completion_tokens": 52,
@@ -6284,9 +6281,9 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "552c9d84-330f-4483-b225-2b9179f620e6",
+        "id": "0fe11a17-ae18-4928-9983-67a1c86924eb",
         "object": "chat.completion",
-        "created": 1790562292,
+        "created": 1790565088,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6315,7 +6312,7 @@
     },
     {
       "case_id": "data_009",
-      "latency_ms": 1557,
+      "latency_ms": 814,
       "usage": {
         "prompt_tokens": 5079,
         "completion_tokens": 52,
@@ -6327,16 +6324,16 @@
         "prompt_cache_miss_tokens": 215
       },
       "raw_response": {
-        "id": "86b45ec0-23d5-47f4-90f9-280ac7fee289",
+        "id": "e48944fa-cab3-44f9-9c2a-96e184301a33",
         "object": "chat.completion",
-        "created": 1790562294,
+        "created": 1790565089,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"data_visualization\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"data_visualization\",\"report_generation\",\"data_analysis\"],\"reason\":\"趋势图和看板属于数据可视化呈现\"}"
+              "content": "{\"skill_id\":\"data_visualization\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"data_visualization\",\"report_generation\",\"data_analysis\"],\"reason\":\"趋势图和看板属于数据可视化呈现\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -6358,7 +6355,7 @@
     },
     {
       "case_id": "data_010",
-      "latency_ms": 909,
+      "latency_ms": 701,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 51,
@@ -6370,9 +6367,9 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "2ba6b145-5cc9-4eb4-91c0-804754794a8a",
+        "id": "eb3d4a19-8861-4af5-8190-c4d54bfcc2e9",
         "object": "chat.completion",
-        "created": 1790562294,
+        "created": 1790565090,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6401,7 +6398,7 @@
     },
     {
       "case_id": "data_011",
-      "latency_ms": 1074,
+      "latency_ms": 705,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 52,
@@ -6413,16 +6410,16 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "d53ed549-793f-4dbf-a23c-f485804c40cf",
+        "id": "5a1d0a56-5e88-4694-a4a7-c5162e64d78c",
         "object": "chat.completion",
-        "created": 1790562295,
+        "created": 1790565090,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"metric_analysis\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"metric_analysis\",\"data_analysis\",\"product_data_analysis\"],\"reason\":\"搭建并监控核心指标体系，属指标分析\"}"
+              "content": "{\"skill_id\":\"metric_analysis\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"metric_analysis\",\"data_analysis\",\"product_data_analysis\"],\"reason\":\"搭建并监控核心指标体系，属指标分析\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -6444,7 +6441,7 @@
     },
     {
       "case_id": "data_012",
-      "latency_ms": 585,
+      "latency_ms": 635,
       "usage": {
         "prompt_tokens": 5075,
         "completion_tokens": 54,
@@ -6456,9 +6453,9 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "5a418433-a227-4c6c-8420-63cd08be8550",
+        "id": "e460e2f1-3e2d-4449-8cb9-6af9ce883656",
         "object": "chat.completion",
-        "created": 1790562296,
+        "created": 1790565091,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6487,7 +6484,7 @@
     },
     {
       "case_id": "data_013",
-      "latency_ms": 865,
+      "latency_ms": 1143,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 60,
@@ -6499,9 +6496,9 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "650021a5-9f23-4213-a2ba-649e85c31e1c",
+        "id": "ab78bff8-9daf-475f-af6f-28acc5242e03",
         "object": "chat.completion",
-        "created": 1790562297,
+        "created": 1790565092,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6530,7 +6527,7 @@
     },
     {
       "case_id": "data_014",
-      "latency_ms": 684,
+      "latency_ms": 668,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 46,
@@ -6542,9 +6539,9 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "1514fd35-1841-4fda-91ce-da92b71f727a",
+        "id": "d60cfccb-4578-4eec-a594-11596cc850e2",
         "object": "chat.completion",
-        "created": 1790562298,
+        "created": 1790565093,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6573,7 +6570,7 @@
     },
     {
       "case_id": "data_015",
-      "latency_ms": 544,
+      "latency_ms": 630,
       "usage": {
         "prompt_tokens": 5082,
         "completion_tokens": 54,
@@ -6585,9 +6582,9 @@
         "prompt_cache_miss_tokens": 218
       },
       "raw_response": {
-        "id": "1d7cec6d-8d5f-43ad-b2eb-e0265f0793d9",
+        "id": "311e3c11-0f46-4936-a657-80ce28d34b49",
         "object": "chat.completion",
-        "created": 1790562299,
+        "created": 1790565094,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6616,7 +6613,7 @@
     },
     {
       "case_id": "data_016",
-      "latency_ms": 671,
+      "latency_ms": 792,
       "usage": {
         "prompt_tokens": 5073,
         "completion_tokens": 51,
@@ -6628,16 +6625,16 @@
         "prompt_cache_miss_tokens": 209
       },
       "raw_response": {
-        "id": "e4e95bc1-0b01-45dd-9c17-c87e7598610b",
+        "id": "9ee125e0-394d-409e-8f39-9b9bbe208a6b",
         "object": "chat.completion",
-        "created": 1790562299,
+        "created": 1790565094,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"data_modeling\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"data_modeling\",\"inventory_forecasting\",\"python_data_analysis\"],\"reason\":\"构建预测模型属于数据建模\"}"
+              "content": "{\"skill_id\":\"data_modeling\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"data_modeling\",\"inventory_forecasting\",\"python_data_analysis\"],\"reason\":\"构建预测模型属数据建模\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -6659,7 +6656,7 @@
     },
     {
       "case_id": "data_017",
-      "latency_ms": 798,
+      "latency_ms": 1073,
       "usage": {
         "prompt_tokens": 5080,
         "completion_tokens": 58,
@@ -6671,9 +6668,9 @@
         "prompt_cache_miss_tokens": 216
       },
       "raw_response": {
-        "id": "0d23049b-f1a7-4715-b762-071ae2109a33",
+        "id": "c6b974a8-974c-444f-8248-ae2a27eac68f",
         "object": "chat.completion",
-        "created": 1790562300,
+        "created": 1790565095,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6702,11 +6699,11 @@
     },
     {
       "case_id": "data_018",
-      "latency_ms": 1043,
+      "latency_ms": 810,
       "usage": {
         "prompt_tokens": 5078,
-        "completion_tokens": 57,
-        "total_tokens": 5135,
+        "completion_tokens": 56,
+        "total_tokens": 5134,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -6714,16 +6711,16 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "c619d9b3-7503-45dc-bdd0-f004d4ce410d",
+        "id": "afdbe699-673a-4f9c-96af-f723adc72b77",
         "object": "chat.completion",
-        "created": 1790562301,
+        "created": 1790565096,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"data_quality_check\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"data_quality_check\",\"data_cleaning\",\"data_processing\"],\"reason\":\"指标口径一致性校验与异常重复排查属数据质量检查\"}"
+              "content": "{\"skill_id\":\"data_quality_check\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"data_quality_check\",\"data_cleaning\",\"data_processing\"],\"reason\":\"校验口径一致性与异常重复，属数据质量检查\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -6731,8 +6728,8 @@
         ],
         "usage": {
           "prompt_tokens": 5078,
-          "completion_tokens": 57,
-          "total_tokens": 5135,
+          "completion_tokens": 56,
+          "total_tokens": 5134,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -6745,7 +6742,7 @@
     },
     {
       "case_id": "data_019",
-      "latency_ms": 975,
+      "latency_ms": 594,
       "usage": {
         "prompt_tokens": 5075,
         "completion_tokens": 57,
@@ -6757,9 +6754,9 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "301b2b0b-2278-4316-889b-4e2cf96d1591",
+        "id": "52bdc368-9711-49e3-91f9-cc0893305e03",
         "object": "chat.completion",
-        "created": 1790562302,
+        "created": 1790565097,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -6788,7 +6785,7 @@
     },
     {
       "case_id": "data_020",
-      "latency_ms": 803,
+      "latency_ms": 802,
       "usage": {
         "prompt_tokens": 5073,
         "completion_tokens": 55,
@@ -6800,16 +6797,16 @@
         "prompt_cache_miss_tokens": 209
       },
       "raw_response": {
-        "id": "657cce37-b632-424a-a879-9ec30dbe2922",
+        "id": "00d12598-cdaf-4e77-9c55-7fad561d99dc",
         "object": "chat.completion",
-        "created": 1790562303,
+        "created": 1790565098,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"data_cleaning\",\"decision\":\"review\",\"confidence\":0.5,\"top3_skill_ids\":[\"data_cleaning\",\"statistical_analysis\",\"data_processing\"],\"reason\":\"同时涉及数据清洗与统计分析，无法确定主技能\"}"
+              "content": "{\"skill_id\":\"data_cleaning\",\"decision\":\"review\",\"confidence\":0.5,\"top3_skill_ids\":[\"data_cleaning\",\"statistical_analysis\",\"data_processing\"],\"reason\":\"同时涉及数据清洗与统计分析，主技能不明确\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -6831,7 +6828,7 @@
     },
     {
       "case_id": "data_021",
-      "latency_ms": 816,
+      "latency_ms": 756,
       "usage": {
         "prompt_tokens": 5074,
         "completion_tokens": 52,
@@ -6843,16 +6840,16 @@
         "prompt_cache_miss_tokens": 210
       },
       "raw_response": {
-        "id": "7ffe9dc0-8f17-4c73-8693-b488665b2e9b",
+        "id": "ca6def21-01cc-44ab-8596-e56a7bfaabba",
         "object": "chat.completion",
-        "created": 1790562303,
+        "created": 1790565098,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"data_visualization\",\"decision\":\"auto_match\",\"confidence\":0.85,\"top3_skill_ids\":[\"data_visualization\",\"metric_analysis\",\"report_generation\"],\"reason\":\"搭建BI看板属数据可视化呈现\"}"
+              "content": "{\"skill_id\":\"data_visualization\",\"decision\":\"auto_match\",\"confidence\":0.85,\"top3_skill_ids\":[\"data_visualization\",\"metric_analysis\",\"report_generation\"],\"reason\":\"搭建BI看板属于数据可视化呈现\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -6874,7 +6871,7 @@
     },
     {
       "case_id": "data_022",
-      "latency_ms": 957,
+      "latency_ms": 567,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 53,
@@ -6886,16 +6883,16 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "f5bbc445-979c-4d66-b6fd-7fb206bcf182",
+        "id": "72effb3f-8fc6-400a-bb39-19038622cb5d",
         "object": "chat.completion",
-        "created": 1790562304,
+        "created": 1790565099,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"data_analysis\",\"decision\":\"auto_match\",\"confidence\":0.85,\"top3_skill_ids\":[\"data_analysis\",\"metric_analysis\",\"data_processing\"],\"reason\":\"日志数据处理并做转化漏斗分析，属业务数据分析\"}"
+              "content": "{\"skill_id\":\"data_analysis\",\"decision\":\"auto_match\",\"confidence\":0.85,\"top3_skill_ids\":[\"data_analysis\",\"data_processing\",\"metric_analysis\"],\"reason\":\"日志数据处理并做转化漏斗分析，属业务数据分析\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -6917,7 +6914,7 @@
     },
     {
       "case_id": "data_023",
-      "latency_ms": 699,
+      "latency_ms": 912,
       "usage": {
         "prompt_tokens": 5077,
         "completion_tokens": 37,
@@ -6929,16 +6926,16 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "e1d1e34d-1266-4a64-b615-b62e96fcfcf5",
+        "id": "a452ee93-6715-41c7-ad36-c772a6de26fd",
         "object": "chat.completion",
-        "created": 1790562305,
+        "created": 1790565100,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":null,\"decision\":\"unknown\",\"confidence\":0.0,\"top3_skill_ids\":[],\"reason\":\"Taxonomy无数据合规或个人信息保护相关技能\"}"
+              "content": "{\"skill_id\":null,\"decision\":\"unknown\",\"confidence\":0.0,\"top3_skill_ids\":[],\"reason\":\"Taxonomy无数据合规或GDPR相关技能\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -6960,7 +6957,7 @@
     },
     {
       "case_id": "data_024",
-      "latency_ms": 1046,
+      "latency_ms": 644,
       "usage": {
         "prompt_tokens": 5074,
         "completion_tokens": 35,
@@ -6972,9 +6969,9 @@
         "prompt_cache_miss_tokens": 210
       },
       "raw_response": {
-        "id": "13ec0eb8-4d99-4345-852d-9b293bdd90f4",
+        "id": "382f831b-ae6f-42e3-a375-2c9f3f007ddb",
         "object": "chat.completion",
-        "created": 1790562306,
+        "created": 1790565101,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7003,7 +7000,7 @@
     },
     {
       "case_id": "office_001",
-      "latency_ms": 998,
+      "latency_ms": 756,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 49,
@@ -7015,9 +7012,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "41ed037d-e173-4ebe-a52e-3e3cdc4acf24",
+        "id": "d7f213c8-cfb6-40b5-b108-d9054c947155",
         "object": "chat.completion",
-        "created": 1790562307,
+        "created": 1790565101,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7046,7 +7043,7 @@
     },
     {
       "case_id": "office_002",
-      "latency_ms": 1009,
+      "latency_ms": 1200,
       "usage": {
         "prompt_tokens": 5067,
         "completion_tokens": 43,
@@ -7058,9 +7055,9 @@
         "prompt_cache_miss_tokens": 203
       },
       "raw_response": {
-        "id": "d72c4851-539f-4354-b08c-d1688ad83906",
+        "id": "8d02fece-77f3-47f0-8f73-86626f43e215",
         "object": "chat.completion",
-        "created": 1790562308,
+        "created": 1790565102,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7089,7 +7086,7 @@
     },
     {
       "case_id": "office_003",
-      "latency_ms": 958,
+      "latency_ms": 898,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 48,
@@ -7101,9 +7098,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "40d88d33-ce4a-4b9a-8e25-f660ee268cfd",
+        "id": "b3c8f755-7ad7-47c5-a8dc-762db7cca745",
         "object": "chat.completion",
-        "created": 1790562309,
+        "created": 1790565103,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7132,7 +7129,7 @@
     },
     {
       "case_id": "office_004",
-      "latency_ms": 687,
+      "latency_ms": 1006,
       "usage": {
         "prompt_tokens": 5067,
         "completion_tokens": 46,
@@ -7144,9 +7141,9 @@
         "prompt_cache_miss_tokens": 203
       },
       "raw_response": {
-        "id": "e432fb35-6f84-4ee7-95cd-99d5c365097e",
+        "id": "f72d3bc8-565f-4e91-a2ac-dada1eca9eaf",
         "object": "chat.completion",
-        "created": 1790562310,
+        "created": 1790565104,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7175,7 +7172,7 @@
     },
     {
       "case_id": "office_005",
-      "latency_ms": 856,
+      "latency_ms": 663,
       "usage": {
         "prompt_tokens": 5070,
         "completion_tokens": 46,
@@ -7187,9 +7184,9 @@
         "prompt_cache_miss_tokens": 206
       },
       "raw_response": {
-        "id": "b5d4f04b-04ed-44b0-a8e8-4fc963f854cd",
+        "id": "d5d9e9e8-fb4e-4beb-955d-91d88424bd2a",
         "object": "chat.completion",
-        "created": 1790562311,
+        "created": 1790565105,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7218,7 +7215,7 @@
     },
     {
       "case_id": "office_006",
-      "latency_ms": 687,
+      "latency_ms": 760,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 48,
@@ -7230,9 +7227,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "6b4479d3-5a80-4950-a0e7-dd042ddc3cc5",
+        "id": "c529fd29-d419-4750-90a4-e620994c37ec",
         "object": "chat.completion",
-        "created": 1790562311,
+        "created": 1790565106,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7261,7 +7258,7 @@
     },
     {
       "case_id": "office_007",
-      "latency_ms": 746,
+      "latency_ms": 642,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 50,
@@ -7273,9 +7270,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "fce89965-e8c5-4688-8e64-0e313bba4c0e",
+        "id": "b071cec7-ec05-4bd0-ae10-1e0e27f0a961",
         "object": "chat.completion",
-        "created": 1790562312,
+        "created": 1790565106,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7304,7 +7301,7 @@
     },
     {
       "case_id": "office_008",
-      "latency_ms": 926,
+      "latency_ms": 1085,
       "usage": {
         "prompt_tokens": 5077,
         "completion_tokens": 55,
@@ -7316,9 +7313,9 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "73552bf6-679f-464d-920d-6aa1b4e8c6b6",
+        "id": "a31ec9c3-84fa-445a-a05c-b8fecf8b2a9b",
         "object": "chat.completion",
-        "created": 1790562313,
+        "created": 1790565107,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7347,7 +7344,7 @@
     },
     {
       "case_id": "office_009",
-      "latency_ms": 994,
+      "latency_ms": 771,
       "usage": {
         "prompt_tokens": 5081,
         "completion_tokens": 51,
@@ -7359,9 +7356,9 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "90b292c7-4304-4978-8bae-80d486b998b2",
+        "id": "dc95d7e2-f2ce-48e1-9841-d59814d9751d",
         "object": "chat.completion",
-        "created": 1790562314,
+        "created": 1790565108,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7390,7 +7387,7 @@
     },
     {
       "case_id": "office_010",
-      "latency_ms": 714,
+      "latency_ms": 692,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 55,
@@ -7402,9 +7399,9 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "5d68ae27-91f9-4547-94f7-f17a3b6a7556",
+        "id": "611530ed-66ee-4bd8-ae87-fe6ab6007c2c",
         "object": "chat.completion",
-        "created": 1790562315,
+        "created": 1790565109,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7433,11 +7430,11 @@
     },
     {
       "case_id": "office_011",
-      "latency_ms": 857,
+      "latency_ms": 759,
       "usage": {
         "prompt_tokens": 5080,
-        "completion_tokens": 52,
-        "total_tokens": 5132,
+        "completion_tokens": 56,
+        "total_tokens": 5136,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -7445,16 +7442,16 @@
         "prompt_cache_miss_tokens": 216
       },
       "raw_response": {
-        "id": "60564c7b-73a5-4796-ae2d-323493991cca",
+        "id": "85ba34fd-bf15-4e30-8565-fba68958c236",
         "object": "chat.completion",
-        "created": 1790562315,
+        "created": 1790565110,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"ppt_design\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"ppt_design\",\"powerpoint\",\"document_formatting\"],\"reason\":\"制作演示材料并统一视觉风格，对应PPT制作\"}"
+              "content": "{\"skill_id\":\"ppt_design\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"ppt_design\",\"powerpoint\",\"document_formatting\"],\"reason\":\"季度汇报演示材料，含内容逻辑与视觉风格，属PPT制作\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -7462,8 +7459,8 @@
         ],
         "usage": {
           "prompt_tokens": 5080,
-          "completion_tokens": 52,
-          "total_tokens": 5132,
+          "completion_tokens": 56,
+          "total_tokens": 5136,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -7476,7 +7473,7 @@
     },
     {
       "case_id": "office_012",
-      "latency_ms": 593,
+      "latency_ms": 797,
       "usage": {
         "prompt_tokens": 5075,
         "completion_tokens": 56,
@@ -7488,16 +7485,16 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "1f64f712-d2ba-416b-84bd-28be46ad8948",
+        "id": "86b3cfab-3cab-4dde-aa82-f619bd94211f",
         "object": "chat.completion",
-        "created": 1790562316,
+        "created": 1790565110,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"business_document_writing\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"business_document_writing\",\"word\",\"document_formatting\"],\"reason\":\"编写合同通知等正式商务文档，对应商务文档制作\"}"
+              "content": "{\"skill_id\":\"business_document_writing\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"business_document_writing\",\"document_formatting\",\"word\"],\"reason\":\"编写合同通知等正式商务文档，对应商务文档制作\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -7519,11 +7516,11 @@
     },
     {
       "case_id": "office_013",
-      "latency_ms": 826,
+      "latency_ms": 859,
       "usage": {
         "prompt_tokens": 5077,
-        "completion_tokens": 54,
-        "total_tokens": 5131,
+        "completion_tokens": 59,
+        "total_tokens": 5136,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -7531,16 +7528,16 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "ef52880b-748c-4e3b-ac87-ec76278e0a4b",
+        "id": "42c22e47-3992-4974-bb63-6e8b68634cad",
         "object": "chat.completion",
-        "created": 1790562317,
+        "created": 1790565111,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"pivot_table\",\"decision\":\"auto_match\",\"confidence\":0.85,\"top3_skill_ids\":[\"pivot_table\",\"vlookup\",\"excel_data_analysis\"],\"reason\":\"明确提到数据透视表，属其核心功能\"}"
+              "content": "{\"skill_id\":\"pivot_table\",\"decision\":\"auto_match\",\"confidence\":0.6,\"top3_skill_ids\":[\"pivot_table\",\"vlookup\",\"excel_data_analysis\"],\"reason\":\"文本含透视表与VLOOKUP，主技能为数据透视表\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -7548,8 +7545,8 @@
         ],
         "usage": {
           "prompt_tokens": 5077,
-          "completion_tokens": 54,
-          "total_tokens": 5131,
+          "completion_tokens": 59,
+          "total_tokens": 5136,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -7562,7 +7559,7 @@
     },
     {
       "case_id": "office_014",
-      "latency_ms": 1070,
+      "latency_ms": 946,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 54,
@@ -7574,9 +7571,9 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "045f7c66-b359-45f7-a862-627b8f132e96",
+        "id": "26da1c70-b558-4781-9a51-c912d18acd45",
         "object": "chat.completion",
-        "created": 1790562318,
+        "created": 1790565112,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7605,7 +7602,7 @@
     },
     {
       "case_id": "office_015",
-      "latency_ms": 750,
+      "latency_ms": 888,
       "usage": {
         "prompt_tokens": 5080,
         "completion_tokens": 57,
@@ -7617,16 +7614,16 @@
         "prompt_cache_miss_tokens": 216
       },
       "raw_response": {
-        "id": "0b0eda38-e8f2-4eac-b29e-71dc1a1fce08",
+        "id": "ae4f9eb9-13dc-4a9e-8c93-9cf91ac7e2c4",
         "object": "chat.completion",
-        "created": 1790562319,
+        "created": 1790565113,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"ppt_design\",\"decision\":\"auto_match\",\"confidence\":0.82,\"top3_skill_ids\":[\"ppt_design\",\"data_visualization\",\"powerpoint\"],\"reason\":\"制作年度总结PPT并含图表讲稿，核心是演示材料交付\"}"
+              "content": "{\"skill_id\":\"ppt_design\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"ppt_design\",\"data_visualization\",\"powerpoint\"],\"reason\":\"制作年度总结PPT并含图表讲稿，核心是演示材料制作\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -7648,7 +7645,7 @@
     },
     {
       "case_id": "office_016",
-      "latency_ms": 1191,
+      "latency_ms": 1031,
       "usage": {
         "prompt_tokens": 5082,
         "completion_tokens": 51,
@@ -7660,9 +7657,9 @@
         "prompt_cache_miss_tokens": 218
       },
       "raw_response": {
-        "id": "e9c370d4-6442-4cff-8a3c-2b28436cdc84",
+        "id": "30c864b7-917e-45d8-8f3a-50c4445e65c3",
         "object": "chat.completion",
-        "created": 1790562320,
+        "created": 1790565114,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7691,7 +7688,7 @@
     },
     {
       "case_id": "office_017",
-      "latency_ms": 956,
+      "latency_ms": 686,
       "usage": {
         "prompt_tokens": 5081,
         "completion_tokens": 50,
@@ -7703,9 +7700,9 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "6f54713e-8fdc-41bb-9b5e-b362f27d0c74",
+        "id": "2eb82a77-51f0-4925-bd45-0d23fbe67f76",
         "object": "chat.completion",
-        "created": 1790562321,
+        "created": 1790565115,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7734,7 +7731,7 @@
     },
     {
       "case_id": "office_018",
-      "latency_ms": 754,
+      "latency_ms": 857,
       "usage": {
         "prompt_tokens": 5077,
         "completion_tokens": 55,
@@ -7746,9 +7743,9 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "913d2932-04c0-4f23-8b01-db6f8168cce0",
+        "id": "dc6d0aa9-87af-4a33-bcfa-7eb74ef4a46d",
         "object": "chat.completion",
-        "created": 1790562322,
+        "created": 1790565116,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7777,7 +7774,7 @@
     },
     {
       "case_id": "office_019",
-      "latency_ms": 839,
+      "latency_ms": 688,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 52,
@@ -7789,9 +7786,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "9f95a3f0-ed78-4e7d-be4a-7b3dd0ea98eb",
+        "id": "6270ec30-a7af-478c-b72b-10395f690f38",
         "object": "chat.completion",
-        "created": 1790562323,
+        "created": 1790565116,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7820,7 +7817,7 @@
     },
     {
       "case_id": "office_020",
-      "latency_ms": 840,
+      "latency_ms": 666,
       "usage": {
         "prompt_tokens": 5071,
         "completion_tokens": 52,
@@ -7832,9 +7829,9 @@
         "prompt_cache_miss_tokens": 207
       },
       "raw_response": {
-        "id": "e7ec0432-dd3f-41c5-9ad4-c3e0eb9bb393",
+        "id": "3b3e9bf0-bccf-41cd-9c07-9076b79f308c",
         "object": "chat.completion",
-        "created": 1790562323,
+        "created": 1790565117,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7863,7 +7860,7 @@
     },
     {
       "case_id": "office_021",
-      "latency_ms": 885,
+      "latency_ms": 866,
       "usage": {
         "prompt_tokens": 5072,
         "completion_tokens": 53,
@@ -7875,16 +7872,16 @@
         "prompt_cache_miss_tokens": 208
       },
       "raw_response": {
-        "id": "3f0774dd-15de-4f36-971c-cb6606829019",
+        "id": "accde226-7a2e-4af6-922c-110c5fce614e",
         "object": "chat.completion",
-        "created": 1790562324,
+        "created": 1790565118,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"ppt_design\",\"decision\":\"auto_match\",\"confidence\":0.85,\"top3_skill_ids\":[\"ppt_design\",\"powerpoint\",\"data_visualization\"],\"reason\":\"制作PPT并展示数据，核心是演示文稿制作\"}"
+              "content": "{\"skill_id\":\"ppt_design\",\"decision\":\"auto_match\",\"confidence\":0.85,\"top3_skill_ids\":[\"ppt_design\",\"powerpoint\",\"data_visualization\"],\"reason\":\"制作PPT并展示数据，核心是演示材料制作\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -7906,11 +7903,11 @@
     },
     {
       "case_id": "office_022",
-      "latency_ms": 695,
+      "latency_ms": 955,
       "usage": {
         "prompt_tokens": 5071,
-        "completion_tokens": 46,
-        "total_tokens": 5117,
+        "completion_tokens": 47,
+        "total_tokens": 5118,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -7918,16 +7915,16 @@
         "prompt_cache_miss_tokens": 207
       },
       "raw_response": {
-        "id": "2b0bab1c-ba39-4971-b2c5-5e405a72ce12",
+        "id": "6ec1f071-3742-4dfc-82be-adee38c086d2",
         "object": "chat.completion",
-        "created": 1790562325,
+        "created": 1790565119,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":null,\"decision\":\"review\",\"confidence\":0.5,\"top3_skill_ids\":[\"document_formatting\",\"ppt_design\",\"powerpoint\"],\"reason\":\"并列两项技能，无法确定主技能\"}"
+              "content": "{\"skill_id\":null,\"decision\":\"review\",\"confidence\":0.5,\"top3_skill_ids\":[\"document_formatting\",\"ppt_design\",\"office_suite\"],\"reason\":\"并列两项技能，无法确定主技能\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -7935,8 +7932,8 @@
         ],
         "usage": {
           "prompt_tokens": 5071,
-          "completion_tokens": 46,
-          "total_tokens": 5117,
+          "completion_tokens": 47,
+          "total_tokens": 5118,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -7949,7 +7946,7 @@
     },
     {
       "case_id": "office_023",
-      "latency_ms": 712,
+      "latency_ms": 710,
       "usage": {
         "prompt_tokens": 5072,
         "completion_tokens": 35,
@@ -7961,9 +7958,9 @@
         "prompt_cache_miss_tokens": 208
       },
       "raw_response": {
-        "id": "4e6b4585-2474-498d-ab1b-83689e1aca3a",
+        "id": "3c4be97c-a33a-4e1f-b839-8e3b482505ce",
         "object": "chat.completion",
-        "created": 1790562326,
+        "created": 1790565120,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -7992,11 +7989,11 @@
     },
     {
       "case_id": "office_024",
-      "latency_ms": 688,
+      "latency_ms": 949,
       "usage": {
         "prompt_tokens": 5075,
-        "completion_tokens": 37,
-        "total_tokens": 5112,
+        "completion_tokens": 36,
+        "total_tokens": 5111,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -8004,16 +8001,16 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "64a948ab-b7fb-453f-aa51-94f70ac69b8f",
+        "id": "4ae15a47-5cec-4f80-aab9-aafcd8fae587",
         "object": "chat.completion",
-        "created": 1790562326,
+        "created": 1790565120,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":null,\"decision\":\"unknown\",\"confidence\":0.0,\"top3_skill_ids\":[],\"reason\":\"飞书/钉钉审批不属于任何技能分类\"}"
+              "content": "{\"skill_id\":null,\"decision\":\"unknown\",\"confidence\":0.0,\"top3_skill_ids\":[],\"reason\":\"飞书/钉钉审批不属于任何技能\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8021,8 +8018,8 @@
         ],
         "usage": {
           "prompt_tokens": 5075,
-          "completion_tokens": 37,
-          "total_tokens": 5112,
+          "completion_tokens": 36,
+          "total_tokens": 5111,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -8035,7 +8032,7 @@
     },
     {
       "case_id": "software_001",
-      "latency_ms": 888,
+      "latency_ms": 887,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 39,
@@ -8047,9 +8044,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "7a5b90e2-48e1-4f0c-8831-f15c43a9fee7",
+        "id": "067d8b18-6049-4d8e-a09e-35c820695c0c",
         "object": "chat.completion",
-        "created": 1790562327,
+        "created": 1790565121,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8078,11 +8075,11 @@
     },
     {
       "case_id": "software_002",
-      "latency_ms": 940,
+      "latency_ms": 61885,
       "usage": {
         "prompt_tokens": 5067,
-        "completion_tokens": 42,
-        "total_tokens": 5109,
+        "completion_tokens": 41,
+        "total_tokens": 5108,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -8090,16 +8087,16 @@
         "prompt_cache_miss_tokens": 203
       },
       "raw_response": {
-        "id": "93e69b81-e51c-40ab-a6d2-61e55dd92c58",
+        "id": "dc40c6c4-62b4-475c-84c9-c44e1f4859df",
         "object": "chat.completion",
-        "created": 1790562328,
+        "created": 1790565183,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"react\",\"decision\":\"auto_match\",\"confidence\":1.0,\"top3_skill_ids\":[\"react\",\"frontend_development\",\"javascript\"],\"reason\":\"文本明确对应React技能\"}"
+              "content": "{\"skill_id\":\"react\",\"decision\":\"auto_match\",\"confidence\":1.0,\"top3_skill_ids\":[\"react\",\"frontend_development\",\"javascript\"],\"reason\":\"明确对应React技能\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8107,8 +8104,8 @@
         ],
         "usage": {
           "prompt_tokens": 5067,
-          "completion_tokens": 42,
-          "total_tokens": 5109,
+          "completion_tokens": 41,
+          "total_tokens": 5108,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -8117,11 +8114,11 @@
         },
         "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
       },
-      "api_error": null
+      "api_error": "The read operation timed out"
     },
     {
       "case_id": "software_003",
-      "latency_ms": 1069,
+      "latency_ms": 664,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 47,
@@ -8133,9 +8130,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "974c73c7-dbdf-49a2-8a1e-d6fc9d316cb8",
+        "id": "5e315509-a907-4a27-91ff-732693e12059",
         "object": "chat.completion",
-        "created": 1790562329,
+        "created": 1790565184,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8164,11 +8161,11 @@
     },
     {
       "case_id": "software_004",
-      "latency_ms": 744,
+      "latency_ms": 491,
       "usage": {
         "prompt_tokens": 5069,
-        "completion_tokens": 37,
-        "total_tokens": 5106,
+        "completion_tokens": 36,
+        "total_tokens": 5105,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -8176,16 +8173,16 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "52f0d8f1-b989-4f28-8683-803ecf25984e",
+        "id": "409aa651-a7b0-44c5-a067-6b4f743d45db",
         "object": "chat.completion",
-        "created": 1790562330,
+        "created": 1790565185,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"git\",\"decision\":\"auto_match\",\"confidence\":1.0,\"top3_skill_ids\":[\"git\"],\"reason\":\"文本明确对应Git版本控制技能\"}"
+              "content": "{\"skill_id\":\"git\",\"decision\":\"auto_match\",\"confidence\":1.0,\"top3_skill_ids\":[\"git\"],\"reason\":\"明确对应Git版本控制技能\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8193,8 +8190,8 @@
         ],
         "usage": {
           "prompt_tokens": 5069,
-          "completion_tokens": 37,
-          "total_tokens": 5106,
+          "completion_tokens": 36,
+          "total_tokens": 5105,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -8207,7 +8204,7 @@
     },
     {
       "case_id": "software_005",
-      "latency_ms": 827,
+      "latency_ms": 932,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 51,
@@ -8219,9 +8216,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "ed980931-7d2a-4f21-bf2a-ec3dd0a2d7d3",
+        "id": "7e373faf-dba7-4a3c-9bc6-db0fccd63c97",
         "object": "chat.completion",
-        "created": 1790562331,
+        "created": 1790565185,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8250,11 +8247,11 @@
     },
     {
       "case_id": "software_006",
-      "latency_ms": 721,
+      "latency_ms": 944,
       "usage": {
         "prompt_tokens": 5068,
-        "completion_tokens": 36,
-        "total_tokens": 5104,
+        "completion_tokens": 37,
+        "total_tokens": 5105,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -8262,16 +8259,16 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "60d978cd-2559-4af1-8c8c-1e64e04d13e6",
+        "id": "a7a9bca8-f2b0-45a5-a4fe-42d3e44426b3",
         "object": "chat.completion",
-        "created": 1790562332,
+        "created": 1790565186,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"docker\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"docker\"],\"reason\":\"容器化对应Docker技能\"}"
+              "content": "{\"skill_id\":\"docker\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"docker\"],\"reason\":\"容器化是Docker的别名\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8279,8 +8276,8 @@
         ],
         "usage": {
           "prompt_tokens": 5068,
-          "completion_tokens": 36,
-          "total_tokens": 5104,
+          "completion_tokens": 37,
+          "total_tokens": 5105,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -8293,7 +8290,7 @@
     },
     {
       "case_id": "software_007",
-      "latency_ms": 819,
+      "latency_ms": 907,
       "usage": {
         "prompt_tokens": 5067,
         "completion_tokens": 44,
@@ -8305,9 +8302,9 @@
         "prompt_cache_miss_tokens": 203
       },
       "raw_response": {
-        "id": "0ea904e4-0fa6-43e0-9b7a-e0b57ef0ea12",
+        "id": "e303815c-eb55-493f-97bc-ec851f62e930",
         "object": "chat.completion",
-        "created": 1790562332,
+        "created": 1790565187,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8336,7 +8333,7 @@
     },
     {
       "case_id": "software_008",
-      "latency_ms": 624,
+      "latency_ms": 795,
       "usage": {
         "prompt_tokens": 5075,
         "completion_tokens": 53,
@@ -8348,9 +8345,9 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "9ce644d8-0bf8-40f4-b313-df8d5977095f",
+        "id": "ac8fb8a4-54a4-48ae-bfc7-747ac2244d9d",
         "object": "chat.completion",
-        "created": 1790562333,
+        "created": 1790565188,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8379,11 +8376,11 @@
     },
     {
       "case_id": "software_009",
-      "latency_ms": 662,
+      "latency_ms": 867,
       "usage": {
         "prompt_tokens": 5075,
-        "completion_tokens": 53,
-        "total_tokens": 5128,
+        "completion_tokens": 50,
+        "total_tokens": 5125,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -8391,16 +8388,16 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "403bdfc2-bbba-4308-9aa4-47601e331ea5",
+        "id": "bcb00eeb-8d74-4767-9e5f-acc99634458d",
         "object": "chat.completion",
-        "created": 1790562334,
+        "created": 1790565189,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"unit_testing\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"unit_testing\",\"python\",\"backend_development\"],\"reason\":\"为服务编写自动化用例并覆盖异常分支，属于单元测试\"}"
+              "content": "{\"skill_id\":\"unit_testing\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"unit_testing\",\"python\",\"backend_development\"],\"reason\":\"编写自动化用例覆盖异常分支，属单元测试\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8408,8 +8405,8 @@
         ],
         "usage": {
           "prompt_tokens": 5075,
-          "completion_tokens": 53,
-          "total_tokens": 5128,
+          "completion_tokens": 50,
+          "total_tokens": 5125,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -8422,7 +8419,7 @@
     },
     {
       "case_id": "software_010",
-      "latency_ms": 814,
+      "latency_ms": 1030,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 46,
@@ -8434,9 +8431,9 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "e358098f-69ee-4c7d-84cb-54d14c735eac",
+        "id": "efa62912-ac42-4c6a-a3dc-793ebdc0bbc6",
         "object": "chat.completion",
-        "created": 1790562334,
+        "created": 1790565190,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8465,7 +8462,7 @@
     },
     {
       "case_id": "software_011",
-      "latency_ms": 764,
+      "latency_ms": 966,
       "usage": {
         "prompt_tokens": 5077,
         "completion_tokens": 40,
@@ -8477,9 +8474,9 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "abe16c01-3e31-4966-afe9-1b7136953773",
+        "id": "8874902c-0ade-4822-9bcc-ecbfcb90effe",
         "object": "chat.completion",
-        "created": 1790562335,
+        "created": 1790565191,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8508,7 +8505,7 @@
     },
     {
       "case_id": "software_012",
-      "latency_ms": 1153,
+      "latency_ms": 1009,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 48,
@@ -8520,9 +8517,9 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "4012bf4f-24b5-4586-a012-dbf345c4108d",
+        "id": "35389701-6ad0-4829-a18e-772596993a18",
         "object": "chat.completion",
-        "created": 1790562336,
+        "created": 1790565192,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8551,11 +8548,11 @@
     },
     {
       "case_id": "software_013",
-      "latency_ms": 605,
+      "latency_ms": 898,
       "usage": {
         "prompt_tokens": 5081,
-        "completion_tokens": 52,
-        "total_tokens": 5133,
+        "completion_tokens": 55,
+        "total_tokens": 5136,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -8563,16 +8560,16 @@
         "prompt_cache_miss_tokens": 217
       },
       "raw_response": {
-        "id": "eab123b6-0e3b-44fb-9659-a9f2e6c7ff92",
+        "id": "265d57a9-0fd4-4194-95ba-775013713b49",
         "object": "chat.completion",
-        "created": 1790562337,
+        "created": 1790565193,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"fastapi\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"fastapi\",\"rest_api\",\"python_backend_development\"],\"reason\":\"明确使用FastAPI开发接口，属FastAPI技能\"}"
+              "content": "{\"skill_id\":\"fastapi\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"fastapi\",\"rest_api\",\"python_backend_development\"],\"reason\":\"明确使用FastAPI开发REST接口，主技能为FastAPI\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8580,8 +8577,8 @@
         ],
         "usage": {
           "prompt_tokens": 5081,
-          "completion_tokens": 52,
-          "total_tokens": 5133,
+          "completion_tokens": 55,
+          "total_tokens": 5136,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -8594,7 +8591,7 @@
     },
     {
       "case_id": "software_014",
-      "latency_ms": 978,
+      "latency_ms": 921,
       "usage": {
         "prompt_tokens": 5080,
         "completion_tokens": 48,
@@ -8606,9 +8603,9 @@
         "prompt_cache_miss_tokens": 216
       },
       "raw_response": {
-        "id": "bfa9ebc2-1a15-4223-90f6-feaa2789ee33",
+        "id": "b3ba1b4a-06c5-4c36-bcfe-7de7d2d3a412",
         "object": "chat.completion",
-        "created": 1790562338,
+        "created": 1790565194,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8637,11 +8634,11 @@
     },
     {
       "case_id": "software_015",
-      "latency_ms": 1022,
+      "latency_ms": 937,
       "usage": {
         "prompt_tokens": 5077,
-        "completion_tokens": 49,
-        "total_tokens": 5126,
+        "completion_tokens": 47,
+        "total_tokens": 5124,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -8649,16 +8646,16 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "94f37ccf-a5ee-4db0-bfb6-4ffc65c65259",
+        "id": "0bf866c5-5531-4a69-b80b-7ef515cfb35c",
         "object": "chat.completion",
-        "created": 1790562339,
+        "created": 1790565195,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"sql\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"sql\",\"database_development\",\"data_processing\"],\"reason\":\"明确为SQL多表关联查询，属SQL技能\"}"
+              "content": "{\"skill_id\":\"sql\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"sql\",\"database_development\",\"data_processing\"],\"reason\":\"核心是编写SQL查询，属SQL技能\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8666,8 +8663,8 @@
         ],
         "usage": {
           "prompt_tokens": 5077,
-          "completion_tokens": 49,
-          "total_tokens": 5126,
+          "completion_tokens": 47,
+          "total_tokens": 5124,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -8680,7 +8677,7 @@
     },
     {
       "case_id": "software_016",
-      "latency_ms": 824,
+      "latency_ms": 649,
       "usage": {
         "prompt_tokens": 5077,
         "completion_tokens": 36,
@@ -8692,9 +8689,9 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "1d7e9bd4-941e-4c19-98e3-35faf7600497",
+        "id": "bd15d40c-568c-46ba-8057-cdc0d6503ea1",
         "object": "chat.completion",
-        "created": 1790562340,
+        "created": 1790565195,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8723,7 +8720,7 @@
     },
     {
       "case_id": "software_017",
-      "latency_ms": 686,
+      "latency_ms": 1164,
       "usage": {
         "prompt_tokens": 5079,
         "completion_tokens": 57,
@@ -8735,9 +8732,9 @@
         "prompt_cache_miss_tokens": 215
       },
       "raw_response": {
-        "id": "dc114a1c-d50c-4a5b-b0a2-5e9bf5f34004",
+        "id": "a599faa2-2037-4159-8c50-060d61bbc418",
         "object": "chat.completion",
-        "created": 1790562341,
+        "created": 1790565196,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8766,7 +8763,7 @@
     },
     {
       "case_id": "software_018",
-      "latency_ms": 841,
+      "latency_ms": 2519,
       "usage": {
         "prompt_tokens": 5074,
         "completion_tokens": 49,
@@ -8778,9 +8775,9 @@
         "prompt_cache_miss_tokens": 210
       },
       "raw_response": {
-        "id": "40c0eb15-9459-4cc2-ba75-0aacd67515bc",
+        "id": "467a8ec3-3f64-43dc-83b9-14044319d9ab",
         "object": "chat.completion",
-        "created": 1790562341,
+        "created": 1790565199,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8809,7 +8806,7 @@
     },
     {
       "case_id": "software_019",
-      "latency_ms": 610,
+      "latency_ms": 924,
       "usage": {
         "prompt_tokens": 5075,
         "completion_tokens": 57,
@@ -8821,9 +8818,9 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "e07f739c-46d1-49ac-a145-ef9dd1d4f13c",
+        "id": "fed298e1-5a1e-4d80-877a-661a80601f5e",
         "object": "chat.completion",
-        "created": 1790562342,
+        "created": 1790565200,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -8852,11 +8849,11 @@
     },
     {
       "case_id": "software_020",
-      "latency_ms": 1069,
+      "latency_ms": 623,
       "usage": {
         "prompt_tokens": 5075,
-        "completion_tokens": 54,
-        "total_tokens": 5129,
+        "completion_tokens": 55,
+        "total_tokens": 5130,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -8864,16 +8861,16 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "6d934611-676e-4076-a625-3383a022e513",
+        "id": "411504b8-f6aa-44cb-a925-3727564eb8b7",
         "object": "chat.completion",
-        "created": 1790562343,
+        "created": 1790565201,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"backend_development\",\"decision\":\"auto_match\",\"confidence\":0.85,\"top3_skill_ids\":[\"backend_development\",\"database_development\",\"rest_api\"],\"reason\":\"开发后端接口属后端开发，表结构设计为附带动作\"}"
+              "content": "{\"skill_id\":\"backend_development\",\"decision\":\"review\",\"confidence\":0.6,\"top3_skill_ids\":[\"backend_development\",\"database_development\",\"rest_api\"],\"reason\":\"同时涉及后端接口开发与数据库表结构设计，主技能不唯一\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8881,8 +8878,8 @@
         ],
         "usage": {
           "prompt_tokens": 5075,
-          "completion_tokens": 54,
-          "total_tokens": 5129,
+          "completion_tokens": 55,
+          "total_tokens": 5130,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -8895,11 +8892,11 @@
     },
     {
       "case_id": "software_021",
-      "latency_ms": 914,
+      "latency_ms": 705,
       "usage": {
         "prompt_tokens": 5073,
-        "completion_tokens": 47,
-        "total_tokens": 5120,
+        "completion_tokens": 45,
+        "total_tokens": 5118,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -8907,16 +8904,16 @@
         "prompt_cache_miss_tokens": 209
       },
       "raw_response": {
-        "id": "f15bdecf-94bd-4707-921f-783879941c6f",
+        "id": "f230b4b7-5d8a-47fd-a244-9d5b1feb2159",
         "object": "chat.completion",
-        "created": 1790562344,
+        "created": 1790565201,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"sql\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"sql\",\"data_analysis\",\"excel_data_analysis\"],\"reason\":\"明确提到使用SQL进行数据查询\"}"
+              "content": "{\"skill_id\":\"sql\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"sql\",\"data_analysis\",\"data_processing\"],\"reason\":\"明确提到使用SQL进行数据查询\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8924,8 +8921,8 @@
         ],
         "usage": {
           "prompt_tokens": 5073,
-          "completion_tokens": 47,
-          "total_tokens": 5120,
+          "completion_tokens": 45,
+          "total_tokens": 5118,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -8938,7 +8935,7 @@
     },
     {
       "case_id": "software_022",
-      "latency_ms": 715,
+      "latency_ms": 762,
       "usage": {
         "prompt_tokens": 5072,
         "completion_tokens": 51,
@@ -8950,16 +8947,16 @@
         "prompt_cache_miss_tokens": 208
       },
       "raw_response": {
-        "id": "1a4964a8-2120-45ab-8ee1-c56a7fc465e1",
+        "id": "f92c8df2-425e-4fbd-9d98-8c1ec568eac7",
         "object": "chat.completion",
-        "created": 1790562345,
+        "created": 1790565202,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"java\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"java\",\"backend_development\",\"python_backend_development\"],\"reason\":\"明确提到Java语言，Spring Boot非Taxonomy技能\"}"
+              "content": "{\"skill_id\":\"java\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"java\",\"backend_development\",\"python_backend_development\"],\"reason\":\"明确提到Java语言，Spring Boot属框架未收录\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -8981,7 +8978,7 @@
     },
     {
       "case_id": "software_023",
-      "latency_ms": 707,
+      "latency_ms": 788,
       "usage": {
         "prompt_tokens": 5072,
         "completion_tokens": 39,
@@ -8993,9 +8990,9 @@
         "prompt_cache_miss_tokens": 208
       },
       "raw_response": {
-        "id": "118a3cc7-d237-4ee1-8381-5799fb9b2114",
+        "id": "22a22ede-e4d0-4594-877b-498be6b7a96a",
         "object": "chat.completion",
-        "created": 1790562345,
+        "created": 1790565203,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9024,7 +9021,7 @@
     },
     {
       "case_id": "software_024",
-      "latency_ms": 866,
+      "latency_ms": 858,
       "usage": {
         "prompt_tokens": 5073,
         "completion_tokens": 42,
@@ -9036,9 +9033,9 @@
         "prompt_cache_miss_tokens": 209
       },
       "raw_response": {
-        "id": "21e0b7a6-56b3-41b7-9deb-e4cdee80d56b",
+        "id": "d19dafcb-46ce-4a5d-99c6-18e213e5fa28",
         "object": "chat.completion",
-        "created": 1790562346,
+        "created": 1790565204,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9067,7 +9064,7 @@
     },
     {
       "case_id": "product_001",
-      "latency_ms": 1112,
+      "latency_ms": 1037,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 53,
@@ -9079,9 +9076,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "2770bb20-8385-4525-8529-4fb3d4b53487",
+        "id": "7bf34c49-e698-45db-be93-a64a3e69d3c8",
         "object": "chat.completion",
-        "created": 1790562347,
+        "created": 1790565204,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9110,7 +9107,7 @@
     },
     {
       "case_id": "product_002",
-      "latency_ms": 1437,
+      "latency_ms": 1652,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 45,
@@ -9122,9 +9119,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "bafff560-fc47-46f4-9ff5-ca79f80b011f",
+        "id": "245be2e3-e741-4df1-9f8b-a26c71744dcf",
         "object": "chat.completion",
-        "created": 1790562349,
+        "created": 1790565206,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9153,11 +9150,11 @@
     },
     {
       "case_id": "product_003",
-      "latency_ms": 943,
+      "latency_ms": 734,
       "usage": {
         "prompt_tokens": 5068,
-        "completion_tokens": 51,
-        "total_tokens": 5119,
+        "completion_tokens": 53,
+        "total_tokens": 5121,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -9165,16 +9162,16 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "53182d64-f074-443d-869e-1aa66ecacad5",
+        "id": "437b51f9-035f-4572-9967-35ceb1e41ec9",
         "object": "chat.completion",
-        "created": 1790562350,
+        "created": 1790565207,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"user_research\",\"decision\":\"auto_match\",\"confidence\":0.98,\"top3_skill_ids\":[\"user_research\",\"user_feedback_analysis\",\"requirements_analysis\"],\"reason\":\"用户调研与用户研究别名一致\"}"
+              "content": "{\"skill_id\":\"user_research\",\"decision\":\"auto_match\",\"confidence\":0.98,\"top3_skill_ids\":[\"user_research\",\"user_feedback_analysis\",\"requirements_analysis\"],\"reason\":\"用户调研即用户研究，标准别名匹配\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -9182,8 +9179,8 @@
         ],
         "usage": {
           "prompt_tokens": 5068,
-          "completion_tokens": 51,
-          "total_tokens": 5119,
+          "completion_tokens": 53,
+          "total_tokens": 5121,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -9196,7 +9193,7 @@
     },
     {
       "case_id": "product_004",
-      "latency_ms": 726,
+      "latency_ms": 889,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 50,
@@ -9208,9 +9205,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "12f3aa35-dad2-4ad9-8836-bfd8030e1345",
+        "id": "eedaa1c6-9101-49d4-a68e-69a3f33909ee",
         "object": "chat.completion",
-        "created": 1790562350,
+        "created": 1790565208,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9239,7 +9236,7 @@
     },
     {
       "case_id": "product_005",
-      "latency_ms": 802,
+      "latency_ms": 725,
       "usage": {
         "prompt_tokens": 5068,
         "completion_tokens": 38,
@@ -9251,9 +9248,9 @@
         "prompt_cache_miss_tokens": 204
       },
       "raw_response": {
-        "id": "4e93d1f5-b16b-47c1-8553-72375e5a2382",
+        "id": "075b40f4-2863-4304-a279-a8ce57e0f271",
         "object": "chat.completion",
-        "created": 1790562351,
+        "created": 1790565209,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9282,7 +9279,7 @@
     },
     {
       "case_id": "product_006",
-      "latency_ms": 1015,
+      "latency_ms": 1117,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 50,
@@ -9294,9 +9291,9 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "9248927e-e81b-4be6-8b19-2b8f295772cb",
+        "id": "35c6e1af-89c4-475e-a8c7-1a3603723549",
         "object": "chat.completion",
-        "created": 1790562352,
+        "created": 1790565210,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9325,7 +9322,7 @@
     },
     {
       "case_id": "product_007",
-      "latency_ms": 954,
+      "latency_ms": 832,
       "usage": {
         "prompt_tokens": 5069,
         "completion_tokens": 59,
@@ -9337,16 +9334,16 @@
         "prompt_cache_miss_tokens": 205
       },
       "raw_response": {
-        "id": "16751bf6-e4cd-4641-9a05-a738af1278d4",
+        "id": "163fcda6-4d94-4656-af32-e2098f79ac0c",
         "object": "chat.completion",
-        "created": 1790562353,
+        "created": 1790565211,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"cross_functional_collaboration\",\"decision\":\"auto_match\",\"confidence\":0.98,\"top3_skill_ids\":[\"cross_functional_collaboration\",\"project_management\",\"requirements_management\"],\"reason\":\"跨团队协作即跨部门协作的别名\"}"
+              "content": "{\"skill_id\":\"cross_functional_collaboration\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"cross_functional_collaboration\",\"project_management\",\"requirements_management\"],\"reason\":\"跨团队协作与跨部门协作同义\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -9368,11 +9365,11 @@
     },
     {
       "case_id": "product_008",
-      "latency_ms": 1182,
+      "latency_ms": 695,
       "usage": {
         "prompt_tokens": 5075,
-        "completion_tokens": 52,
-        "total_tokens": 5127,
+        "completion_tokens": 53,
+        "total_tokens": 5128,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -9380,16 +9377,16 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "c70d858e-d963-44b2-97b1-99878f4fbff6",
+        "id": "8e9b4bc6-a5fb-4fc4-b76b-6551a20debb4",
         "object": "chat.completion",
-        "created": 1790562354,
+        "created": 1790565212,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"user_research\",\"decision\":\"auto_match\",\"confidence\":0.97,\"top3_skill_ids\":[\"user_research\",\"requirements_analysis\",\"user_feedback_analysis\"],\"reason\":\"访谈问卷了解用户痛点属于用户研究\"}"
+              "content": "{\"skill_id\":\"user_research\",\"decision\":\"auto_match\",\"confidence\":0.97,\"top3_skill_ids\":[\"user_research\",\"requirements_analysis\",\"user_feedback_analysis\"],\"reason\":\"访谈和问卷了解用户痛点属于用户研究\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -9397,8 +9394,8 @@
         ],
         "usage": {
           "prompt_tokens": 5075,
-          "completion_tokens": 52,
-          "total_tokens": 5127,
+          "completion_tokens": 53,
+          "total_tokens": 5128,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -9411,7 +9408,7 @@
     },
     {
       "case_id": "product_009",
-      "latency_ms": 565,
+      "latency_ms": 668,
       "usage": {
         "prompt_tokens": 5077,
         "completion_tokens": 55,
@@ -9423,16 +9420,16 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "18ba7588-41fb-4301-aa73-fd00a3f8bf8f",
+        "id": "0cc8ebcb-48bd-41cd-a4e0-dab212a4ab97",
         "object": "chat.completion",
-        "created": 1790562355,
+        "created": 1790565212,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"competitor_analysis\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"competitor_analysis\",\"product_selection\",\"pricing_strategy\"],\"reason\":\"对比同类产品功能与价格属竞品分析\"}"
+              "content": "{\"skill_id\":\"competitor_analysis\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"competitor_analysis\",\"product_planning\",\"requirements_analysis\"],\"reason\":\"对比同类产品功能与价格属竞品分析\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -9454,11 +9451,11 @@
     },
     {
       "case_id": "product_010",
-      "latency_ms": 1078,
+      "latency_ms": 828,
       "usage": {
         "prompt_tokens": 5079,
-        "completion_tokens": 58,
-        "total_tokens": 5137,
+        "completion_tokens": 56,
+        "total_tokens": 5135,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -9466,16 +9463,16 @@
         "prompt_cache_miss_tokens": 215
       },
       "raw_response": {
-        "id": "a762debf-7d37-444f-965e-2deac93129e6",
+        "id": "19a5c59d-c9f7-4659-86c0-a8820a648bd5",
         "object": "chat.completion",
-        "created": 1790562356,
+        "created": 1790565213,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"requirements_management\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"requirements_management\",\"requirements_analysis\",\"cross_functional_collaboration\"],\"reason\":\"整理用户诉求为结构化需求并流转，属需求管理\"}"
+              "content": "{\"skill_id\":\"requirements_management\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"requirements_management\",\"requirements_analysis\",\"user_feedback_analysis\"],\"reason\":\"整理用户诉求为结构化需求并流转，属需求管理\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -9483,8 +9480,8 @@
         ],
         "usage": {
           "prompt_tokens": 5079,
-          "completion_tokens": 58,
-          "total_tokens": 5137,
+          "completion_tokens": 56,
+          "total_tokens": 5135,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -9497,7 +9494,7 @@
     },
     {
       "case_id": "product_011",
-      "latency_ms": 844,
+      "latency_ms": 727,
       "usage": {
         "prompt_tokens": 5075,
         "completion_tokens": 53,
@@ -9509,9 +9506,9 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "fae8aab9-3f06-4f52-a063-9e815dbe305a",
+        "id": "2508f7fd-a351-4fd6-82a0-c14eb4205a6b",
         "object": "chat.completion",
-        "created": 1790562357,
+        "created": 1790565214,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9540,7 +9537,7 @@
     },
     {
       "case_id": "product_012",
-      "latency_ms": 1588,
+      "latency_ms": 929,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 48,
@@ -9552,9 +9549,9 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "5198be5c-578c-40f7-8377-7ea4c75ee551",
+        "id": "6339d3cb-af3b-4fe2-9879-34c56bef39c2",
         "object": "chat.completion",
-        "created": 1790562358,
+        "created": 1790565214,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9583,7 +9580,7 @@
     },
     {
       "case_id": "product_013",
-      "latency_ms": 992,
+      "latency_ms": 1174,
       "usage": {
         "prompt_tokens": 5079,
         "completion_tokens": 58,
@@ -9595,9 +9592,9 @@
         "prompt_cache_miss_tokens": 215
       },
       "raw_response": {
-        "id": "24402549-5163-4fb0-a04f-236318d4d001",
+        "id": "b9ba3313-449c-4b38-a27d-b5f221868f73",
         "object": "chat.completion",
-        "created": 1790562359,
+        "created": 1790565216,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9626,7 +9623,7 @@
     },
     {
       "case_id": "product_014",
-      "latency_ms": 724,
+      "latency_ms": 745,
       "usage": {
         "prompt_tokens": 5080,
         "completion_tokens": 48,
@@ -9638,9 +9635,9 @@
         "prompt_cache_miss_tokens": 216
       },
       "raw_response": {
-        "id": "73fdc160-b659-43da-b5c4-86fc393e5b93",
+        "id": "f4df078e-8c8b-4876-8044-f3db1ad78358",
         "object": "chat.completion",
-        "created": 1790562360,
+        "created": 1790565217,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9669,7 +9666,7 @@
     },
     {
       "case_id": "product_015",
-      "latency_ms": 1489,
+      "latency_ms": 904,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 57,
@@ -9681,9 +9678,9 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "5be0852a-b3c5-44c2-ad56-ec6e8d5f38ac",
+        "id": "deca2b55-a607-41da-9118-b9c387e53a1d",
         "object": "chat.completion",
-        "created": 1790562361,
+        "created": 1790565217,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9712,7 +9709,7 @@
     },
     {
       "case_id": "product_016",
-      "latency_ms": 1025,
+      "latency_ms": 943,
       "usage": {
         "prompt_tokens": 5076,
         "completion_tokens": 55,
@@ -9724,9 +9721,9 @@
         "prompt_cache_miss_tokens": 212
       },
       "raw_response": {
-        "id": "207928d3-2d9d-4002-977e-d52ef087e488",
+        "id": "22bfaff8-12db-49de-9540-b9c2375b9a01",
         "object": "chat.completion",
-        "created": 1790562362,
+        "created": 1790565218,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9755,7 +9752,7 @@
     },
     {
       "case_id": "product_017",
-      "latency_ms": 1002,
+      "latency_ms": 947,
       "usage": {
         "prompt_tokens": 5079,
         "completion_tokens": 61,
@@ -9767,9 +9764,9 @@
         "prompt_cache_miss_tokens": 215
       },
       "raw_response": {
-        "id": "142b1fe0-ed1b-4e56-9862-297f6da0d953",
+        "id": "a9fa4704-daf8-4e92-abd4-abb576cdf094",
         "object": "chat.completion",
-        "created": 1790562363,
+        "created": 1790565219,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9798,7 +9795,7 @@
     },
     {
       "case_id": "product_018",
-      "latency_ms": 992,
+      "latency_ms": 997,
       "usage": {
         "prompt_tokens": 5074,
         "completion_tokens": 53,
@@ -9810,9 +9807,9 @@
         "prompt_cache_miss_tokens": 210
       },
       "raw_response": {
-        "id": "776ffa62-46e7-4609-a946-b5f0416bdf06",
+        "id": "a62237c1-8a30-420e-b0c8-2413bd915dba",
         "object": "chat.completion",
-        "created": 1790562364,
+        "created": 1790565220,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9841,11 +9838,11 @@
     },
     {
       "case_id": "product_019",
-      "latency_ms": 1014,
+      "latency_ms": 678,
       "usage": {
         "prompt_tokens": 5077,
-        "completion_tokens": 56,
-        "total_tokens": 5133,
+        "completion_tokens": 57,
+        "total_tokens": 5134,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -9853,16 +9850,16 @@
         "prompt_cache_miss_tokens": 213
       },
       "raw_response": {
-        "id": "37bc9120-d38a-49cf-8eae-5ed102a79cca",
+        "id": "a182e30e-b768-460a-9a0e-a9a017e018f5",
         "object": "chat.completion",
-        "created": 1790562365,
+        "created": 1790565221,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":\"requirements_management\",\"decision\":\"auto_match\",\"confidence\":0.95,\"top3_skill_ids\":[\"requirements_management\",\"requirement_prioritization\",\"product_iteration\"],\"reason\":\"需求收集评审排期上线属需求全生命周期管理\"}"
+              "content": "{\"skill_id\":\"requirements_management\",\"decision\":\"auto_match\",\"confidence\":0.9,\"top3_skill_ids\":[\"requirements_management\",\"requirement_prioritization\",\"product_iteration\"],\"reason\":\"需求收集评审排期上线跟进属需求全生命周期管理\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -9870,8 +9867,8 @@
         ],
         "usage": {
           "prompt_tokens": 5077,
-          "completion_tokens": 56,
-          "total_tokens": 5133,
+          "completion_tokens": 57,
+          "total_tokens": 5134,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },
@@ -9884,7 +9881,7 @@
     },
     {
       "case_id": "product_020",
-      "latency_ms": 751,
+      "latency_ms": 898,
       "usage": {
         "prompt_tokens": 5074,
         "completion_tokens": 54,
@@ -9896,9 +9893,9 @@
         "prompt_cache_miss_tokens": 210
       },
       "raw_response": {
-        "id": "b9b480be-4a91-4073-9292-9f7d4a85a5ff",
+        "id": "f9be6a93-03fe-45e3-98f2-845e5e98d422",
         "object": "chat.completion",
-        "created": 1790562367,
+        "created": 1790565222,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9927,7 +9924,7 @@
     },
     {
       "case_id": "product_021",
-      "latency_ms": 601,
+      "latency_ms": 874,
       "usage": {
         "prompt_tokens": 5078,
         "completion_tokens": 50,
@@ -9939,9 +9936,9 @@
         "prompt_cache_miss_tokens": 214
       },
       "raw_response": {
-        "id": "af8954bb-96da-43b1-a397-d27034fdcd51",
+        "id": "8d2bc446-e86e-4513-a325-83e1cf3fbd69",
         "object": "chat.completion",
-        "created": 1790562367,
+        "created": 1790565223,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -9970,7 +9967,7 @@
     },
     {
       "case_id": "product_022",
-      "latency_ms": 956,
+      "latency_ms": 676,
       "usage": {
         "prompt_tokens": 5072,
         "completion_tokens": 59,
@@ -9982,9 +9979,9 @@
         "prompt_cache_miss_tokens": 208
       },
       "raw_response": {
-        "id": "42c33432-af64-4664-a53d-7223f5c53bf0",
+        "id": "c2d8fd87-6373-4372-babf-61b0ef7da4e5",
         "object": "chat.completion",
-        "created": 1790562368,
+        "created": 1790565223,
         "model": "deepseek-flash",
         "choices": [
           {
@@ -10013,7 +10010,7 @@
     },
     {
       "case_id": "product_023",
-      "latency_ms": 1282,
+      "latency_ms": 895,
       "usage": {
         "prompt_tokens": 5071,
         "completion_tokens": 34,
@@ -10025,16 +10022,16 @@
         "prompt_cache_miss_tokens": 207
       },
       "raw_response": {
-        "id": "1db99e0e-6546-4e97-b223-61a3d2c530bc",
+        "id": "51ec9ed2-d803-45c5-bb6d-3a03aa2e61ef",
         "object": "chat.completion",
-        "created": 1790562369,
+        "created": 1790565224,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":null,\"decision\":\"unknown\",\"confidence\":0.0,\"top3_skill_ids\":[],\"reason\":\"视觉设计规范不在技能清单中\"}"
+              "content": "{\"skill_id\":null,\"decision\":\"unknown\",\"confidence\":0.0,\"top3_skill_ids\":[],\"reason\":\"视觉设计规范不在技能分类范围内\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -10056,11 +10053,11 @@
     },
     {
       "case_id": "product_024",
-      "latency_ms": 1111,
+      "latency_ms": 732,
       "usage": {
         "prompt_tokens": 5075,
-        "completion_tokens": 36,
-        "total_tokens": 5111,
+        "completion_tokens": 37,
+        "total_tokens": 5112,
         "prompt_tokens_details": {
           "cached_tokens": 4864
         },
@@ -10068,16 +10065,16 @@
         "prompt_cache_miss_tokens": 211
       },
       "raw_response": {
-        "id": "8f384939-178e-4f71-9f01-e3884e812191",
+        "id": "98e22023-854a-4750-b65d-16841c5c8937",
         "object": "chat.completion",
-        "created": 1790562370,
+        "created": 1790565225,
         "model": "deepseek-flash",
         "choices": [
           {
             "index": 0,
             "message": {
               "role": "assistant",
-              "content": "{\"skill_id\":null,\"decision\":\"unknown\",\"confidence\":0.0,\"top3_skill_ids\":[],\"reason\":\"创业经历与商业敏感度无对应技能\"}"
+              "content": "{\"skill_id\":null,\"decision\":\"unknown\",\"confidence\":0.0,\"top3_skill_ids\":[],\"reason\":\"创业经历与商业敏感度不属于技能分类体系\"}"
             },
             "logprobs": null,
             "finish_reason": "stop"
@@ -10085,8 +10082,8 @@
         ],
         "usage": {
           "prompt_tokens": 5075,
-          "completion_tokens": 36,
-          "total_tokens": 5111,
+          "completion_tokens": 37,
+          "total_tokens": 5112,
           "prompt_tokens_details": {
             "cached_tokens": 4864
           },

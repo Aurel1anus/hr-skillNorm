@@ -1,5 +1,6 @@
 """HTTP bridge for exact/alias matching with DeepSeek fallback."""
 
+import os
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
@@ -9,6 +10,8 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from app.deepseek_matcher import DeepSeekMatcher
+from app.jev_matcher import JevMatcher
+from app.matchers import MatcherRegistry
 from app.normalizer import SkillNormalizer
 from app.taxonomy import load_skills
 
@@ -29,7 +32,9 @@ app.add_middleware(
 )
 
 _skills = load_skills(SKILLS_PATH)
-_normalizer = SkillNormalizer(_skills, fallback_matcher=DeepSeekMatcher(_skills).match)
+_registry = MatcherRegistry([DeepSeekMatcher(_skills), JevMatcher(_skills)])
+_default_provider = os.getenv("SKILL_MATCHER_PROVIDER", "deepseek")
+_normalizer = SkillNormalizer(_skills, semantic_matcher=_registry.get(_default_provider))
 
 
 class NormalizeRequest(BaseModel):
@@ -38,6 +43,11 @@ class NormalizeRequest(BaseModel):
 
 class NormalizeManyRequest(BaseModel):
     texts: list[str]
+
+
+class NormalizeDebugRequest(BaseModel):
+    text: str
+    provider: str
 
 
 @app.get("/api/skills")
@@ -66,6 +76,30 @@ def normalize_one(req: NormalizeRequest):
 def normalize_many(req: NormalizeManyRequest):
     """Normalize a batch of skill expressions."""
     return [normalize_text(text).to_dict() for text in req.texts]
+
+
+@app.post("/api/normalize/debug")
+def normalize_debug(req: NormalizeDebugRequest):
+    try:
+        return SkillNormalizer(_skills, semantic_matcher=_registry.get(req.provider)).normalize(req.text).to_dict()
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except RuntimeError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+
+@app.post("/api/normalize/compare")
+def normalize_compare(req: NormalizeRequest):
+    exact = SkillNormalizer(_skills).normalize(req.text)
+    if exact.match_type == "exact":
+        return {"alias_match": exact.to_dict(), "deepseek": None, "jev": None}
+    results = {}
+    for provider in ("deepseek", "jev"):
+        try:
+            results[provider] = _registry.get(provider).match(req.text).to_dict()
+        except RuntimeError as exc:
+            results[provider] = {"error": str(exc), "provider": provider}
+    return {"alias_match": None, **results}
 
 
 def normalize_text(text: str):

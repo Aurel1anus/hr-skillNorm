@@ -1,5 +1,7 @@
 import json
 import os
+import time
+from dataclasses import replace
 from collections.abc import Sequence
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -26,6 +28,8 @@ load_env(Path(__file__).resolve().parents[1] / ".env")
 
 
 class DeepSeekMatcher:
+    provider_name = "deepseek"
+
     def __init__(self, skills: Sequence[Skill]):
         self._skills = {skill.id: skill for skill in skills}
         self._api_key = os.getenv("DEEPSEEK_API_KEY")
@@ -52,6 +56,7 @@ class DeepSeekMatcher:
             headers={"Authorization": f"Bearer {self._api_key}", "Content-Type": "application/json"},
             method="POST",
         )
+        started = time.perf_counter()
         try:
             with urlopen(request, timeout=60) as response:
                 body = json.loads(response.read().decode("utf-8"))
@@ -62,7 +67,14 @@ class DeepSeekMatcher:
 
         choices = body.get("choices")
         content = choices[0].get("message", {}).get("content") if isinstance(choices, list) and choices else None
-        return self._parse(text, content)
+        result = self._parse(text, content)
+        usage = body.get("usage") or {}
+        return replace(
+            result,
+            latency_ms=round((time.perf_counter() - started) * 1000),
+            input_tokens=usage.get("prompt_tokens"),
+            output_tokens=usage.get("completion_tokens"),
+        )
 
     def _parse(self, raw_text: str, content: object) -> SkillNormalizationResult:
         try:
@@ -75,6 +87,7 @@ class DeepSeekMatcher:
         confidence = float(confidence) if isinstance(confidence, (int, float)) else 0.0
         confidence = min(1.0, max(0.0, confidence))
         candidate_ids = value.get("top3_skill_ids", []) if isinstance(value, dict) else []
+        reason = value.get("reason") if isinstance(value, dict) and isinstance(value.get("reason"), str) else None
         if not isinstance(candidate_ids, list):
             candidate_ids = []
         candidate_ids = list(dict.fromkeys(
@@ -87,16 +100,18 @@ class DeepSeekMatcher:
             skill = self._skills[skill_id]
             return SkillNormalizationResult(
                 raw_text, skill.id, skill.name, confidence, "semantic", False,
-                self._candidates(candidate_ids, confidence),
+                self._candidates(candidate_ids, confidence), provider="deepseek",
+                confidence_label=value.get("confidence") if isinstance(value.get("confidence"), str) and value["confidence"] in {"high", "medium", "low"} else None,
+                reason=reason,
             )
         if decision == "unknown":
             return SkillNormalizationResult(
                 raw_text, None, None, confidence, "unknown", True,
-                self._candidates(candidate_ids, confidence),
+                self._candidates(candidate_ids, confidence), provider="deepseek", reason=reason,
             )
         return SkillNormalizationResult(
             raw_text, None, None, confidence, "review", True,
-            self._candidates(candidate_ids, confidence),
+            self._candidates(candidate_ids, confidence), provider="deepseek", reason=reason,
         )
 
     def _candidates(self, ids: list[str], confidence: float) -> list[SkillCandidate]:

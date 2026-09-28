@@ -31,6 +31,12 @@ class SkillNormalizationResult:
     match_type: MatchType
     needs_review: bool
     candidates: list[SkillCandidate] = field(default_factory=list)
+    provider: str = "alias"
+    confidence_label: str | None = None
+    latency_ms: int | None = None
+    input_tokens: int | None = None
+    output_tokens: int | None = None
+    reason: str | None = None
 
     @property
     def normalized(self) -> dict[str, str] | None:
